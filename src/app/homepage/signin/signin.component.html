@@ -1,0 +1,163 @@
+<!-- Navbar Start -->
+<nav
+    class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="homepage"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a class="nav-item nav-link" href="homepage">Home</a>
+            <!-- <a class="nav-item nav-link">About</a> -->
+            <a class="nav-item nav-link" href="allcourses">Courses</a>
+            <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+        </div>
+        <a href="../homepage/signup"
+            class="btn py-4 px-lg-5 d-none d-lg-block nav-item nav-link active"
+            style="background: #11101D;">Sign Up<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<div class="background">
+
+    <div class="container" style="margin-top: 5vh;">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="../../../assets/img2/account.png" alt>                
+            </div>            
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <form [formGroup]="loginForm">
+                        <div class="input-boxes">
+                            <div class="input-box"
+                                [class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email"
+                                    placeholder="Enter your email"
+                                    formControlName="email" required>
+                            </div>
+                            <small class="text-danger"
+                                *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">*Email
+                                is required</small>
+
+                            <div class="input-box"
+                                [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">
+                                <i class="fas fa-lock"></i>
+                                <input
+                                    type="{{ showPassword ? 'text' : 'password' }}"
+                                    placeholder="Enter your password"
+                                    formControlName="password" required>
+                            </div>
+                            <small class="text-danger"
+                                *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">*Password
+                                is required</small>
+
+                            <input type="checkbox"
+                                (change)="togglePasswordVisibility()"
+                                style="margin-top: -1vh; margin-bottom: 2vh;" />
+                            Show Password
+
+                            <div class="text">
+                                <!-- <a data-toggle="modal" data-target="#forgotPasswordModal">Forgot Password?</a> -->
+                                <a (click)="Start()"
+                                    style="cursor: pointer; color: #06BBCC;">Forgot
+                                    password?</a>
+                                </div>
+                            <div class="button input-box">
+                                <input type="submit" (click)="onLogin()"
+                                    value="Sumbit">
+                            </div>
+                            <a routerLink="/homepage/signup">
+                                <div class="text sign-up-text">Don't have an
+                                    account? <label> Sigup
+                                        now</label></div>
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div class="container"> --> 
+
+    <div class="form-content form-content2">
+        <div class="login-form">
+            <div class="card shadow confirmation-card" *ngIf="start">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow">
+                        <form #forgotPasswordForm="ngForm" (ngSubmit)="onSubmit(forgotPasswordForm)">
+                            <div class="form-group">
+                              <label for="email" style="text-align: center; align-items: center; margin-left: 5vh; padding-top: 3vh;">Email address</label>
+                              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" style="margin-left: 5vh; margin-bottom: 3vh; width: 50vh;" required>
+                              <!-- <small class="form-text text-muted">We'll send password reset instructions to this email.</small> -->
+                              <small class="form-text text-danger" style="margin-left: 5vh;" *ngIf="forgotPasswordForm.controls['email'].errors?.['required'] && forgotPasswordForm.submitted">
+                                Email is required
+                              </small>
+                            </div>            
+                            <div *ngIf="email && !showOTPInput && !otpVerified">
+                              <button type="submit" class="btn btn-primary" style="margin-left: 5vh; margin-bottom: 3vh;" (click)="sendOTP()">Send OTP</button>
+                            </div>                        
+                
+                            <div *ngIf="showOTPInput">
+                              <div class="form-group">
+                                <label for="otp" style="margin-left: 5vh;">Enter OTP</label>
+                                <input type="text" class="form-control" id="otp" name="otp" style="margin-left: 5vh; margin-bottom: 3vh; width: 50vh;" [(ngModel)]="otp" required>
+                              </div>
+                              <button type="button" class="btn btn-primary" style="margin-left: 5vh; margin-bottom: 3vh;" (click)="verifyOTP()">Verify OTP</button>
+                            </div>
+                
+                            <div *ngIf="otpVerified">
+                              <div class="form-group">
+                                <label for="newPassword" style="margin-left: 5vh; width: 50vh;">Enter New Password</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword" style="margin-left: 5vh; width: 50vh; margin-bottom: 3vh;" [(ngModel)]="newPassword" required>
+                              </div>
+                              <button type="button" class="btn btn-primary" style="margin-left: 5vh; width: 30vh; margin-bottom: 3vh;" (click)="updatePassword()">Update Password</button>
+                            </div>
+
+                            <button type="button"
+                                    class="btn-close position-absolute top-0 end-0 mt-3 me-3"
+                                    aria-label="Close"
+                                    (click)="closeCard()"></button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+</div>
+
+<!-- <div class="container-xxl py-5 justify-content-center align-items-center modal-open" *ngIf="start"> 
+    <div class="container">
+        <div class="card shadow confirmation-card">
+            <div class="row g-5">                
+                <div class="col-lg-6 wow" >
+                    <div class="card-body">                        
+                        
+                        <div class="confirmation-card confirmation-buttons">
+                            <p class="confirmation-text">Are you sure you want to submit?</p>
+                            <button class="btn btn-primary">Yes</button> 
+                            <button class="btn btn-secondary">Cancel</button>
+                        </div>
+                        
+                        <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" aria-label="Close" (click)="closeCard()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

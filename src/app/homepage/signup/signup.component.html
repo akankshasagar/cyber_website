@@ -1,0 +1,280 @@
+<!-- Navbar Start -->
+<nav
+	class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+	<a href="homepage" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+		<h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+	</a>
+	<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+		data-bs-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<div class="navbar-nav ms-auto p-4 p-lg-0">
+			<a class="nav-item nav-link" href="homepage">Home</a>
+			<!-- <a class="nav-item nav-link">About</a> -->
+			<a class="nav-item nav-link" href="allcourses">Courses</a>
+			<!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+		</div>
+		<a href="homepage/signin"
+			class="btn py-4 px-lg-5 d-none d-lg-block nav-item nav-link active"
+			style="background: #11101D;">Sign In<i
+				class="fa fa-arrow-right ms-3"></i></a>
+	</div>
+</nav>
+<!-- Navbar End -->
+
+<div class="background">
+
+	<div class="container" style="margin-top: 5vh;">
+		<input type="checkbox" id="flip">
+		<div class="cover">
+			<div class="front">
+				<img src="../../../assets/img2/account.png" alt>
+				<!-- <div class="text">
+					<span class="text-1">Every new friend is a <br> new adventure</span>
+				<span class="text-2">Let's get connected</span>
+				</div> -->
+			</div>
+			<!-- <div class="back">
+				<img class="backImg" src="../../assets/img/account.png" alt="">
+				<div class="text">
+					<span class="text-1">Complete miles of journey <br> with one step</span>
+					<span class="text-2">Let's get started</span>
+				</div>
+			</div> -->
+		</div>
+		<div class="forms">
+			<div class="form-content">
+				<div class="login-form">
+					<div class="title">Sign Up</div>
+					<form [formGroup]="signupForm">
+						<div class="input-boxes">
+							<div class="input-box"
+								[class.error]="signupForm.controls['name'].dirty && signupForm.hasError('required', 'name')">
+								<i class="fas fa-user"></i>
+								<input type="text" formControlName="name" placeholder="Enter your name"
+									required>
+							</div>
+							<small class="text-danger"
+								*ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required', 'name')">*Name
+								is required</small>
+
+							<div class="input-box"
+								[class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">
+								<i class="fas fa-envelope"></i>
+								<input type="text" placeholder="Enter your email"
+									formControlName="email" required>
+							</div>
+							<small class="text-danger"
+								*ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">*Email
+								is required</small>
+
+							<div class="input-box select">
+								<select formControlName="deptName">
+									<option value="" disabled selected>Select Department</option>
+									<option *ngFor="let department of departments" [value]="department.deptName">{{ department.deptName }}</option>
+								</select>
+							</div> 
+
+							<small class="text-danger" *ngIf="signupForm.controls['deptName'].dirty && signupForm.hasError('required', 'deptName')">*Department is required</small>						
+
+							<div class="input-box"
+								[class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">
+								<i class="fas fa-lock"></i>
+								<input type="{{ showPassword ? 'text' : 'password' }}"
+									placeholder="Enter your password"
+									formControlName="password" required>
+							</div>
+							<small class="text-danger"
+								*ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">*Password
+								is required</small>
+
+							<input type="checkbox"
+								(change)="togglePasswordVisibility()"
+								style="margin-top: -1vh; margin-bottom: 2vh;" />
+							Show Password
+
+							<!-- <div class="select">
+								<select>
+								  <option value="1">Americano</option>
+								  <option value="2">Latte</option>
+								  <option value="3">Green Tea</option>
+								</select>
+							  </div>
+							  <div class = "down_note">
+							  <p>Coffee, at the City hall <a href="https://codepen.io/raubaca/pen/bGWmZje" target="_blank">here!</a></p>
+							</div> -->
+
+							
+							<!-- <div formGroupName="department">
+								<label for="deptName">Department Name</label>
+								<input
+								  id="deptName"
+								  formControlName="deptName"
+								  type="text"
+								  class="form-control"
+								/>
+							  </div> -->
+							  
+							
+
+							<!-- <div class="text"><a href="#">Forgot password?</a></div> -->
+							<div class="button input-box">
+								<input type="submit" (click)="onSignup()" value="Sumbit">
+							</div>
+							<a routerLink="/homepage/signin">
+								<div class="text sign-up-text">Already have an account? <label> Login
+										now</label></div> <!--for="flip"-->
+							</a>
+						</div>
+					</form>
+				</div>
+				<!-- <div class="signup-form">
+					<div class="title">Signup</div>
+				  <form [formGroup]="signupForm">
+					  <div class="input-boxes">
+						<div class="input-box" [class.error]="signupForm.controls['name'].dirty && signupForm.hasError('required', 'name')">
+						  <i class="fas fa-user"></i>
+						  <input type="text" formControlName="name" placeholder="Enter your name" required>
+						</div>
+						<small class="text-danger" *ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required', 'name')">*Name is required</small>
+
+						<div class="input-box" [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">
+						  <i class="fas fa-envelope"></i>
+						  <input type="text" formControlName="email" placeholder="Enter your email" required>
+						</div>
+						<small class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">*Email is required</small>
+
+						<div class="input-box" [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">
+						  <i class="fas fa-lock"></i>
+						  <input type="password" formControlName="password" placeholder="Enter your password" required>
+						</div>
+						<small class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">*Password is required</small>
+
+						<div class="button input-box">
+						  <input type="submit" (click)="onSignup()" value="Sumbit">
+						</div>
+						<div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+					  </div>
+				</form>
+			  </div> -->
+				<!-- <div class="login-form">
+					<div class="title">Login</div>
+					<form [formGroup]="loginForm">
+						<div class="input-boxes" style="margin-top: 6vh;">
+							<div class="input-box">
+								<mat-form-field appearance="outline" style="width: 60vh;">
+									<mat-label><mat-icon
+											style="font-size: x-large; padding-top: 1vh; margin-right: 1vh;">
+											email</mat-icon>Email</mat-label>
+									<input type="email" style="margin-left: -4vh;" formControlName="email"
+										matInput required>
+									<mat-error
+										*ngIf="loginForm.hasError('required', 'email') && loginForm.controls['email'].invalid">Please
+										Enter your Email</mat-error>
+								</mat-form-field>
+							</div>
+							<div class="input-box" style="margin-top: 5vh;">
+								<mat-form-field appearance="outline" style="width: 60vh;">
+									<mat-label style="margin-top: -3vh;"><mat-icon
+											style="font-size: 25px; margin-right: 1vh;">lock</mat-icon>Password</mat-label>
+									<input type="password" style="margin-left: -4vh;"
+										formControlName="password" [type]="hide ? 'password' : 'text'"
+										matInput required>
+									<button mat-icon-button matSuffix (click)="hide = !hide"
+										[attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+										<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+									</button>
+									<mat-error
+										*ngIf="loginForm.hasError('required', 'password') && loginForm.controls['password'].invalid">Please
+										Enter your Password</mat-error>
+								</mat-form-field>
+							</div>
+							<div class="text" style="margin-top: 2vh;"><a href="#">Forgot
+									password?</a></div>
+							<section style="margin-top: 1vh;">
+								<div class="example-button-row">
+									<button mat-raised-button (click)="onSubmit()"
+										style="background-color: #06BBCC; color: #ddd; width: 359px;">Login</button>
+								</div>
+							</section>
+							<div class="text sign-up-text">
+								Don't have an account? <label>Sigup now</label> for="flip"
+							</div>
+						</div>
+					</form>
+				</div> -->
+				<!-- <div class="signup-form">
+					<div class="title">Signup</div>
+					<form [formGroup]="signupForm">
+						<div class="input-boxes">
+							<div class="input-box">
+								<mat-form-field appearance="outline" style="width: 60vh;">
+									<mat-label style="margin-top: -3vh;"><mat-icon
+											style="font-size: x-large; padding-top: 1vh; margin-right: 1vh;">person</mat-icon>Name</mat-label>
+									<input type="text" style="margin-left: -4vh;" formControlName="name"
+										matInput required>
+									<mat-error
+										*ngIf="signupForm.hasError('required', 'name') && signupForm.controls['name'].invalid">Please
+										Enter your Name</mat-error>
+								</mat-form-field>
+							</div>
+							<div class="input-box" style="margin-top: 5vh;">
+								<mat-form-field appearance="outline" style="width: 60vh;">
+									<mat-label><mat-icon
+											style="font-size: x-large; padding-top: 1vh; margin-right: 1vh;">
+											email</mat-icon>Email</mat-label>
+									<input type="email" style="margin-left: -4vh;" formControlName="email"
+										matInput required>
+									<mat-error
+										*ngIf="signupForm.hasError('required', 'email') && signupForm.controls['email'].invalid">Please
+										Enter your Email</mat-error>
+								</mat-form-field>
+							</div>
+							<div class="input-box" style="margin-top: 5vh;">
+								<mat-form-field appearance="outline" style="width: 60vh;">
+									<mat-label><mat-icon
+											style="font-size: 25px; padding-top: .5vh; margin-right: 1vh;">lock</mat-icon>Password</mat-label>
+									<input type="password" style="margin-left: -4vh;"
+										formControlName="password" [type]="hide ? 'password' : 'text'"
+										matInput required>
+									<button mat-icon-button matSuffix (click)="hide = !hide"
+										[attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+										<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+									</button>
+									<mat-error
+										*ngIf="signupForm.hasError('required', 'password') && signupForm.controls['password'].invalid">Please
+										Enter your Password</mat-error>
+								</mat-form-field>
+							</div>
+							<section style="margin-top: 1vh;">
+								<div class="example-button-row">
+									<button mat-raised-button
+										style="background-color: #06BBCC; color: #ddd; width: 359px;">Sign Up</button>
+								</div>
+							</section>
+							<div class="text sign-up-text">Already have an account? <label
+									for="flip">Login now</label></div>
+						</div>
+					</form>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div>
+	<h2>Registration</h2>
+	<form>
+		<div>
+
+			<mat-form-field appearance="outline">
+				<mat-label><mat-icon>lock</mat-icon> Enter your
+					password</mat-label>
+				<input matInput>
+			</mat-form-field>
+		</div>
+	</form>
+</div> -->
+
+<!-- auth-form.component.html -->
