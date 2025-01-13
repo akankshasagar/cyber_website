@@ -61,6 +61,9 @@
                             class="formbold-form-input"
                             required
                         />
+                        <div *ngIf="imageError" class="text-danger">
+                            {{ imageError }}
+                        </div>
                     </div>
 
                     <div class="formbold-input-group">

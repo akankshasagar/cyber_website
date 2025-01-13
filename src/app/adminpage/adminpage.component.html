@@ -30,15 +30,13 @@
             <h1 class="mb-5">Courses Available</h1>
         </div>
         <a class="btn btn-primary py-3 px-5 mt-2" href="adminpage/addcourse">Add Course</a>
-        <div class="row g-4 justify-content-center">
+        <!-- <div class="row g-4 justify-content-center">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="../../assets/img2/course-1.jpeg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">                            
-                            <!-- <a (click)="Start()" class="flex-shrink-0 btn btn-sm btn-primary px-5"
-                                style="border-radius: 30PX 30px 30px 30px;">Start Now</a> -->
-                            <a (click)="Start()" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">                                                        
+                            <a class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
                             <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
                         </div>
                     </div>
@@ -49,22 +47,93 @@
                     </div>
                 </div>
             </div>            
+        </div> -->
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        <div *ngFor="let course of courses" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="course-item bg-light">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid" [src]="course.imagePath" [alt]="course.courseName" />
+                    <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                        <a (click)="Start(course)" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
+                        <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
+                    </div>
+                </div>
+                <div class="text-center p-4 pb-0">
+                    <h5 class="mb-4">{{ course.courseName }}</h5>
+                    <!-- <p>{{ course.courseDescription }}</p> -->
+                </div>
+                <!-- <div class="text-center py-3">
+                    <a [href]="course.filePath" class="btn btn-sm btn-outline-primary" download>Download File</a>
+                </div> -->
+            </div>
         </div>
     </div>
 
-    <div *ngFor="let course of courses">
+    <!-- <div *ngFor="let course of courses">
         <h3>{{ course.courseName }}</h3>
         <p>{{ course.courseDescription }}</p>
         <img [src]="course.imagePath" alt="{{ course.courseName }}" />
         <a [href]="course.filePath" download>Download File</a>
-    </div>
+    </div> -->
       
       
 </div>
 <!-- Courses End -->
 
 <!---Course About starts-->
-<div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
+
+<!-- <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
+    <div class="container">
+      <div class="card shadow">
+        <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
+          <div class="row gx-0">
+            <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
+              <div class="position-relative h-100">
+                <img class="img-fluid position-absolute w-100 h-100" [src]="selectedCourse?.imagePath" [alt]="selectedCourse?.courseName">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 wow" data-wow-delay="0.3s">
+              <div class="card-body">
+                <h1 class="mb-4">{{ selectedCourse?.courseName }}</h1>
+                <p class="mb-4">{{ selectedCourse?.courseDescription }}</p>
+                <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [href]="'courses/' + selectedCourse?.id" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
+                <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3 d-lg-block" aria-label="Close" (click)="closeCard()"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="modal-backdrop" *ngIf="start">
+    <div class="modal-container">
+      <div class="card shadow">
+        <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
+          <div class="row gx-0">
+            <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
+              <div class="position-relative h-100">
+                <img class="img-fluid position-absolute w-100 h-100" [src]="selectedCourse?.imagePath" [alt]="selectedCourse?.courseName">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-2" data-wow-delay="0.3s"> <!--class="col-lg-6 order-lg-2 wow"-->
+              <div class="card-body">
+                <h1 class="mb-4">{{ selectedCourse?.courseName }}</h1>
+                <p class="mb-4">{{ selectedCourse?.courseDescription }}</p>
+                <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [href]="'courses/' + selectedCourse?.id" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
+                <button type="button" class="btn-close" aria-label="Close" (click)="closeCard()"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+  
+
+<!-- <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start2">
     <div class="container">
         <div class="card shadow">
             <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
@@ -87,7 +156,7 @@
         </div>
         </div>
     </div>
-</div>
+</div> -->
     
 <!--Course About Ends-->
 

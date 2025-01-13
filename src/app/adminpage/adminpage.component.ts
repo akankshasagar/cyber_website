@@ -11,8 +11,10 @@ import { CourseService } from '../services/course.service';
 export class AdminpageComponent {
 
   start: boolean = false;
+  start2: boolean = false;
   userRole: string | null = null;
   courses: any[] = [];
+  selectedCourse: any = null;
 
   constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService) { 
   
@@ -47,12 +49,22 @@ export class AdminpageComponent {
       });
   }
 
-  Start(){
-    this.start = true;
+  // Start2(){
+  //   this.start = true;
+  // }
+
+  Start(course: any): void {
+    this.selectedCourse = course;
+    this.start = true; // Display the modal
+    console.log(course);
+    console.log(this.selectedCourse);
+    document.body.style.overflow = 'hidden';
   }
 
   closeCard() {
     this.start = false;
+    this.selectedCourse = null;
+    document.body.style.overflow = '';
   }
 
 }
