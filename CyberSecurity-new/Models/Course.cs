@@ -7,5 +7,6 @@
         public string CourseDescription { get; set; }
         public string ImagePath { get; set; }
         public string FilePath { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -85,6 +85,9 @@ namespace CyberSecurity_new.Migrations
                     b.Property<string>("CourseName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("FilePath")
                         .HasColumnType("nvarchar(max)");
 

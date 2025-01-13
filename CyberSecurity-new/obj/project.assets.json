@@ -7559,7 +7559,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "System.Drawing.Common >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -7569,11 +7570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Akanksha Mudge\\Downloads\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
+      "projectUniqueName": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
       "projectName": "CyberSecurity-new",
-      "projectPath": "C:\\Users\\Akanksha Mudge\\Downloads\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
+      "projectPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
       "packagesPath": "C:\\Users\\Akanksha Mudge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Akanksha Mudge\\Downloads\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\obj\\",
+      "outputPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7648,6 +7649,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           }
         },
         "imports": [
