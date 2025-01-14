@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
+import { User } from '../Model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class AuthService {
 
   private baseUrl:string = "https://localhost:7243/api/User/";
   private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
+  private apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
 
   private isacttest001: string = "https://localhost:7243/api/IsactAnswers001";
   private attacksurfacestest001: string = "https://localhost:7243/api/AttackSurfacesAnswers001";
@@ -184,6 +186,10 @@ export class AuthService {
   UpdatePassword(email: string, newPassword: string): Observable<any> {
     const url = `https://localhost:7243/api/OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
     return this.http.post<any>(url, {email, newPassword});
+  }
+
+  registerUser(user: User): Observable<any> {
+    return this.http.post<any>(this.apiUrl, user);
   }
 
 }

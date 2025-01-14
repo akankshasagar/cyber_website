@@ -47,4 +47,184 @@
     margin-right: 10px;
     cursor: pointer;
   }
+
+  .modal-backdrop2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-container2 {
+    background: #fff;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+  .modal-container2 .btn-close2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-container2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-container2 .input-box {
+    margin-bottom: 15px;
+}
+
+.modal-container2 .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-container2 .input-box button {
+    width: 100%;
+    background: #4070f4;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-container2 .input-box button:hover {
+    background: #0e4bf1;
+}
   
+
+  .wrapper{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    justify-content: center;
+    position: relative;
+  }
+  .wrapper h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  .wrapper h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+  }
+  .wrapper form{
+    margin-top: 30px;
+  }
+  .wrapper form .input-box{
+    height: 52px;
+    margin: 18px 0;
+  }
+  form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: #4070f4;
+  }
+  form .policy{
+    display: flex;
+    align-items: center;
+  }
+  form h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .input-box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+  }
+  .input-box.button input:hover{
+    background: #0e4bf1;
+  }
+  form .text h3{
+   color: #333;
+   width: 100%;
+   text-align: center;
+  }
+  form .text h3 a{
+    color: #4070f4;
+    text-decoration: none;
+  }
+  form .text h3 a:hover{
+    text-decoration: underline;
+  }  
+
+  /* Custom dropdown styling */
+.custom-dropdown {
+  width: 100%; /* Full width of the container */
+  padding: 10px 15px; /* Adds padding inside the dropdown */
+  font-size: 16px; /* Font size for the options */
+  /* background-color: #f0f0f0; */
+  border: 1px solid #ccc; 
+  border-radius: 5px; /* Rounded corners */
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+}
+
+/* Styling for the placeholder text */
+.custom-dropdown option:disabled {
+  color: #999; /* Grey color for the placeholder */
+  font-style: italic; /* Italicize placeholder text */
+}
+
+/* Remove default dropdown arrow */
+.custom-dropdown::-ms-expand {
+  display: none; /* Removes default arrow in Internet Explorer */
+}
+
+/* Hover and focus states */
+.custom-dropdown:hover {
+  border-color: #888; /* Darker border on hover */
+}
+
+.custom-dropdown:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #0056b3; /* Blue border on focus */
+}

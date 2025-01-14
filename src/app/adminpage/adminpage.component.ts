@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
+import { DepartmentServiceService } from '../services/department-service.service';
+import { User } from '../Model/user.model';
+import { RoleService } from '../services/role.service';
+import { RoleMaster } from '../Model/rolemaster.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-adminpage',
@@ -15,14 +20,23 @@ export class AdminpageComponent {
   userRole: string | null = null;
   courses: any[] = [];
   selectedCourse: any = null;
+  isFormVisible: boolean = false;
+  user: User = new User();
+  apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
+  departments: { deptId: number, deptName: string }[] = [];
+  selectedDeptId: number = 0;
+  roles: RoleMaster[] = [];
+  selectedRoleId: number = 0; // Default roleId value
 
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService) { 
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService) { 
   
   }
   
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
-    this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token
+    this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token 
+    this.loadDepartments();   
+    this.loadRoles();
     this.courseService.getCourses().subscribe({
       next: (data) => {
         this.courses = data;
@@ -31,6 +45,55 @@ export class AdminpageComponent {
         console.error('Failed to fetch courses:', error);
       },
     });
+  }  
+
+  onSubmit(): void {
+    // Set the departmentId and roleId based on the selected values
+    this.user.deptId = this.selectedDeptId;
+    this.user.roleId = this.selectedRoleId;
+
+    // Send the user data to the backend for registration
+    this.auth.registerUser(this.user).subscribe(
+      (response) => {
+        // console.log('Registration Successful:', response);
+        // alert('Registration Successful');
+        this.toastr.success(response.message);
+        this.isFormVisible = false;  // Hide form on success
+      },
+      (error) => {
+        console.error('Registration Failed:', error);
+        let errorMessage = 'Some Other Error Occured';
+        if (error?.error?.Message) {
+          errorMessage = error.error.Message;
+        }
+        this.toastr.error(error?.error.message);
+      }
+    );
+  }
+
+
+  // Method to load departments from API
+  loadDepartments(): void {
+    this.departmentService.getDepartments().subscribe(
+      (data) => {
+        this.departments = data;
+      },
+      (error) => {
+        console.error('Error loading departments', error);
+      }
+    );
+  }
+
+  // Load roles from the Role service
+  loadRoles(): void {
+    this.roleService.getRoles().subscribe(
+      (data) => {
+        this.roles = data;
+      },
+      (error) => {
+        console.error('Error loading roles', error);
+      }
+    );
   }
   
   logout() {
@@ -47,6 +110,14 @@ export class AdminpageComponent {
           console.error('Error occurred during enrollment', error);
         }
       });
+  }
+
+  showForm(): void {
+    this.isFormVisible = true;
+  }
+
+  closeForm(): void {
+    this.isFormVisible = false;
   }
 
   Start(course: any): void {
