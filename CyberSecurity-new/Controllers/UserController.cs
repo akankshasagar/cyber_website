@@ -105,6 +105,98 @@ namespace CyberSecurity_new.Controllers
             });
         }
 
+        // UserController.cs
+        [HttpPost("RegisterAdminOrManager")]
+        public async Task<IActionResult> RegisterAdminOrManager([FromBody] User userObj)
+        {
+            if (userObj == null)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Validate RoleId from RoleMaster
+            var role = await _authContext.rolemasters.FindAsync(userObj.RoleId);
+            if (role == null)
+                return BadRequest(new { Message = "Invalid Role" });
+
+            // Ensure only Admin or Manager roles are allowed to register
+            //if (userObj.RoleId != 1 && userObj.RoleId != 2)
+            //    return BadRequest(new { Message = "Only Admin or Manager roles can register other Admins or Managers." });
+
+            //// Verify the current user's role (Assuming GetCurrentUserAsync() method is implemented)
+            //var currentUser = await GetCurrentUserAsync();
+            //if (currentUser == null || currentUser.RoleId != 1)
+            //    return Forbid(); // Only Admin can register Admins or Managers
+
+            // Check if the email already exists
+            if (await CheckEmailExistsAsync(userObj.Email))
+                return BadRequest(new { Message = "Email already Exists!" });
+
+            // Check password strength
+            var pass = CheckPasswordStrength(userObj.Password);
+            if (!string.IsNullOrEmpty(pass))
+                return BadRequest(new { Message = pass.ToString() });
+
+            // Hash the password and get the hash and salt
+            var (passwordHash, passwordSalt) = PasswordHasher2.HashPassword(userObj.Password);
+
+            // Handle DeptName to fetch DeptId if not provided
+            if (userObj.DeptId == 0)
+            {
+                if (string.IsNullOrEmpty(userObj.Department?.DeptName))
+                    return BadRequest(new { Message = "Either DeptId or DeptName must be provided" });
+
+                // Fetch the DeptId based on DeptName
+                var department = await _authContext.Departments
+                    .FirstOrDefaultAsync(d => d.DeptName == userObj.Department.DeptName);
+
+                if (department == null)
+                    return BadRequest(new { Message = "Invalid Department Name provided" });
+
+                // Assign the fetched DeptId
+                userObj.DeptId = department.DeptId;
+            }
+            else
+            {
+                // Validate DeptId if provided
+                var department = await _authContext.Departments
+                    .FirstOrDefaultAsync(d => d.DeptId == userObj.DeptId);
+
+                if (department == null)
+                    return BadRequest(new { Message = "Invalid Department selected" });
+            }
+
+            userObj.Password = PasswordHasher.HashPassword(userObj.Password);
+            userObj.Password_Hash = passwordHash;
+            userObj.Passowrd_Salt = passwordSalt;
+            userObj.CreatedDate = DateTime.UtcNow;
+
+            // Ensure no new Department is linked in the user model
+            userObj.Department = null;
+
+            // Save the new user to the database
+            await _authContext.Users.AddAsync(userObj);
+            await _authContext.SaveChangesAsync();
+
+            string roleName = userObj.RoleId == 1 ? "Admin" : "Manager";
+
+            // Return success message
+            return Ok(new
+            {
+                Message = $"{roleName} Registered Successfully!",
+                RegisteredRole = roleName
+            });
+        }
+
+        private async Task<User> GetCurrentUserAsync()
+        {
+            // Replace this with your actual implementation to get the current user
+            // For example, fetch the user from the token or session
+            return await _authContext.Users.FirstOrDefaultAsync(u => u.Email == User.Identity.Name);
+        }
+
+
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] User userObj)
         {

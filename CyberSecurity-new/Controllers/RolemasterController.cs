@@ -2,6 +2,7 @@
 using CyberSecurity_new.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CyberSecurity_new.Controllers
 {
@@ -37,6 +38,16 @@ namespace CyberSecurity_new.Controllers
                 return StatusCode(500, new { Message = ex.InnerException?.Message ?? ex.Message });
             }
         }
+
+        [HttpGet("GetRoles")]
+        public async Task<IActionResult> GetRoles()
+        {
+            var roles = await _authContext.rolemasters
+                .Select(r => new { r.RoleId, r.RoleName }).ToListAsync();
+
+            return Ok(roles);
+        }
+
 
     }
 }

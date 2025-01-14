@@ -1003,6 +1003,18 @@
         }
       }
     },
+    "/api/Rolemaster/GetRoles": {
+      "get": {
+        "tags": [
+          "Rolemaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/TestAnswers01": {
       "post": {
         "tags": [
@@ -1091,6 +1103,37 @@
       }
     },
     "/api/User/Register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/RegisterAdminOrManager": {
       "post": {
         "tags": [
           "User"

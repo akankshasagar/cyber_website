@@ -653,6 +653,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.RolemasterController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Rolemaster/GetRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.TestAnswers01",
     "Method": "SubmitForm",
     "RelativePath": "api/TestAnswers01",
@@ -744,6 +754,22 @@
     "ContainingType": "CyberSecurity_new.Controllers.UserController",
     "Method": "RegisterUser",
     "RelativePath": "api/User/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userObj",
+        "Type": "CyberSecurity_new.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.UserController",
+    "Method": "RegisterAdminOrManager",
+    "RelativePath": "api/User/RegisterAdminOrManager",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
