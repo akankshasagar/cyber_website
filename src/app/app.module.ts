@@ -81,6 +81,7 @@ import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbu
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { EditcourseComponent } from './adminpage/editcourse/editcourse.component';
 import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -148,7 +149,8 @@ import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
     CyberTest001Component,
     AdminpageComponent,
     EditcourseComponent,
-    AddcourseComponent
+    AddcourseComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
