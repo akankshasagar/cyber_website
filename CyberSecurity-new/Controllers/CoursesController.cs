@@ -58,6 +58,27 @@ namespace CyberSecurity_new.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddCourse([FromForm] CourseDto courseDto)
         {
+            // Validate if required fields are null or empty
+            if (string.IsNullOrWhiteSpace(courseDto.Name))
+            {
+                return BadRequest(new { Message = "Course name is required." });
+            }
+
+            if (string.IsNullOrWhiteSpace(courseDto.Description))
+            {
+                return BadRequest(new { Message = "Course description is required." });
+            }
+
+            if (courseDto.Image == null)
+            {
+                return BadRequest(new { Message = "Image is required." });
+            }
+
+            if (courseDto.File == null)
+            {
+                return BadRequest(new { Message = "File is required." });
+            }
+
             var imageFileName = Guid.NewGuid() + Path.GetExtension(courseDto.Image.FileName);
             var fileFileName = Guid.NewGuid() + Path.GetExtension(courseDto.File.FileName);
 
@@ -103,8 +124,12 @@ namespace CyberSecurity_new.Controllers
             _context.Courses.Add(course);
             await _context.SaveChangesAsync();
 
-            return Ok(course);
+            return Ok(new
+            {
+                Message = "Course Added Successfully!"
+            });
         }
+
 
         [HttpGet]
         public IActionResult GetCourses()
@@ -127,64 +152,111 @@ namespace CyberSecurity_new.Controllers
             return Ok(courses);
         }
 
+        //[HttpGet("{id}")]
+        //public IActionResult GetCourseById(int id)
+        //{
+        //    try
+        //    {
+        //        var indianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time");
+
+        //        // Fetch the course from the database
+        //        var course = _context.Courses
+        //            .Where(c => c.Id == id)
+        //            .Select(c => new
+        //            {
+        //                c.Id,
+        //                c.CourseName,
+        //                c.CourseDescription,
+        //                ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}{c.ImagePath}" : null,
+        //                FilePath = c.FilePath != null ? $"{Request.Scheme}://{Request.Host}{c.FilePath}" : null,                        
+        //                c.CreatedAt
+        //            })
+        //            .FirstOrDefault();
+
+        //        if (course == null)
+        //        {
+        //            return NotFound(new { message = "Course not found" });
+        //        }
+
+        //        // Convert CreatedAt to IST
+        //        var convertedCreatedAt = TimeZoneInfo.ConvertTimeFromUtc(course.CreatedAt, indianTimeZone);
+
+        //        // Read the file content if the file exists
+        //        string fileContent = null;
+        //        if (!string.IsNullOrEmpty(course.FilePath) && System.IO.File.Exists(course.FilePath))
+        //        {
+        //            fileContent = System.IO.File.ReadAllText(course.FilePath);
+        //        }
+
+        //        // Return the response with file content
+        //        return Ok(new
+        //        {
+        //            course.Id,
+        //            course.CourseName,
+        //            course.CourseDescription,
+        //            course.ImagePath,
+        //            course.FilePath,
+        //            CreatedAt = convertedCreatedAt,
+        //            FileContent = fileContent // Include the file content in the response
+        //        });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Log the exception if needed
+        //        Console.WriteLine($"Error in GetCourseById: {ex.Message}");
+
+        //        // Return a generic error response
+        //        return StatusCode(500, new { message = "An error occurred while processing your request.", details = ex.Message });
+        //    }
+        //}
+
         [HttpGet("{id}")]
         public IActionResult GetCourseById(int id)
         {
-            try
+            var course = _context.Courses
+                .Where(c => c.Id == id)
+                .Select(c => new
+                {
+                    c.Id,
+                    c.CourseName,
+                    c.CourseDescription,
+                    ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}{c.ImagePath}" : null,
+                    FilePath = c.FilePath != null ? $"{Request.Scheme}://{Request.Host}{c.FilePath}" : null,
+                    FileContent = c.FilePath != null && System.IO.File.Exists(c.FilePath)
+                        ? System.IO.File.ReadAllText(c.FilePath)
+                        : null
+                })
+                .FirstOrDefault();
+
+            if (course == null)
             {
-                var indianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time");
-
-                // Fetch the course from the database
-                var course = _context.Courses
-                    .Where(c => c.Id == id)
-                    .Select(c => new
-                    {
-                        c.Id,
-                        c.CourseName,
-                        c.CourseDescription,
-                        ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}{c.ImagePath}" : null,
-                        FilePath = c.FilePath != null ? $"{Request.Scheme}://{Request.Host}{c.FilePath}" : null,
-                        c.FilePath, // Include the raw file path
-                        c.CreatedAt
-                    })
-                    .FirstOrDefault();
-
-                if (course == null)
-                {
-                    return NotFound(new { message = "Course not found" });
-                }
-
-                // Convert CreatedAt to IST
-                var convertedCreatedAt = TimeZoneInfo.ConvertTimeFromUtc(course.CreatedAt, indianTimeZone);
-
-                // Read the file content if the file exists
-                string fileContent = null;
-                if (!string.IsNullOrEmpty(course.FilePath) && System.IO.File.Exists(course.FilePath))
-                {
-                    fileContent = System.IO.File.ReadAllText(course.FilePath);
-                }
-
-                // Return the response with file content
-                return Ok(new
-                {
-                    course.Id,
-                    course.CourseName,
-                    course.CourseDescription,
-                    course.ImagePath,
-                    course.FilePath,
-                    CreatedAt = convertedCreatedAt,
-                    FileContent = fileContent // Include the file content in the response
-                });
+                return NotFound(new { message = "Course not found" });
             }
-            catch (Exception ex)
-            {
-                // Log the exception if needed
-                Console.WriteLine($"Error in GetCourseById: {ex.Message}");
 
-                // Return a generic error response
-                return StatusCode(500, new { message = "An error occurred while processing your request.", details = ex.Message });
-            }
+            return Ok(course);
         }
+
+
+        [HttpGet("download/{id}")]
+        public IActionResult DownloadCourseFile(int id)
+        {
+            var course = _context.Courses.FirstOrDefault(c => c.Id == id);
+            if (course == null || string.IsNullOrEmpty(course.FilePath))
+            {
+                return NotFound("File not found.");
+            }
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), course.FilePath.TrimStart('/'));
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("File does not exist.");
+            }
+
+            var fileName = Path.GetFileName(filePath);
+            var contentType = "application/octet-stream";
+            return PhysicalFile(filePath, contentType, fileName);
+        }
+
 
     }
 

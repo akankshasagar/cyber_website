@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj": {}
+    "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\CyberSecurity-new.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj": {
+    "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\CyberSecurity-new.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\CyberSecurity-new.csproj",
         "projectName": "CyberSecurity-new",
-        "projectPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\CyberSecurity-new.csproj",
-        "packagesPath": "C:\\Users\\Akanksha Mudge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\obj\\",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\CyberSecurity-new.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Akanksha Mudge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

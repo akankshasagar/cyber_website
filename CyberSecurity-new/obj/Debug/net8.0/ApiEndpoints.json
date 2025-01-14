@@ -129,6 +129,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.CoursesController",
+    "Method": "DownloadCourseFile",
+    "RelativePath": "api/Courses/download/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.CoursesCompletedController",
     "Method": "Enroll",
     "RelativePath": "api/CoursesCompleted",
