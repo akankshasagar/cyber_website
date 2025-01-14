@@ -115,6 +115,7 @@ namespace CyberSecurity_new.Controllers
             var courses = _context.Courses
                 .Select(course => new
                 {
+                    course.Id,
                     course.CourseName,
                     course.CourseDescription,
                     ImagePath = $"{Request.Scheme}://{Request.Host}{course.ImagePath}",
@@ -126,6 +127,64 @@ namespace CyberSecurity_new.Controllers
             return Ok(courses);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetCourseById(int id)
+        {
+            try
+            {
+                var indianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time");
+
+                // Fetch the course from the database
+                var course = _context.Courses
+                    .Where(c => c.Id == id)
+                    .Select(c => new
+                    {
+                        c.Id,
+                        c.CourseName,
+                        c.CourseDescription,
+                        ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}{c.ImagePath}" : null,
+                        FilePath = c.FilePath != null ? $"{Request.Scheme}://{Request.Host}{c.FilePath}" : null,
+                        c.FilePath, // Include the raw file path
+                        c.CreatedAt
+                    })
+                    .FirstOrDefault();
+
+                if (course == null)
+                {
+                    return NotFound(new { message = "Course not found" });
+                }
+
+                // Convert CreatedAt to IST
+                var convertedCreatedAt = TimeZoneInfo.ConvertTimeFromUtc(course.CreatedAt, indianTimeZone);
+
+                // Read the file content if the file exists
+                string fileContent = null;
+                if (!string.IsNullOrEmpty(course.FilePath) && System.IO.File.Exists(course.FilePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(course.FilePath);
+                }
+
+                // Return the response with file content
+                return Ok(new
+                {
+                    course.Id,
+                    course.CourseName,
+                    course.CourseDescription,
+                    course.ImagePath,
+                    course.FilePath,
+                    CreatedAt = convertedCreatedAt,
+                    FileContent = fileContent // Include the file content in the response
+                });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if needed
+                Console.WriteLine($"Error in GetCourseById: {ex.Message}");
+
+                // Return a generic error response
+                return StatusCode(500, new { message = "An error occurred while processing your request.", details = ex.Message });
+            }
+        }
 
     }
 

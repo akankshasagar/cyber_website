@@ -83,6 +83,22 @@
   },
   {
     "ContainingType": "CyberSecurity_new.Controllers.CoursesController",
+    "Method": "GetCourseById",
+    "RelativePath": "api/Courses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.CoursesController",
     "Method": "AddCourse",
     "RelativePath": "api/Courses/add",
     "HttpMethod": "POST",
