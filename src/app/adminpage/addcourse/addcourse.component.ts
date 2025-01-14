@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
 
@@ -17,18 +18,12 @@ export class AddcourseComponent {
   selectedFile: File | null = null;
   imageError: string | null = null;
 
-  constructor(private auth: AuthService, private http: HttpClient, private fb: FormBuilder, private courseService: CourseService) { 
+  constructor(private auth: AuthService, private http: HttpClient, private fb: FormBuilder, private courseService: CourseService, private toastr: ToastrService) { 
     this.courseForm = this.fb.group({
       courseName: [''],
       courseDescription: [''],
     });
   }
-
-  // onFileSelect(event: Event, type: string): void {
-  //   const file = (event.target as HTMLInputElement).files![0];
-  //   if (type === 'image') this.selectedImage = file;
-  //   else if (type === 'file') this.selectedFile = file;
-  // }
 
   onFileSelect(event: Event, type: string): void {
     const file = (event.target as HTMLInputElement).files![0];
@@ -63,7 +58,7 @@ export class AddcourseComponent {
   onSubmit(): void {
 
     if (this.imageError) {
-      alert('Please resolve the image error before submitting.');
+      this.toastr.error('Please resolve the image error before submitting.');
       return;
     }
     const formData = new FormData();
@@ -74,11 +69,22 @@ export class AddcourseComponent {
 
   this.courseService.addCourse(formData).subscribe({
     next: (response) => {
-      alert('Course added successfully!');
+      this.toastr.success(response.message);
+      // alert('Course added successfully!');
       console.log('Response:', response);
+
+      this.courseForm.reset();
+      this.selectedImage = null;
+      this.selectedFile = null;
+      this.imageError = null;
+
+      // Manually reset the file inputs
+      (document.getElementById('imageInput') as HTMLInputElement).value = '';
+      (document.getElementById('fileInput') as HTMLInputElement).value = '';
     },
     error: (error) => {
-      alert('Failed to add course.');
+      this.toastr.error(error?.error.message);
+      // alert('Failed to add course.');
       console.error('Error:', error);
     },
   });

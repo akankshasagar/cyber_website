@@ -11,9 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a class="nav-item nav-link" href="adminpage">Home</a>
-            <!-- <a class="nav-item nav-link">About</a> -->
             <a class="nav-item nav-link active" href="courses">Courses</a>
-            <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
         </div>
         <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
                 class="fa fa-arrow-right ms-3"></i></a>
@@ -29,27 +27,10 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
             <h1 class="mb-5">Courses Available</h1>
         </div>
-        <a class="btn btn-primary py-3 px-5 mt-2" href="adminpage/addcourse">Add Course</a>
-        <!-- <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="../../assets/img2/course-1.jpeg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">                                                        
-                            <a class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
-                            <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">                        
-                        <h5 class="mb-4">ADVANCED CYBER THREATS In DIGITAL ERA</h5>
-                    </div>
-                    <div class="d-flex border-top">                        
-                    </div>
-                </div>
-            </div>            
-        </div> -->
+        <a class="btn btn-primary py-3 px-5 mt-2 me-3" href="adminpage/addcourse">Add Course</a> 
+        <a class="btn btn-primary py-3 px-5 mt-2">Register Users</a>        
     </div>
-
+    <br>
     <div class="row g-4 justify-content-center">
         <div *ngFor="let course of courses" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="course-item bg-light">
@@ -62,51 +43,14 @@
                 </div>
                 <div class="text-center p-4 pb-0">
                     <h5 class="mb-4">{{ course.courseName }}</h5>
-                    <!-- <p>{{ course.courseDescription }}</p> -->
                 </div>
-                <!-- <div class="text-center py-3">
-                    <a [href]="course.filePath" class="btn btn-sm btn-outline-primary" download>Download File</a>
-                </div> -->
             </div>
         </div>
-    </div>
-
-    <!-- <div *ngFor="let course of courses">
-        <h3>{{ course.courseName }}</h3>
-        <p>{{ course.courseDescription }}</p>
-        <img [src]="course.imagePath" alt="{{ course.courseName }}" />
-        <a [href]="course.filePath" download>Download File</a>
-    </div> -->
-      
-      
+    </div>    
 </div>
 <!-- Courses End -->
 
 <!---Course About starts-->
-
-<!-- <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
-    <div class="container">
-      <div class="card shadow">
-        <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
-          <div class="row gx-0">
-            <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
-              <div class="position-relative h-100">
-                <img class="img-fluid position-absolute w-100 h-100" [src]="selectedCourse?.imagePath" [alt]="selectedCourse?.courseName">
-              </div>
-            </div>
-            <div class="col-lg-6 order-lg-2 wow" data-wow-delay="0.3s">
-              <div class="card-body">
-                <h1 class="mb-4">{{ selectedCourse?.courseName }}</h1>
-                <p class="mb-4">{{ selectedCourse?.courseDescription }}</p>
-                <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [href]="'courses/' + selectedCourse?.id" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
-                <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3 d-lg-block" aria-label="Close" (click)="closeCard()"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   
   <div class="modal-backdrop" *ngIf="start">
     <div class="modal-container">
@@ -132,58 +76,12 @@
     </div>
   </div>    
   
-
-<!-- <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start2">
-    <div class="container">
-        <div class="card shadow">
-            <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
-            <div class="row gx-0">
-                <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="../../assets/img2/course-1.jpeg" alt="" >
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2 wow" data-wow-delay="0.3s">
-                    <div class="card-body">                        
-                        <h1 class="mb-4">ADVANCED CYBER THREATS In DIGITAL ERA</h1>
-                        <p class="mb-4">Cybersecurity education should be accessible to everyone.</p>
-                        <p class="mb-4">Threats have the potential to steal or damage data, disrupt business, or create harm in general. It refers to the sophisticated and evolving cybersecurity challenges that arise in the modern digital age. As technology advances and becomes more integrated into various aspects of daily life and business operations, the threat landscape also becomes increasingly complex and diverse.</p>                        
-                        <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" href="courses/cs001" (click)="enroll('','Enrolled in ADVANCED CYBER THREATS In DIGITAL ERA')">Start Now</a>
-                        <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3 d-lg-block" aria-label="Close" (click)="closeCard()"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div> -->
-    
 <!--Course About Ends-->
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-25 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-55">
-        <div class="row g-5">
-            <!-- <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Quick Link</h4> -->
-            <!-- <a class="btn btn-link" href="">About Us</a> -->
-            <!-- <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Privacy Policy</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">FAQs & Help</a>
-            </div> -->
-            <!-- <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>XYZ, India</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+12 32456 27890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i></p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>      -->
+        <div class="row g-5">            
             <div class="container">
                 <div class="copyright">
                     <div class="row">

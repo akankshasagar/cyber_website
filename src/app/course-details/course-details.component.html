@@ -1,0 +1,14 @@
+<div class="container py-5">
+    <div class="card">
+        <div class="card-body">
+            <h1>{{ course?.courseName }}</h1>
+            <p>{{ course?.courseDescription }}</p>
+            <img *ngIf="course?.imagePath" [src]="course.imagePath" alt="Course Image" class="course-image img-fluid mb-3" />
+            <div *ngIf="course?.filePath">
+                <p>Course File:</p>
+                <a [href]="course.filePath" target="_blank" class="btn btn-primary">Download File</a>
+            </div>
+        </div>
+    </div>
+</div> 
+

@@ -49,10 +49,6 @@ export class AdminpageComponent {
       });
   }
 
-  // Start2(){
-  //   this.start = true;
-  // }
-
   Start(course: any): void {
     this.selectedCourse = course;
     this.start = true; // Display the modal

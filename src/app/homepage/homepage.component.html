@@ -265,7 +265,37 @@
     <!-- Services End -->
 
     <!-- Courses Start -->
+
     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Courses Available</h1>
+            </div>
+            <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="adminpage/addcourse">Add Course</a>         -->
+        </div>
+    
+        <div class="row g-4 justify-content-center">
+            <div *ngFor="let course of courses" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" [src]="course.imagePath" [alt]="course.courseName" />
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a (click)="Start(course)" class="flex-shrink-0 btn btn-sm btn-primary px-5"
+                                style="border-radius: 30PX 30px 30px 30px;">Start Now</a>
+                            <!-- <a (click)="Start(course)" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
+                            <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a> -->
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4">{{ course.courseName }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -277,70 +307,48 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="../../assets/img2/course-1.jpeg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <!-- <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px 0 0 30px;">Read More</a> -->
+                                
                                 <a (click)="Start()" class="flex-shrink-0 btn btn-sm btn-primary px-5"
                                     style="border-radius: 30PX 30px 30px 30px;">Start Now</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <!-- <h3 class="mb-0">$149.00</h3> -->
                             <h5 class="mb-4">ADVANCED CYBER THREATS In DIGITAL ERA</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Name</small> -->
-                            <!-- <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small> -->
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="../../assets/img2/course-2.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="courses/topic2" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                                    style="border-radius: 0 30px 30px 0;">Start Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">                            
-                            <h5 class="mb-4">CyberSecurity Course2</h5>
-                        </div>
-                        <div class="d-flex border-top">                            
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="../../assets/img2/course-3.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                                    style="border-radius: 0 30px 30px 0;">Start Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">                            
-                            <h5 class="mb-4">CyberSecurity Course3</h5>
-                        </div>
-                        <div class="d-flex border-top">                            
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Courses End -->
 
     <!---Course About starts-->
-    <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
+    <div class="modal-backdrop" *ngIf="start">
+        <div class="modal-container">
+          <div class="card shadow">
+            <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
+              <div class="row gx-0">
+                <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
+                  <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" [src]="selectedCourse?.imagePath" [alt]="selectedCourse?.courseName">
+                  </div>
+                </div>
+                <div class="col-lg-6 order-lg-2" data-wow-delay="0.3s"> <!--class="col-lg-6 order-lg-2 wow"-->
+                  <div class="card-body">
+                    <h1 class="mb-4">{{ selectedCourse?.courseName }}</h1>
+                    <p class="mb-4">{{ selectedCourse?.courseDescription }}</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [routerLink]="['/course-details', selectedCourse?.id]" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="closeCard()"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
         <div class="container">
             <div class="card shadow">
                 <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
@@ -363,7 +371,7 @@
             </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
 <!--Course About Ends-->
 
