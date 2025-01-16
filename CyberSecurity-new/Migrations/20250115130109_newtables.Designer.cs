@@ -4,6 +4,7 @@ using CyberSecurity_new.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CyberSecurity_new.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250115130109_newtables")]
+    partial class newtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -145,16 +147,13 @@ namespace CyberSecurity_new.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("CourseDescription")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CourseName")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ImagePath")
+                    b.Property<string>("ThumbnailImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -377,6 +376,30 @@ namespace CyberSecurity_new.Migrations
                     b.ToTable("dosanddontstest001", (string)null);
                 });
 
+            modelBuilder.Entity("CyberSecurity_new.Models.Image", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TopicId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("Image", (string)null);
+                });
+
             modelBuilder.Entity("CyberSecurity_new.Models.IRMngmntTest001", b =>
                 {
                     b.Property<int>("Id")
@@ -510,15 +533,17 @@ namespace CyberSecurity_new.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("CoursesId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Module_Name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
+
+                    b.HasIndex("CoursesId");
 
                     b.ToTable("Module", (string)null);
                 });
@@ -655,31 +680,17 @@ namespace CyberSecurity_new.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("ModuleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("T_ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Topic_Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Topic_Name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
-
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("topics");
+                    b.ToTable("Topic", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.User", b =>
@@ -775,6 +786,17 @@ namespace CyberSecurity_new.Migrations
                     b.ToTable("wirelessenvironmenttest001", (string)null);
                 });
 
+            modelBuilder.Entity("CyberSecurity_new.Models.Image", b =>
+                {
+                    b.HasOne("CyberSecurity_new.Models.Topic", "Topic")
+                        .WithMany("Images")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Topic");
+                });
+
             modelBuilder.Entity("CyberSecurity_new.Models.LoginHistory", b =>
                 {
                     b.HasOne("CyberSecurity_new.Models.User", "User")
@@ -788,30 +810,26 @@ namespace CyberSecurity_new.Migrations
 
             modelBuilder.Entity("CyberSecurity_new.Models.Module", b =>
                 {
-                    b.HasOne("CyberSecurity_new.Models.Courses", "Courses")
+                    b.HasOne("CyberSecurity_new.Models.Course", "Course")
                         .WithMany()
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Courses");
+                    b.HasOne("CyberSecurity_new.Models.Courses", null)
+                        .WithMany("Modules")
+                        .HasForeignKey("CoursesId");
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.Topic", b =>
                 {
-                    b.HasOne("CyberSecurity_new.Models.Courses", "Courses")
-                        .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("CyberSecurity_new.Models.Module", "Module")
-                        .WithMany()
+                        .WithMany("Topics")
                         .HasForeignKey("ModuleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Courses");
 
                     b.Navigation("Module");
                 });
@@ -833,6 +851,21 @@ namespace CyberSecurity_new.Migrations
                     b.Navigation("Department");
 
                     b.Navigation("Rolemaster");
+                });
+
+            modelBuilder.Entity("CyberSecurity_new.Models.Courses", b =>
+                {
+                    b.Navigation("Modules");
+                });
+
+            modelBuilder.Entity("CyberSecurity_new.Models.Module", b =>
+                {
+                    b.Navigation("Topics");
+                });
+
+            modelBuilder.Entity("CyberSecurity_new.Models.Topic", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

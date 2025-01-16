@@ -56,6 +56,22 @@
     ]
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.CourseController",
+    "Method": "AddCourseWithModulesAndTopics",
+    "RelativePath": "api/Course/AddCourseWithModulesAndTopics",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CyberSecurity_new.Controllers.CourseWithModulesAndTopicsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.CourseEnrollmentsController",
     "Method": "Enroll",
     "RelativePath": "api/CourseEnrollments",

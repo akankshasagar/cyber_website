@@ -92,6 +92,37 @@
         }
       }
     },
+    "/api/Course/AddCourseWithModulesAndTopics": {
+      "post": {
+        "tags": [
+          "Course"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseWithModulesAndTopicsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseWithModulesAndTopicsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseWithModulesAndTopicsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/CourseEnrollments": {
       "post": {
         "tags": [
@@ -1414,6 +1445,31 @@
         },
         "additionalProperties": false
       },
+      "CourseWithModulesAndTopicsDto": {
+        "type": "object",
+        "properties": {
+          "courseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "courseDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModuleDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CyberStalkBullyTest001": {
         "type": "object",
         "properties": {
@@ -1830,6 +1886,23 @@
         },
         "additionalProperties": false
       },
+      "ModuleDto": {
+        "type": "object",
+        "properties": {
+          "moduleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TopicDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PhishingSpoofingTest001": {
         "type": "object",
         "properties": {
@@ -1942,6 +2015,24 @@
             "type": "integer",
             "format": "int32",
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TopicDto": {
+        "type": "object",
+        "properties": {
+          "topicName": {
+            "type": "string",
+            "nullable": true
+          },
+          "topicDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "tImagePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

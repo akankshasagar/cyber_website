@@ -1,7 +1,9 @@
 ﻿using CyberSecurity_new.Context;
 using CyberSecurity_new.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CyberSecurity_new.Controllers
 {
@@ -255,7 +257,7 @@ namespace CyberSecurity_new.Controllers
             var fileName = Path.GetFileName(filePath);
             var contentType = "application/octet-stream";
             return PhysicalFile(filePath, contentType, fileName);
-        }
+        }        
 
 
     }

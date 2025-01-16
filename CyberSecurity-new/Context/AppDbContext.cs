@@ -25,6 +25,10 @@ namespace CyberSecurity_new.Context
         public DbSet<DnsAptTest001> DnsAptTest001s { get; set; }
         public DbSet<CyberStalkBullyTest001> CyberStalkBullyTest001s { get; set; }
         public DbSet<Course> Courses { get; set; }
+
+        public DbSet<Courses> course { get; set; }
+        public DbSet<Module> modules { get; set; }
+        public DbSet<Topic> topics { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
         public DbSet<OTPVerification> OTPVerifications { get; set; }
@@ -58,6 +62,22 @@ namespace CyberSecurity_new.Context
             modelBuilder.Entity<CyberStalkBullyTest001>().ToTable("cyberstalkbullytest001");
 
             modelBuilder.Entity<Course>().ToTable("CourseAdded");
+
+            modelBuilder.Entity<Courses>().ToTable("Course");
+            modelBuilder.Entity<Module>().ToTable("Module");
+            modelBuilder.Entity<Topic>()
+            .HasOne(t => t.Module)
+            .WithMany()
+            .HasForeignKey(t => t.ModuleId)
+            .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Module
+
+            modelBuilder.Entity<Topic>()
+            .HasOne(t => t.Courses)
+            .WithMany()
+            .HasForeignKey(t => t.CourseId)
+            .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Courses
+
+
             modelBuilder.Entity<CourseEnrollment>().ToTable("coursesEnrolled");
             modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");
 
