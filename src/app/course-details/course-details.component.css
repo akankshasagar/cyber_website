@@ -1,14 +1,14 @@
 html, body {
-    height: auto; /* Prevent fixed height */
-    overflow: auto; /* Ensure scrolling is enabled */
+    height: auto; 
+    overflow: auto; 
 }
 
 .course-image {
-    max-width: 300px; /* Set the maximum width */
-    max-height: 200px; /* Set the maximum height */
-    object-fit: contain; /* Maintain aspect ratio while fitting within dimensions */
-    margin: 0 auto; /* Center the image if needed */
-    display: block; /* Ensure it's treated as a block-level element */
+    max-width: 300px; 
+    max-height: 200px; 
+    object-fit: contain; 
+    margin: 0 auto; 
+    display: block; 
     height: auto;
 }
 
