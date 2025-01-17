@@ -1,7 +1,10 @@
-﻿using CyberSecurity_new.Context;
+﻿using System.Security.Claims;
+using CyberSecurity_new.Context;
 using CyberSecurity_new.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CyberSecurity_new.Controllers
 {
@@ -9,11 +12,12 @@ namespace CyberSecurity_new.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        private readonly AppDbContext _context;    
+        private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         public CourseController(AppDbContext context)
         {
-            _context = context;
+            _context = context;            
         }
 
         //[HttpPost("add")]
@@ -99,21 +103,166 @@ namespace CyberSecurity_new.Controllers
         //    });
         //}
 
+        //[HttpPost("AddCourseWithModulesAndTopics")]
+        //public async Task<IActionResult> AddCourseWithModulesAndTopics([FromBody] CourseWithModulesAndTopicsDto request)
+        //{
+        //    if (request == null || string.IsNullOrEmpty(request.CourseName))
+        //    {
+        //        return BadRequest(new { message = "Course data is required." });
+        //    }
+
+        //    // Create and save the course
+        //    var course = new Courses
+        //    {
+        //        CourseName = request.CourseName,
+        //        CourseDescription = request.CourseDescription,
+        //        ImagePath = request.ImagePath,
+        //        CreatedAt = DateTime.Now
+        //    };
+
+        //    _context.course.Add(course);
+        //    await _context.SaveChangesAsync();
+
+        //    // Add modules with topics
+        //    foreach (var moduleDto in request.Modules)
+        //    {
+        //        var module = new Module
+        //        {
+        //            Module_Name = moduleDto.ModuleName,
+        //            CourseId = course.Id,
+        //            CreatedAt = DateTime.Now
+        //        };
+
+        //        _context.modules.Add(module);
+        //        await _context.SaveChangesAsync();
+
+        //        foreach (var topicDto in moduleDto.Topics)
+        //        {
+        //            var topic = new Topic
+        //            {
+        //                Topic_Name = topicDto.TopicName,
+        //                Topic_Description = topicDto.TopicDescription,
+        //                T_ImagePath = topicDto.TImagePath,
+        //                ModuleId = module.Id,
+        //                CourseId = course.Id,
+        //                CreatedAt = DateTime.Now
+        //            };
+
+        //            _context.topics.Add(topic);
+        //        }
+        //    }
+
+        //    await _context.SaveChangesAsync();
+
+        //    return Ok(new { message = "Course, modules, and topics added successfully.", courseId = course.Id });
+        //}        
+
+
+        private string? SaveBase64Image(string? base64Image, string folderPath, string fileName)
+        {
+            //if (string.IsNullOrEmpty(base64Image) || !base64Image.Contains("base64"))
+            //{
+            //    throw new ArgumentException("Invalid base64 image string.");
+            //}
+
+            if (string.IsNullOrEmpty(base64Image))
+            {
+                return null; // No image to save
+            }
+
+            // Extract the directory path and ensure it exists
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            var base64Data = base64Image.Split(',')[1]; // Extract Base64 data
+            var imageData = Convert.FromBase64String(base64Data);
+
+            var filePath = Path.Combine(folderPath, fileName);
+
+            try
+            {
+                System.IO.File.WriteAllBytes(filePath, imageData);
+                return filePath;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving file: {ex.Message}");
+                throw;
+            }
+        }
+
+
         [HttpPost("AddCourseWithModulesAndTopics")]
         public async Task<IActionResult> AddCourseWithModulesAndTopics([FromBody] CourseWithModulesAndTopicsDto request)
         {
+
+            // Get the logged-in user's email from the claims (e.g., from JWT or session)
+            var userEmail = HttpContext.User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+
+            if (string.IsNullOrEmpty(userEmail))
+            {
+                return Unauthorized(new { message = "User not authenticated." });
+            }
+
+            // Fetch the logged-in user's details from the database
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+
+            if (user == null)
+            {
+                return Unauthorized(new { message = "User not found." });
+            }
+
+            // Validate user's role (RoleId != 3 is required)
+            if (user.RoleId == 3)
+            {
+                return Forbid("You do not have permission to add a course.");
+            }
+
+            // Validate that the course name and description are provided
             if (request == null || string.IsNullOrEmpty(request.CourseName))
             {
-                return BadRequest(new { message = "Course data is required." });
+                return BadRequest(new { message = "Course name is required." });
             }
+
+            if (string.IsNullOrEmpty(request.CourseDescription))
+            {
+                return BadRequest(new { message = "Course description is required." });
+            }
+
+            // Validate that at least one module is provided
+            if (request.Modules == null || request.Modules.Count == 0)
+            {
+                return BadRequest(new { message = "At least one module is required to add a course." });
+            }
+
+            // Validate that each module has at least one topic
+            foreach (var module in request.Modules)
+            {
+                if (module.Topics == null || module.Topics.Count == 0)
+                {
+                    return BadRequest(new { message = "Each module must have at least one topic." });
+                }
+            }
+
+            // Ensure the course image is provided
+            if (string.IsNullOrEmpty(request.ImagePath))
+            {
+                return BadRequest(new { message = "Course image is required." });
+            }
+
+            // Save the course image
+            var courseImagePath = SaveBase64Image(request.ImagePath, "wwwroot/images/courses", $"{Guid.NewGuid()}.png");
 
             // Create and save the course
             var course = new Courses
             {
                 CourseName = request.CourseName,
                 CourseDescription = request.CourseDescription,
-                ImagePath = request.ImagePath,
-                CreatedAt = DateTime.Now
+                ImagePath = courseImagePath,
+                CreatedAt = DateTime.Now,
+                CreatedBy = userEmail
             };
 
             _context.course.Add(course);
@@ -126,7 +275,8 @@ namespace CyberSecurity_new.Controllers
                 {
                     Module_Name = moduleDto.ModuleName,
                     CourseId = course.Id,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = userEmail
                 };
 
                 _context.modules.Add(module);
@@ -134,14 +284,20 @@ namespace CyberSecurity_new.Controllers
 
                 foreach (var topicDto in moduleDto.Topics)
                 {
+                    // Save topic image if provided
+                    var topicImagePath = !string.IsNullOrEmpty(topicDto.TImagePath)
+                        ? SaveBase64Image(topicDto.TImagePath, "wwwroot/images/topics", $"{Guid.NewGuid()}.png")
+                        : null;
+
                     var topic = new Topic
                     {
                         Topic_Name = topicDto.TopicName,
                         Topic_Description = topicDto.TopicDescription,
-                        T_ImagePath = topicDto.TImagePath,
+                        T_ImagePath = topicImagePath,
                         ModuleId = module.Id,
                         CourseId = course.Id,
-                        CreatedAt = DateTime.Now
+                        CreatedAt = DateTime.Now,
+                        CreatedBy = userEmail
                     };
 
                     _context.topics.Add(topic);

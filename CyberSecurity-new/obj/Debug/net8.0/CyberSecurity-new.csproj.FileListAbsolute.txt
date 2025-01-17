@@ -1279,3 +1279,4 @@ C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\stat
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\CyberSec.EEE9AAD3.Up2Date
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.genruntimeconfig.cache
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\ref\CyberSecurity-new.dll
+C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\bin\Debug\net8.0\CyberSecurity-new.staticwebassets.runtime.json

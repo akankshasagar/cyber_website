@@ -9,6 +9,7 @@ namespace CyberSecurity_new.Models
         public string CourseDescription { get; set; }
         public string ImagePath { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string CreatedBy { get; set; }
     }
 
 
@@ -20,6 +21,7 @@ namespace CyberSecurity_new.Models
         [ForeignKey("Courses")]
         public int CourseId { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string CreatedBy { get; set; }
 
         public virtual Courses Courses { get; set; }
     }
@@ -38,6 +40,7 @@ namespace CyberSecurity_new.Models
         [ForeignKey("Courses")]
         public int CourseId { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string CreatedBy { get; set; }
 
         public virtual Courses Courses { get; set; }
         public virtual Module Module { get; set; }

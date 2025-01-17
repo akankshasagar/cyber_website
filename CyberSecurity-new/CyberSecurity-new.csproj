@@ -30,6 +30,8 @@
     <Folder Include="Uploads\Files\" />
     <Folder Include="Uploads\Images\" />
     <Folder Include="Uploads\Topics\" />
+    <Folder Include="wwwroot\images\courses\" />
+    <Folder Include="wwwroot\images\topics\" />
   </ItemGroup>
 
 </Project>
