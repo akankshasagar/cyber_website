@@ -93,6 +93,12 @@ export class AddcourseComponent {
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
     this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token
+    this.courseForm = this.fb.group({
+      courseName: ['', Validators.required],
+      courseDescription: ['', Validators.required],
+      image: [null],
+      modules: this.fb.array([])
+    });
   }
 
   logout() {
@@ -101,9 +107,10 @@ export class AddcourseComponent {
 
 
   courseForm: FormGroup;
-  imageError: string | null = null;
+  imageError: string = '';
+  apiUrl: string = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';
 
-  constructor(private fb: FormBuilder, private courseService: CourseService, private auth: AuthService) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private auth: AuthService, private toastr: ToastrService) {
     this.courseForm = this.fb.group({
       courseName: ['', Validators.required],
       courseDescription: ['', Validators.required],
@@ -116,6 +123,10 @@ export class AddcourseComponent {
     return this.courseForm.get('modules') as FormArray;
   }
 
+  getTopics(moduleIndex: number): FormArray {
+    return this.modules.at(moduleIndex).get('topics') as FormArray;
+  }
+
   addModule(): void {
     this.modules.push(
       this.fb.group({
@@ -125,8 +136,8 @@ export class AddcourseComponent {
     );
   }
 
-  getTopics(moduleIndex: number): FormArray {
-    return this.modules.at(moduleIndex).get('topics') as FormArray;
+  removeModule(moduleIndex: number): void {
+    this.modules.removeAt(moduleIndex);
   }
 
   addTopic(moduleIndex: number): void {
@@ -134,61 +145,97 @@ export class AddcourseComponent {
       this.fb.group({
         topicName: ['', Validators.required],
         topicDescription: ['', Validators.required],
-        tImagePath: [null, Validators.required]
+        topicImage: [null]
       })
     );
   }
 
-  onFileSelect(event: Event, field: string, moduleIndex?: number, topicIndex?: number): void {
-    const file = (event.target as HTMLInputElement).files?.[0];
+  removeTopic(moduleIndex: number, topicIndex: number): void {
+    this.getTopics(moduleIndex).removeAt(topicIndex);
+  }
+
+  onFileSelect(event: any, type: string, moduleIndex?: number, topicIndex?: number): void {
+    const file = event.target.files[0];    
+
+    // if (file) {
+    //   const reader = new FileReader();
+    //   reader.onload = () => {
+    //     if (type === 'image') {
+    //       this.courseForm.patchValue({ image: reader.result });
+    //     } else if (type === 'topic' && moduleIndex !== undefined && topicIndex !== undefined) {
+    //       const topics = this.getTopics(moduleIndex);
+    //       topics.at(topicIndex).patchValue({ topicImage: reader.result });
+    //     }
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
+
     if (file) {
-      if (field === 'image') {
-        this.courseForm.patchValue({ image: file });
-      } else if (field === 'topic' && moduleIndex !== undefined && topicIndex !== undefined) {
-        this.getTopics(moduleIndex).at(topicIndex).patchValue({ tImagePath: file });
-      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (type === 'image') {
+          this.courseForm.patchValue({ image: reader.result });
+          this.courseForm.get('image')?.setErrors(null); // Clear any previous errors
+        } else if (type === 'topic' && moduleIndex !== undefined && topicIndex !== undefined) {
+          const topics = this.getTopics(moduleIndex);
+          topics.at(topicIndex).patchValue({ topicImage: reader.result });
+        }
+      };
+      reader.readAsDataURL(file);
+    } else {
+      this.courseForm.get('image')?.setErrors({ required: true }); // Set error if no file is selected
     }
   }
 
   onSubmit(): void {
+    if (this.courseForm.invalid) {
+      // Mark all controls as touched to show validation errors
+      this.courseForm.markAllAsTouched();
+      this.toastr.error('Please fill all required fields', 'Validation Error');
+      return;
+    }
     if (this.courseForm.valid) {
-      const payload = this.buildPayload();
-      console.log('Payload sent to API:', payload); // Debugging log
-  
-      this.courseService.addCourse2(payload).subscribe({
+      const formData = this.courseForm.value;
+
+      // Transform Form Data for API
+      const payload = {
+        CourseName: formData.courseName,
+        CourseDescription: formData.courseDescription,
+        ImagePath: formData.image, // Base64 encoded image
+        Modules: formData.modules.map((module: any) => ({
+          ModuleName: module.moduleName,
+          Topics: module.topics.map((topic: any) => ({
+            TopicName: topic.topicName,
+            TopicDescription: topic.topicDescription,
+            TImagePath: topic.topicImage // Base64 encoded image
+          }))
+        }))
+      };
+      
+      // API call
+      this.http.post(this.apiUrl, payload).subscribe({
         next: (response) => {
-          alert('Course added successfully!');
-          console.log('Response:', response);
+          this.toastr.success('Course added successfully!', 'Success');
+          this.resetForm();
+          // alert('Course added successfully!');
+          // console.log(response);
         },
         error: (error) => {
-          alert('Failed to add course.');
-          console.error('Error details:', error);
+          // alert('Failed to add course.');  
+          // this.toastr.error('Failed to add course.', 'Error');    
+          this.toastr.error(error?.error.message);              
+          // console.error(error);
         }
       });
-      
-    } else {
-      alert('Please fill out all required fields.');
-    }
-  }    
+    }    
+  }
 
-  private buildPayload(): any {
-    const formValue = this.courseForm.value;
-  
-    const modules = formValue.modules.map((module: any) => ({
-      ModuleName: module.moduleName,
-      Topics: module.topics.map((topic: any) => ({
-        TopicName: topic.topicName,
-        TopicDescription: topic.topicDescription,
-        TImagePath: topic.tImagePath
-      }))
-    }));
-  
-    return {
-      CourseName: formValue.courseName,
-      CourseDescription: formValue.courseDescription,
-      ImagePath: formValue.image, // Ensure this is a string path or base64 if backend requires it
-      Modules: modules
-    };
+  private resetForm(): void {
+    this.courseForm.reset(); // Reset the form controls
+    while (this.modules.length) {
+      this.modules.removeAt(0); // Clear all modules and topics
+    }
+    this.imageError = ''; // Clear any image error messages
   }
   
 }

@@ -124,9 +124,12 @@
                 class="formbold-form-input"
                 required
               />
-              <div *ngIf="imageError" class="text-danger">
-                {{ imageError }}
+              <div *ngIf="courseForm.get('image')?.touched && courseForm.get('image')?.invalid" class="text-danger">
+                Course image is required.
               </div>
+              <!-- <div *ngIf="imageError" class="text-danger">
+                {{ imageError }}
+              </div> -->
             </div>
   
             <div formArrayName="modules" *ngFor="let module of modules.controls; let i = index">
@@ -173,14 +176,23 @@
                       <input
                         type="file"
                         (change)="onFileSelect($event, 'topic', i, j)"
-                        class="formbold-form-input"
-                        required
+                        class="formbold-form-input"                        
                       />
                     </div>
+
+                    <!-- Remove Topic Button -->
+                  <button class="formbold-btn btn-danger" type="button" (click)="removeTopic(i, j)">
+                    Remove Topic
+                  </button>
                   </div>
                 </div>
   
                 <button class="formbold-btn" type="button" (click)="addTopic(i)">Add Topic</button>
+
+                <!-- Remove Module Button -->
+              <button class="formbold-btn btn-danger" type="button" (click)="removeModule(i)">
+                Remove Module
+              </button>
               </div>
             </div>
   
