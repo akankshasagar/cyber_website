@@ -7,8 +7,9 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class CourseService {
 
-  private apiUrl = 'https://localhost:7243/api/Courses';
+  private apiUrl = 'https://localhost:7243/api/Course';
   private apiUrl2 = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';
+  private baseUrl = 'https://localhost:7243/api/Module';
 
   constructor(private http: HttpClient) { }
 
@@ -28,5 +29,13 @@ export class CourseService {
 
   getCourses(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
+  }
+
+  getCourseById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
+
+  getModulesByCourse(courseId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/${courseId}`);
   }
 }

@@ -27,6 +27,9 @@ export class AdminpageComponent {
   selectedDeptId: number = 0;
   roles: RoleMaster[] = [];
   selectedRoleId: number = 0; // Default roleId value
+  currentPage: number = 1; // Current page number
+  coursesPerPage: number = 3; // Number of courses per page
+  paginatedCourses: any[] = []; // Courses to display on the current page
 
   constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService) { 
   
@@ -40,12 +43,42 @@ export class AdminpageComponent {
     this.courseService.getCourses().subscribe({
       next: (data) => {
         this.courses = data;
+        this.updatePaginatedCourses();
       },
       error: (error) => {
         console.error('Failed to fetch courses:', error);
       },
     });
   }  
+
+  updatePaginatedCourses(): void {
+    const startIndex = (this.currentPage - 1) * this.coursesPerPage;
+    const endIndex = startIndex + this.coursesPerPage;
+    this.paginatedCourses = this.courses.slice(startIndex, endIndex);
+  }
+
+  goToPage(page: number): void {
+    this.currentPage = page;
+    this.updatePaginatedCourses();
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage++;
+      this.updatePaginatedCourses();
+    }
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updatePaginatedCourses();
+    }
+  }
+
+  totalPages(): number {
+    return Math.ceil(this.courses.length / this.coursesPerPage);
+  }
 
   onSubmit(): void {
     // Set the departmentId and roleId based on the selected values

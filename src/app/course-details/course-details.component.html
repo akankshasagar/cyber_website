@@ -1,4 +1,4 @@
-<div class="container py-5">
+<!-- <div class="container py-5">
     <div class="card">
         <div class="card-body">
             <h1>{{ course?.courseName }}</h1>
@@ -11,4 +11,129 @@
         </div>
     </div>
 </div> 
+ -->
 
+ <!-- <mat-toolbar color="primary" class="toolbar">    
+    <h2 class="m-0 align-items-center px-4 px-lg-5">
+      <i (click)="drawer.toggle()" class="fa fa-bars me-3" style="cursor: pointer;"></i>eLEARNING
+    </h2>
+  </mat-toolbar> -->
+  <!-- Navbar Start -->
+<nav
+class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+<a class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+  <h2 class="m-0"><i class="fa fa-solid fa-bars" (click)="drawer.toggle()"
+      style="cursor: pointer; font-size: 30px;"></i> eLEARNING</h2>
+</a>  
+</nav>
+<!-- Navbar End -->
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #drawer mode="side" opened>    
+      <div class="sidebar open">      
+        <ul class="nav-list">
+  
+          <!-----------Chapter 1--------------------------------------------->
+  
+          <li *ngFor="let module of modules">
+            <a (click)="getTopics(module.id)">
+              <i class="bx bx-task"></i>
+              <span class="links_name2">{{ module.module_Name }}</span>            
+              <i class="bx"
+              [ngClass]="{
+                'bx-chevron-down': !showTopics[module.id],
+                'bx-chevron-up': showTopics[module.id]
+              }"
+              style="padding-left: 5vh; padding-right: 1vh; cursor: pointer;"></i>
+            </a>
+            <span class="tooltip">Information Security & CIA Triad</span>
+            <ul *ngIf="showTopics[module.id]">
+              <li *ngFor="let topic of topics">
+                <a>
+                  <i class='bx bx-task'></i>
+                  <span class="links_name2">{{ topic.topic_Name }}</span>
+                </a>
+              </li>                            
+            </ul>
+            <li class="profile">
+              <div class="profile-details">
+                <i class='bx bxs-user-circle' style="font-size: 30px;"></i>            
+                <div class="name_job">
+                  <div class="name">{{fullName}}</div>
+                  <div class="job">{{email}}</div>
+                </div>
+              </div>
+              <i class='bx bx-log-out' id="log_out" (click)="logout()" style="cursor: pointer;"></i>
+            
+          </li>
+          </ul>
+        </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+        </mat-sidenav-container>
+
+  <!-- <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer mode="side" opened style="width: 320px;">
+      <div class="sidebar">
+        <ul class="nav-links">
+          <li *ngFor="let module of modules">
+            <div class="iocn-link">
+              <a href="#">
+                <i class='bx bx-collection'></i>
+                <span class="link_name module-name">{{ module.module_Name }}</span>
+              </a>
+              <i
+                class='bx bxs-chevron-down arrow'
+                (click)="toggleDropdown()"
+                style="cursor: pointer;"
+              ></i>
+            </div>
+            <ul class="sub-menu" *ngIf="isDropdownOpen">
+              <li><a class="link_name" href="#">{{ module.module_Name }}</a></li>
+              <li><a href="#">HTML & CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">PHP & MySQL</a></li>
+            </ul>
+          </li>         
+          
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <img src="image/profile.jpg" alt="profileImg">
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Prem Shahi</div>
+                <div class="job">Web Designer</div>
+              </div>
+              <i class='bx bx-log-out'></i>
+            </div>
+          </li>
+        </ul>        
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        
+
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+            <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>
+            <h1 class="mb-4">Information Security</h1>
+            
+            <div class="row gy-2 gx-4 mb-4">
+                <div class="col-m-6">
+                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i><b>“Information Security”</b> is a broad term that covers protection of data and the systems that contain it, from the storage location through all connections to it.</p>
+                </div>
+                <div class="col-m-6">
+                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>It includes the users who view, handle, and transmit it, and the devices they use to do so.</p>
+                </div>
+                <div class="col-m-6">
+                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>The first step to developing a comprehensive information security plan and a culture of cyber-security is to recognize the need to have such a plan.</p>
+                </div>                    
+            </div>
+            <a class="btn btn-primary py-3 px-5 mt-2" [routerLink]="['../cia-triad']">Next</a>
+        </div>
+      </mat-sidenav-content>
+      
+  </mat-sidenav-container> -->
+  

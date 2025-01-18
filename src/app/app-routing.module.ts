@@ -57,6 +57,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { EditcourseComponent } from './adminpage/editcourse/editcourse.component';
 import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { SubComponent } from './course-details/sub/sub.component';
 
 
 const routes: Routes = [
@@ -71,7 +72,15 @@ const routes: Routes = [
 
     // { path: 'editcourse', component: EditcourseComponent }},
   { path: 'courses', component: CoursesComponent, canActivate:[AuthGuard] },
-  { path: 'course-details/:id', component: CourseDetailsComponent, canActivate:[AuthGuard] },
+  { path: 'course-details/:id', component: CourseDetailsComponent, canActivate:[AuthGuard]
+    ,children: [
+      {
+        path: 'sub',
+        component: SubComponent
+      }
+    ]
+   },
+  // { path: 'course-details/:id/sub', component: SubComponent },
   { path: 'courses/cs001', component: CS001Component, canActivate:[AuthGuard], children: [
     { path: '', pathMatch: 'full', redirectTo: 'information-security-and-cia-triad/information-security' },
 
