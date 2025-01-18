@@ -34,6 +34,7 @@ export class CourseDetailsComponent {
   showChapter1Topics: boolean = false;
   topics: any[] = [];  // List of topics for the selected module
   showTopics: { [key: number]: boolean } = {};
+  selectedTopic: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -61,6 +62,7 @@ export class CourseDetailsComponent {
       });
     }
     this.loadModules();
+    this.loadDefaultTopic();
 
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
@@ -72,6 +74,19 @@ export class CourseDetailsComponent {
         let emailFromToken = this.auth.getEmailFromToken();
         this.email = val || emailFromToken
       })
+  }
+
+  loadDefaultTopic(): void {
+    this.courseService.getTopicsByCourse(this.courseId) // Replace 1 with the actual courseId
+      .subscribe({
+        next: (data) => {
+          if (data && data.length > 0) {
+            this.topics = data;
+            this.selectedTopic = data[0]; // Automatically set the first topic as the selected topic
+          }
+        },
+        error: (err) => console.error(err)
+      });
   }
 
   loadModules(): void {
@@ -87,21 +102,26 @@ export class CourseDetailsComponent {
 
   // Fetch topics for a specific module
   getTopics(moduleId: number): void {
-    if (this.showTopics[moduleId]) {
-      // Collapse the list if already open
-      this.showTopics[moduleId] = false;
-      return;
-    }
+    this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
+      .subscribe({
+        next: (data) => {
+          this.topics = data;
+          this.showTopics[moduleId] = true;
+          if (data && data.length > 0) {
+            this.selectedTopic = data[0]; // Automatically select the first topic in the module
+          }
+        },
+        error: (err) => console.error(err)
+      });
+  }
 
-    this.http.get<any[]>(`https://localhost:7243/api/Topic/${this.courseId}/${moduleId}/Topics`).subscribe(
-      (data) => {
-        this.topics = data;
-        this.showTopics[moduleId] = true; // Expand the list
+  viewTopicDetails(topicId: number): void {
+    this.courseService.getTopicById(topicId).subscribe({
+      next: (data) => {
+        this.selectedTopic = data;
       },
-      (error) => {
-        console.error(`Error fetching topics for module ${moduleId}:`, error);
-      }
-    );
+      error: (err) => console.error(err)
+    });
   }
 
   logout() {

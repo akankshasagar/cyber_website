@@ -49,7 +49,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <span class="tooltip">Information Security & CIA Triad</span>
             <ul *ngIf="showTopics[module.id]">
               <li *ngFor="let topic of topics">
-                <a>
+                <a (click)="viewTopicDetails(topic.id)">
                   <i class='bx bx-task'></i>
                   <span class="links_name2">{{ topic.topic_Name }}</span>
                 </a>
@@ -69,7 +69,32 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
           </ul>
         </div>
         </mat-sidenav>
-        <mat-sidenav-content>
+        <mat-sidenav-content>          
+
+          <div class="container-xxl py-5" *ngIf="selectedTopic">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="img-fluid position-absolute w-100 h-100" 
+                            src="../../../../assets/img2/attacksurfaces.png" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">     
+                        <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>           
+                        <h1 class="mb-4">{{ selectedTopic.topic_Name }}</h1>                        
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-m-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>
+                                  {{ selectedTopic.topic_Description }}                                  
+                                </p>
+                            </div>                            
+                        </div>
+                        <a class="btn btn-primary py-3 px-5 mt-2">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
           <router-outlet></router-outlet>
         </mat-sidenav-content>
         </mat-sidenav-container>

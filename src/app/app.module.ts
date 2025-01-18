@@ -82,7 +82,6 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { EditcourseComponent } from './adminpage/editcourse/editcourse.component';
 import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
-import { SubComponent } from './course-details/sub/sub.component';
 
 @NgModule({
   declarations: [
@@ -151,8 +150,7 @@ import { SubComponent } from './course-details/sub/sub.component';
     AdminpageComponent,
     EditcourseComponent,
     AddcourseComponent,
-    CourseDetailsComponent,
-    SubComponent
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
