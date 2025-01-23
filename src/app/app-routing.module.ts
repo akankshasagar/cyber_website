@@ -71,7 +71,7 @@ const routes: Routes = [
 
     // { path: 'editcourse', component: EditcourseComponent }},
   { path: 'courses', component: CoursesComponent, canActivate:[AuthGuard] },
-  { path: 'course-details/:id', component: CourseDetailsComponent, canActivate:[AuthGuard] },
+  { path: 'course-details/:id/:courseName', component: CourseDetailsComponent, canActivate:[AuthGuard] },
   // { path: 'sub/:topicId', component: SubComponent },
   { path: 'courses/cs001', component: CS001Component, canActivate:[AuthGuard], children: [
     { path: '', pathMatch: 'full', redirectTo: 'information-security-and-cia-triad/information-security' },

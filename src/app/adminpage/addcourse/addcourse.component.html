@@ -126,10 +126,7 @@
               />
               <div *ngIf="courseForm.get('image')?.touched && courseForm.get('image')?.invalid" class="text-danger">
                 Course image is required.
-              </div>
-              <!-- <div *ngIf="imageError" class="text-danger">
-                {{ imageError }}
-              </div> -->
+              </div>             
             </div>
   
             <div formArrayName="modules" *ngFor="let module of modules.controls; let i = index">
@@ -180,7 +177,6 @@
                       />
                     </div>
 
-                    <!-- Remove Topic Button -->
                   <button class="formbold-btn btn-danger" type="button" (click)="removeTopic(i, j)">
                     Remove Topic
                   </button>
@@ -189,7 +185,6 @@
   
                 <button class="formbold-btn" type="button" (click)="addTopic(i)">Add Topic</button>
 
-                <!-- Remove Module Button -->
               <button class="formbold-btn btn-danger" type="button" (click)="removeModule(i)">
                 Remove Module
               </button>
@@ -203,7 +198,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
   
 
 

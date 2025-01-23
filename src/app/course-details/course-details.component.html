@@ -46,7 +46,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
               }"
               style="padding-left: 5vh; padding-right: 1vh; cursor: pointer;"></i>
             </a>
-            <span class="tooltip">Information Security & CIA Triad</span>
+            <span class="tooltip">{{ module.module_Name }}</span>
             <ul *ngIf="showTopics[module.id]">
               <li *ngFor="let topic of topics">
                 <a (click)="viewTopicDetails(topic.id)">
@@ -57,7 +57,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             </ul>
             <li class="profile">
               <div class="profile-details">
-                <i class='bx bxs-user-circle' style="font-size: 30px;"></i>            
+                <i class='bx bxs-user-circle' style="font-size: 40px;"></i>            
                 <div class="name_job">
                   <div class="name">{{fullName}}</div>
                   <div class="job">{{email}}</div>
@@ -76,8 +76,13 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                 <div class="row g-5">
                     <div class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                         <div class="position-relative h-100">
-                            <img class="img-fluid position-absolute w-100 h-100" 
-                            src="../../../../assets/img2/attacksurfaces.png" alt="" style="object-fit: cover;">
+                            <!-- <img class="img-fluid position-absolute w-100 h-100" 
+                            src="../../../../assets/img2/attacksurfaces.png" alt="" style="object-fit: cover;"> -->
+                            <img *ngIf="selectedTopic?.imagePath" 
+                              [src]="selectedTopic.imagePath" 
+                              class="img-fluid position-absolute w-100 h-100" 
+                              alt="Topic Image" 
+                              style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">     
@@ -90,7 +95,9 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                                 </p>
                             </div>                            
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2">Next</a>
+                        <!-- <a class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a> -->
+                        <a *ngIf="!isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a>
+                        <a *ngIf="isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToTest()">Take the Test</a>
                     </div>
                 </div>
             </div>

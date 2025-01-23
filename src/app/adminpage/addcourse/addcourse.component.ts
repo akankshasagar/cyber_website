@@ -236,6 +236,6 @@ export class AddcourseComponent {
       this.modules.removeAt(0); // Clear all modules and topics
     }
     this.imageError = ''; // Clear any image error messages
-  }
+  } 
   
 }

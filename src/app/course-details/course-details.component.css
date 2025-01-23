@@ -523,11 +523,11 @@
   }
   .sidebar li.profile{
     position: fixed;
-    height: 60px;
+    height: 90px;
     width: 78px;
     left: 0;
     bottom: -8px;
-    padding: 10px 14px;
+    padding: 20px 14px;
     background: #1d1b31;
     transition: all 0.5s ease;
     overflow: hidden;
@@ -568,6 +568,7 @@
     line-height: 60px;
     border-radius: 0px;
     transition: all 0.5s ease;
+    font-size: 25px;
   }
   .sidebar.open .profile #log_out{
     width: 50px;

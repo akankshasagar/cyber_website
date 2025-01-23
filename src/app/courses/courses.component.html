@@ -100,7 +100,7 @@
               <div class="card-body">
                 <h1 class="mb-4">{{ selectedCourse?.courseName }}</h1>
                 <p class="mb-4">{{ selectedCourse?.courseDescription }}</p>
-                <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [routerLink]="['/course-details', selectedCourse?.id]" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
+                <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" [routerLink]="['/course-details', selectedCourse?.id, selectedCourse?.courseName]" (click)="enroll(selectedCourse?.id, 'Enrolled in ' + selectedCourse?.courseName)">Start Now</a>
                 <button type="button" class="btn-close" aria-label="Close" (click)="closeCard()"></button>
               </div>
             </div>

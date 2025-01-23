@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from '../services/course.service';
 import { AuthService } from '../services/auth.service';
 import { UserstoreService } from '../services/userstore.service';
@@ -41,7 +41,8 @@ export class CourseDetailsComponent {
     private courseService: CourseService,
     private auth: AuthService,
     private userStore: UserstoreService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {
   }
 
@@ -56,10 +57,18 @@ export class CourseDetailsComponent {
   
   ngOnInit(): void {
     const courseId = this.route.snapshot.paramMap.get('id');
+    const courseName = this.route.snapshot.paramMap.get('courseName') || '';
     if (courseId) {
-      this.courseService.getCourseById(+courseId).subscribe((data) => {
+      this.courseService.getCourseById(+courseId, courseName).subscribe((data) => {
         this.course = data;
+        this.loadModulesAndTriggerFirstModule();
       });
+    }
+    const topicId = this.route.snapshot.paramMap.get('id');
+    if (topicId) {
+        this.courseService.getTopicById(+topicId).subscribe((data) => {
+            this.selectedTopic = data;
+        });
     }
     this.loadModules();
     this.loadDefaultTopic();
@@ -101,19 +110,49 @@ export class CourseDetailsComponent {
   }
 
   // Fetch topics for a specific module
-  getTopics(moduleId: number): void {
-    this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
+  // getTopics(moduleId: number): void {   
+  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
+  //     .subscribe({
+  //       next: (data) => {
+  //         this.topics = data;
+  //         // this.showTopics[moduleId] = true;
+  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
+  //         if (data && data.length > 0) {
+  //           this.selectedTopic = data[0]; // Automatically select the first topic in the module
+  //           console.log(data[0]);
+  //         }
+  //       },
+  //       error: (err) => console.error(err)
+  //     });
+  // }
+
+  getTopics(moduleId: number): void {   
+    this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId)  // Replace 1 with the actual courseId
       .subscribe({
         next: (data) => {
           this.topics = data;
-          this.showTopics[moduleId] = true;
+          // Toggle the visibility of topics
+          this.showTopics[moduleId] = !this.showTopics[moduleId];
+          
           if (data && data.length > 0) {
-            this.selectedTopic = data[0]; // Automatically select the first topic in the module
+            // Select the first topic in the module
+            this.selectedTopic = data[0];  // Automatically select the first topic in the module
+            console.log(this.selectedTopic);  // Log the selected topic for debugging
+  
+            // Ensure the image path is correct and update if needed
+            if (this.selectedTopic?.t_ImagePath) {
+              // Normalize the image path if necessary (in case backslashes exist)
+              this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
+              // Now the imagePath will hold the correct value
+              this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
+            }
           }
         },
         error: (err) => console.error(err)
       });
   }
+  
+  
 
   viewTopicDetails(topicId: number): void {
     this.courseService.getTopicById(topicId).subscribe({
@@ -124,8 +163,52 @@ export class CourseDetailsComponent {
     });
   }
 
+  goToNextTopic(): void {
+    if (this.selectedTopic) {
+      const currentIndex = this.topics.findIndex(topic => topic.id === this.selectedTopic.id);
+      const nextIndex = (currentIndex + 1) % this.topics.length; // Loops back to the first topic if the last one is reached
+      const nextTopic = this.topics[nextIndex]; // Get the next topic
+      
+      // Call viewTopicDetails to simulate clicking on the next topic
+      this.viewTopicDetails(nextTopic.id);
+    }
+  }
+
+  goToTest(): void {
+    // You can implement your test redirection logic here
+    console.log('Redirecting to the test page...');
+    // Example: Navigate to a test page
+    // this.router.navigate(['/test']);
+  }
+
+  isLastTopic(): boolean {
+    if (this.selectedTopic) {
+      const currentIndex = this.topics.findIndex(topic => topic.id === this.selectedTopic.id);
+      return currentIndex === this.topics.length - 1; // Check if it's the last topic
+    }
+    return false;
+  }
+  
+  
+
   logout() {
     this.auth.signOut();
   }
+
+  loadModulesAndTriggerFirstModule(): void {
+    this.courseService.getModulesByCourse(this.courseId).subscribe({
+      next: (modules) => {
+        this.modules = modules;
+  
+        if (modules?.length > 0) {
+          const firstModule = modules[0]; // Get the first module
+  
+          // Simulate clicking the first module
+          this.getTopics(firstModule.id);
+        }
+      },
+      error: (err) => console.error('Error loading modules:', err),
+    });
+  }  
  
 }
