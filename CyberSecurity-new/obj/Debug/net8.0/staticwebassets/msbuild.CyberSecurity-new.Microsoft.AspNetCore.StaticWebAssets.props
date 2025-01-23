@@ -1,65 +1,47 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0061552e-df30-49b1-a5b6-d690a4ce3379.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/0061552e-df30-49b1-a5b6-d690a4ce3379.png</RelativePath>
+      <RelativePath>images/courses/2a403bd5-703a-45ad-a8d2-7f647aca88f1.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8sx823t6bw</Fingerprint>
-      <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
+      <Fingerprint>1rb94c13xd</Fingerprint>
+      <Integrity>Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0061552e-df30-49b1-a5b6-d690a4ce3379.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png</RelativePath>
+      <RelativePath>images/courses/57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
+      <Fingerprint>bwbz7uumnu</Fingerprint>
+      <Integrity>+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0bb80c16-3312-4792-a38b-e66b1ab54d09.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/0bb80c16-3312-4792-a38b-e66b1ab54d09.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0bb80c16-3312-4792-a38b-e66b1ab54d09.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png</RelativePath>
+      <RelativePath>images/courses/8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -70,68 +52,86 @@
       <Integrity>5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\118ed143-d436-46cb-a253-8f02cc02ade7.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\d7f77ec9-4e14-46bd-9eee-bed94377af29.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/118ed143-d436-46cb-a253-8f02cc02ade7.png</RelativePath>
+      <RelativePath>images/courses/d7f77ec9-4e14-46bd-9eee-bed94377af29.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
+      <Fingerprint>1rb94c13xd</Fingerprint>
+      <Integrity>Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\118ed143-d436-46cb-a253-8f02cc02ade7.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\d7f77ec9-4e14-46bd-9eee-bed94377af29.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\19801657-df38-4819-9f99-5c1e22358fbd.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\1963d37c-2265-4d7c-90a9-f77f489fd069.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/19801657-df38-4819-9f99-5c1e22358fbd.png</RelativePath>
+      <RelativePath>images/topics/1963d37c-2265-4d7c-90a9-f77f489fd069.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lva6mptnns</Fingerprint>
-      <Integrity>keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8=</Integrity>
+      <Fingerprint>u6l43jd5d6</Fingerprint>
+      <Integrity>RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\19801657-df38-4819-9f99-5c1e22358fbd.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\1963d37c-2265-4d7c-90a9-f77f489fd069.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\27398a06-6715-4f6a-8f77-6fe822cf5c53.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png</RelativePath>
+      <RelativePath>images/topics/27398a06-6715-4f6a-8f77-6fe822cf5c53.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zqxddzdkto</Fingerprint>
-      <Integrity>5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=</Integrity>
+      <Fingerprint>1rb94c13xd</Fingerprint>
+      <Integrity>Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\27398a06-6715-4f6a-8f77-6fe822cf5c53.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\398898f8-e71e-45b9-9369-1f85be5a3e2c.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\2c3aa922-5564-4455-82c2-3502aad6a566.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/398898f8-e71e-45b9-9369-1f85be5a3e2c.png</RelativePath>
+      <RelativePath>images/topics/2c3aa922-5564-4455-82c2-3502aad6a566.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ml2tvcvbid</Fingerprint>
+      <Integrity>lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\2c3aa922-5564-4455-82c2-3502aad6a566.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\4adfe50d-5df0-4091-a5fa-827b2c382f62.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CyberSecurity-new</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CyberSecurity-new</BasePath>
+      <RelativePath>images/topics/4adfe50d-5df0-4091-a5fa-827b2c382f62.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -142,14 +142,86 @@
       <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\398898f8-e71e-45b9-9369-1f85be5a3e2c.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\4adfe50d-5df0-4091-a5fa-827b2c382f62.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png</RelativePath>
+      <RelativePath>images/topics/602b6bfd-a871-4324-941a-c2b2aa9dcf77.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>w9iou32ey1</Fingerprint>
+      <Integrity>hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CyberSecurity-new</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CyberSecurity-new</BasePath>
+      <RelativePath>images/topics/680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>05vwf1of7p</Fingerprint>
+      <Integrity>XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CyberSecurity-new</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CyberSecurity-new</BasePath>
+      <RelativePath>images/topics/6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>09j3amzp8h</Fingerprint>
+      <Integrity>zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8066e5a2-3224-474b-9f0b-316a087cb6de.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CyberSecurity-new</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CyberSecurity-new</BasePath>
+      <RelativePath>images/topics/8066e5a2-3224-474b-9f0b-316a087cb6de.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wrtdxtb45c</Fingerprint>
+      <Integrity>BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8066e5a2-3224-474b-9f0b-316a087cb6de.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\83953f70-dc7a-4194-a221-d508f19e0353.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CyberSecurity-new</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CyberSecurity-new</BasePath>
+      <RelativePath>images/topics/83953f70-dc7a-4194-a221-d508f19e0353.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -160,457 +232,133 @@
       <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\83953f70-dc7a-4194-a221-d508f19e0353.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/55a4b6c9-9a8d-4fa5-853b-797837aa0247.png</RelativePath>
+      <RelativePath>images/topics/8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
+      <Fingerprint>sr5clgvjzf</Fingerprint>
+      <Integrity>OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\5879af5c-ed33-4288-9083-e6a0a9a73902.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8e22efaa-23be-4ea2-97a3-07d28f135a49.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/5879af5c-ed33-4288-9083-e6a0a9a73902.png</RelativePath>
+      <RelativePath>images/topics/8e22efaa-23be-4ea2-97a3-07d28f135a49.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
+      <Fingerprint>fig7hdx7yq</Fingerprint>
+      <Integrity>VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\5879af5c-ed33-4288-9083-e6a0a9a73902.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8e22efaa-23be-4ea2-97a3-07d28f135a49.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\6f268b6a-6936-4959-a388-d0357307cd07.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/6f268b6a-6936-4959-a388-d0357307cd07.png</RelativePath>
+      <RelativePath>images/topics/b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8sx823t6bw</Fingerprint>
-      <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
+      <Fingerprint>hlluq8053z</Fingerprint>
+      <Integrity>1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\6f268b6a-6936-4959-a388-d0357307cd07.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c2b22b7c-e69a-489e-b052-d86559989b14.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png</RelativePath>
+      <RelativePath>images/topics/c2b22b7c-e69a-489e-b052-d86559989b14.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8sx823t6bw</Fingerprint>
-      <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
+      <Fingerprint>5f5hn5gi4l</Fingerprint>
+      <Integrity>T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c2b22b7c-e69a-489e-b052-d86559989b14.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c938676a-b135-40c1-9655-77733076bccc.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png</RelativePath>
+      <RelativePath>images/topics/c938676a-b135-40c1-9655-77733076bccc.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n8tuj793sc</Fingerprint>
-      <Integrity>h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=</Integrity>
+      <Fingerprint>9hwc0axjau</Fingerprint>
+      <Integrity>k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c938676a-b135-40c1-9655-77733076bccc.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/ae9ce19b-cbf0-4806-a41b-4b0340646a81.png</RelativePath>
+      <RelativePath>images/topics/d531bbe4-fb14-481c-b95e-a39bf85e01ee.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
+      <Fingerprint>pau3j32wng</Fingerprint>
+      <Integrity>30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\b95e4527-8fe5-4063-8418-095c51c156d5.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png'))">
       <SourceType>Package</SourceType>
       <SourceId>CyberSecurity-new</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/b95e4527-8fe5-4063-8418-095c51c156d5.png</RelativePath>
+      <RelativePath>images/topics/fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8sx823t6bw</Fingerprint>
-      <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
+      <Fingerprint>510yw2axrh</Fingerprint>
+      <Integrity>V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\b95e4527-8fe5-4063-8418-095c51c156d5.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n8tuj793sc</Fingerprint>
-      <Integrity>h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ced3befc-631a-422f-8b58-4791d2cdb842.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/ced3befc-631a-422f-8b58-4791d2cdb842.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ced3befc-631a-422f-8b58-4791d2cdb842.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8sx823t6bw</Fingerprint>
-      <Integrity>+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fttjp90ayt</Fingerprint>
-      <Integrity>sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e20c4530-8f60-4650-8b6f-6890c4a4075e.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/e20c4530-8f60-4650-8b6f-6890c4a4075e.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zqxddzdkto</Fingerprint>
-      <Integrity>5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e20c4530-8f60-4650-8b6f-6890c4a4075e.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e64743a0-568a-4fd6-adab-7107664a7924.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/e64743a0-568a-4fd6-adab-7107664a7924.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\e64743a0-568a-4fd6-adab-7107664a7924.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ecd4785f-075d-4318-8dcd-4482bd5128f6.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/ecd4785f-075d-4318-8dcd-4482bd5128f6.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d2dyzvdsvr</Fingerprint>
-      <Integrity>W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ecd4785f-075d-4318-8dcd-4482bd5128f6.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ed377327-ec65-4273-9e1f-d23d28641243.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/courses/ed377327-ec65-4273-9e1f-d23d28641243.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\courses\ed377327-ec65-4273-9e1f-d23d28641243.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\03fb888a-17fd-48db-a506-539af397572d.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/03fb888a-17fd-48db-a506-539af397572d.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\03fb888a-17fd-48db-a506-539af397572d.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n8tuj793sc</Fingerprint>
-      <Integrity>h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\1f3b2234-fd55-4260-96bd-dcd2f059d194.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/1f3b2234-fd55-4260-96bd-dcd2f059d194.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uzv1gypvdk</Fingerprint>
-      <Integrity>OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\1f3b2234-fd55-4260-96bd-dcd2f059d194.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uzv1gypvdk</Fingerprint>
-      <Integrity>OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uzv1gypvdk</Fingerprint>
-      <Integrity>OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/8f8c9792-50bc-4560-8a76-1ae14b95eab7.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\af86af57-f067-4023-9c04-d5c235d54d98.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/af86af57-f067-4023-9c04-d5c235d54d98.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8jw76tgka9</Fingerprint>
-      <Integrity>jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\af86af57-f067-4023-9c04-d5c235d54d98.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\b1c74586-e623-4a29-b0e5-df24db406ed1.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/b1c74586-e623-4a29-b0e5-df24db406ed1.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uzv1gypvdk</Fingerprint>
-      <Integrity>OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\b1c74586-e623-4a29-b0e5-df24db406ed1.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c30e1749-95c7-4c5e-84f9-a243a2709f33.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/c30e1749-95c7-4c5e-84f9-a243a2709f33.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yl3rwvdlvn</Fingerprint>
-      <Integrity>BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\c30e1749-95c7-4c5e-84f9-a243a2709f33.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CyberSecurity-new</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CyberSecurity-new</BasePath>
-      <RelativePath>images/topics/e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uzv1gypvdk</Fingerprint>
-      <Integrity>OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\topics\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Images\76189695-650c-4d35-9021-fee23aad06a2.png'))">
       <SourceType>Package</SourceType>

@@ -56,11 +56,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
-    RequestPath = "/Uploads"
-});
+//app.UseStaticFiles(new StaticFileOptions
+//{
+//    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
+//    RequestPath = "/Uploads"
+//});
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 app.UseCors("MyPolicy");

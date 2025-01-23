@@ -123,6 +123,49 @@
         }
       }
     },
+    "/api/Course": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Course/{id}/{courseName}": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "courseName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/CourseEnrollments": {
       "post": {
         "tags": [
@@ -839,6 +882,55 @@
         }
       }
     },
+    "/api/Module/{courseId}": {
+      "get": {
+        "tags": [
+          "Module"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Module"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Module"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Module"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/OTPSender/send": {
       "post": {
         "tags": [
@@ -1129,6 +1221,136 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Topic/{courseId}/Topics": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Topic/{courseId}/{moduleId}/Topics": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Topic"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Topic/{id}": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -1465,6 +1687,36 @@
             "items": {
               "$ref": "#/components/schemas/ModuleDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Courses": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "courseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "courseDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -1886,6 +2138,35 @@
         },
         "additionalProperties": false
       },
+      "Module": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "module_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "courseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courses": {
+            "$ref": "#/components/schemas/Courses"
+          }
+        },
+        "additionalProperties": false
+      },
       "ModuleDto": {
         "type": "object",
         "properties": {
@@ -1897,6 +2178,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TopicDto"
+            },
+            "nullable": true
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuestionDto"
             },
             "nullable": true
           }
@@ -1962,6 +2250,36 @@
         },
         "additionalProperties": false
       },
+      "QuestionDto": {
+        "type": "object",
+        "properties": {
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionA": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionB": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionC": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionD": {
+            "type": "string",
+            "nullable": true
+          },
+          "correctOption": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Rolemaster": {
         "type": "object",
         "properties": {
@@ -2015,6 +2333,50 @@
             "type": "integer",
             "format": "int32",
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Topic": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "topic_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "topic_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "t_ImagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "moduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "courseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courses": {
+            "$ref": "#/components/schemas/Courses"
+          },
+          "module": {
+            "$ref": "#/components/schemas/Module"
           }
         },
         "additionalProperties": false

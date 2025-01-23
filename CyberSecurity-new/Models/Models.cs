@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CyberSecurity_new.Models
 {
@@ -45,5 +46,30 @@ namespace CyberSecurity_new.Models
         public virtual Courses Courses { get; set; }
         public virtual Module Module { get; set; }
 
+    }
+
+    public class Question
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string QuestionText { get; set; }
+
+        public string OptionA { get; set; }
+        public string OptionB { get; set; }
+        public string OptionC { get; set; }
+        public string OptionD { get; set; }
+
+        public string CorrectOption { get; set; }
+
+        [ForeignKey("Module")]
+        public int ModuleId { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+        public string CreatedBy { get; set; }
+
+        // Navigation Property
+        public virtual Module Module { get; set; }
     }
 }

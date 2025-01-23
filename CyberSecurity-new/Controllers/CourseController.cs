@@ -302,11 +302,96 @@ namespace CyberSecurity_new.Controllers
 
                     _context.topics.Add(topic);
                 }
+                await _context.SaveChangesAsync();
+
+                foreach (var questionDto in moduleDto.Questions)
+                {
+                    var question = new Question
+                    {
+                        QuestionText = questionDto.QuestionText,
+                        OptionA = questionDto.OptionA,
+                        OptionB = questionDto.OptionB,
+                        OptionC = questionDto.OptionC,
+                        OptionD = questionDto.OptionD,
+                        CorrectOption = questionDto.CorrectOption,
+                        ModuleId = module.Id,
+                        CreatedAt = DateTime.Now,
+                        CreatedBy = userEmail
+                    };
+
+                    _context.questions.Add(question);
+                }
             }
 
             await _context.SaveChangesAsync();
 
             return Ok(new { message = "Course, modules, and topics added successfully.", courseId = course.Id });
+        }
+
+
+        [HttpGet]
+        public IActionResult GetCourses()
+        {
+
+            var indianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time");
+
+            var courses = _context.course
+                .Select(course => new
+                {
+                    course.Id,
+                    course.CourseName,
+                    course.CourseDescription,
+                    ImagePath = $"{Request.Scheme}://{Request.Host}/images/courses/{System.IO.Path.GetFileName(course.ImagePath)}",
+                    CreatedAt = TimeZoneInfo.ConvertTimeFromUtc(course.CreatedAt, indianTimeZone)
+                })
+                .ToList();
+
+            return Ok(courses);
+        }
+
+        //[HttpGet("{id}")]
+        //public IActionResult GetCourseById(int id)
+        //{
+        //    var course = _context.course
+        //        .Where(c => c.Id == id)
+        //        .Select(c => new
+        //        {
+        //            c.Id,
+        //            c.CourseName,
+        //            c.CourseDescription,
+        //            ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}/images/courses/{System.IO.Path.GetFileName(c.ImagePath)}" : null
+        //        })
+        //        .FirstOrDefault();
+
+        //    if (course == null)
+        //    {
+        //        return NotFound(new { message = "Course not found" });
+        //    }
+
+        //    return Ok(course);
+        //}
+
+
+        [HttpGet("{id}/{courseName}")]
+        public IActionResult GetCourseById(int id)
+        {
+            var course = _context.course
+                .Where(c => c.Id == id)
+                .Select(c => new
+                {
+                    c.Id,
+                    c.CourseName,
+                    c.CourseDescription,
+                    ImagePath = c.ImagePath != null ? $"{Request.Scheme}://{Request.Host}/images/courses/{System.IO.Path.GetFileName(c.ImagePath)}" : null
+                })
+                .FirstOrDefault();
+
+            if (course == null)
+            {
+                return NotFound(new { message = "Course not found" });
+            }
+
+            return Ok(course);
         }
 
 
@@ -334,6 +419,7 @@ namespace CyberSecurity_new.Controllers
     {
         public string ModuleName { get; set; }
         public List<TopicDto> Topics { get; set; }
+        public List<QuestionDto> Questions { get; set; }
     }
 
     public class TopicDto
@@ -341,6 +427,16 @@ namespace CyberSecurity_new.Controllers
         public string TopicName { get; set; }
         public string TopicDescription { get; set; }
         public string TImagePath { get; set; }
+    }
+
+    public class QuestionDto
+    {
+        public string QuestionText { get; set; } // The actual question
+        public string OptionA { get; set; }     // Option A
+        public string OptionB { get; set; }     // Option B
+        public string OptionC { get; set; }     // Option C
+        public string OptionD { get; set; }     // Option D
+        public string CorrectOption { get; set; } // Correct answer
     }
 
 

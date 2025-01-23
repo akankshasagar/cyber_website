@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3iBIB/QxuGYUWPIycmX1YVSIYi+HF+As7TlCUdVno4Q=",
+  "Hash": "eDAhtkZgErQuBlol+isSbt+IPpplErAnf+jBPOdlUsM=",
   "Source": "CyberSecurity-new",
   "BasePath": "_content/CyberSecurity-new",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0061552e-df30-49b1-a5b6-d690a4ce3379.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/0061552e-df30-49b1-a5b6-d690a4ce3379#[.{fingerprint}]?.png",
+      "RelativePath": "images/courses/2a403bd5-703a-45ad-a8d2-7f647aca88f1#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8sx823t6bw",
-      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
+      "Fingerprint": "1rb94c13xd",
+      "Integrity": "Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\0061552e-df30-49b1-a5b6-d690a4ce3379.png"
+      "OriginalItemSpec": "wwwroot\\images\\courses\\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/06eb54ce-ef71-4d64-8cba-fe21ccc6885a#[.{fingerprint}]?.png",
+      "RelativePath": "images/courses/57973e87-12bb-4dbc-a9a3-4809c2fc8a01#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,40 +52,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
+      "Fingerprint": "bwbz7uumnu",
+      "Integrity": "+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png"
+      "OriginalItemSpec": "wwwroot\\images\\courses\\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0bb80c16-3312-4792-a38b-e66b1ab54d09.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/0bb80c16-3312-4792-a38b-e66b1ab54d09#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\0bb80c16-3312-4792-a38b-e66b1ab54d09.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/0e421cd9-68d1-4b8e-a29a-cfb3368fb95f#[.{fingerprint}]?.png",
+      "RelativePath": "images/courses/8acb6bd8-5396-44de-ad5f-320d0b91b4ee#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -98,15 +77,15 @@
       "Integrity": "5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png"
+      "OriginalItemSpec": "wwwroot\\images\\courses\\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\118ed143-d436-46cb-a253-8f02cc02ade7.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d7f77ec9-4e14-46bd-9eee-bed94377af29.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/118ed143-d436-46cb-a253-8f02cc02ade7#[.{fingerprint}]?.png",
+      "RelativePath": "images/courses/d7f77ec9-4e14-46bd-9eee-bed94377af29#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -115,19 +94,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
+      "Fingerprint": "1rb94c13xd",
+      "Integrity": "Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\118ed143-d436-46cb-a253-8f02cc02ade7.png"
+      "OriginalItemSpec": "wwwroot\\images\\courses\\d7f77ec9-4e14-46bd-9eee-bed94377af29.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\19801657-df38-4819-9f99-5c1e22358fbd.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1963d37c-2265-4d7c-90a9-f77f489fd069.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/19801657-df38-4819-9f99-5c1e22358fbd#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/1963d37c-2265-4d7c-90a9-f77f489fd069#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -136,19 +115,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lva6mptnns",
-      "Integrity": "keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8=",
+      "Fingerprint": "u6l43jd5d6",
+      "Integrity": "RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\19801657-df38-4819-9f99-5c1e22358fbd.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\1963d37c-2265-4d7c-90a9-f77f489fd069.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\27398a06-6715-4f6a-8f77-6fe822cf5c53.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/1b9ce22c-6203-44fc-a28c-e984e9fe3ad6#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/27398a06-6715-4f6a-8f77-6fe822cf5c53#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -157,19 +136,40 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zqxddzdkto",
-      "Integrity": "5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=",
+      "Fingerprint": "1rb94c13xd",
+      "Integrity": "Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\27398a06-6715-4f6a-8f77-6fe822cf5c53.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\398898f8-e71e-45b9-9369-1f85be5a3e2c.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\2c3aa922-5564-4455-82c2-3502aad6a566.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/398898f8-e71e-45b9-9369-1f85be5a3e2c#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/2c3aa922-5564-4455-82c2-3502aad6a566#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ml2tvcvbid",
+      "Integrity": "lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\2c3aa922-5564-4455-82c2-3502aad6a566.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\4adfe50d-5df0-4091-a5fa-827b2c382f62.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/4adfe50d-5df0-4091-a5fa-827b2c382f62#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -182,15 +182,99 @@
       "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\398898f8-e71e-45b9-9369-1f85be5a3e2c.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\4adfe50d-5df0-4091-a5fa-827b2c382f62.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/44d36207-78e9-42b5-a1f1-4eeaf7d72cba#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/602b6bfd-a871-4324-941a-c2b2aa9dcf77#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w9iou32ey1",
+      "Integrity": "hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "05vwf1of7p",
+      "Integrity": "XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/6c0bda93-a855-48a5-b0e8-4bd2b70ed660#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "09j3amzp8h",
+      "Integrity": "zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8066e5a2-3224-474b-9f0b-316a087cb6de.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/8066e5a2-3224-474b-9f0b-316a087cb6de#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wrtdxtb45c",
+      "Integrity": "BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\8066e5a2-3224-474b-9f0b-316a087cb6de.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\83953f70-dc7a-4194-a221-d508f19e0353.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/83953f70-dc7a-4194-a221-d508f19e0353#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -203,15 +287,15 @@
       "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\83953f70-dc7a-4194-a221-d508f19e0353.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/55a4b6c9-9a8d-4fa5-853b-797837aa0247#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -220,19 +304,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
+      "Fingerprint": "sr5clgvjzf",
+      "Integrity": "OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\5879af5c-ed33-4288-9083-e6a0a9a73902.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8e22efaa-23be-4ea2-97a3-07d28f135a49.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/5879af5c-ed33-4288-9083-e6a0a9a73902#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/8e22efaa-23be-4ea2-97a3-07d28f135a49#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -241,19 +325,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
+      "Fingerprint": "fig7hdx7yq",
+      "Integrity": "VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\5879af5c-ed33-4288-9083-e6a0a9a73902.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\8e22efaa-23be-4ea2-97a3-07d28f135a49.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\6f268b6a-6936-4959-a388-d0357307cd07.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/6f268b6a-6936-4959-a388-d0357307cd07#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/b6db2bdc-ef37-4a0d-969e-346cc2b11ede#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -262,19 +346,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8sx823t6bw",
-      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
+      "Fingerprint": "hlluq8053z",
+      "Integrity": "1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\6f268b6a-6936-4959-a388-d0357307cd07.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/c2b22b7c-e69a-489e-b052-d86559989b14#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -283,19 +367,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8sx823t6bw",
-      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
+      "Fingerprint": "5f5hn5gi4l",
+      "Integrity": "T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c938676a-b135-40c1-9655-77733076bccc.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/c938676a-b135-40c1-9655-77733076bccc#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -304,19 +388,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n8tuj793sc",
-      "Integrity": "h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=",
+      "Fingerprint": "9hwc0axjau",
+      "Integrity": "k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\c938676a-b135-40c1-9655-77733076bccc.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/ae9ce19b-cbf0-4806-a41b-4b0340646a81#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/d531bbe4-fb14-481c-b95e-a39bf85e01ee#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -325,19 +409,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
+      "Fingerprint": "pau3j32wng",
+      "Integrity": "30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\b95e4527-8fe5-4063-8418-095c51c156d5.png",
+      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
       "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/b95e4527-8fe5-4063-8418-095c51c156d5#[.{fingerprint}]?.png",
+      "RelativePath": "images/topics/fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -346,389 +430,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8sx823t6bw",
-      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
+      "Fingerprint": "510yw2axrh",
+      "Integrity": "V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\b95e4527-8fe5-4063-8418-095c51c156d5.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/c6b2dd0d-00eb-4d66-a930-fa7974de7c23#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "n8tuj793sc",
-      "Integrity": "h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ced3befc-631a-422f-8b58-4791d2cdb842.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/ced3befc-631a-422f-8b58-4791d2cdb842#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\ced3befc-631a-422f-8b58-4791d2cdb842.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/d00e3ea1-447c-48d4-8a3f-b3e1c357a93a#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "8sx823t6bw",
-      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/e04eba59-ec85-4b7c-ae9e-c4838002c0c2#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "fttjp90ayt",
-      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e20c4530-8f60-4650-8b6f-6890c4a4075e.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/e20c4530-8f60-4650-8b6f-6890c4a4075e#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "zqxddzdkto",
-      "Integrity": "5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\e20c4530-8f60-4650-8b6f-6890c4a4075e.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e64743a0-568a-4fd6-adab-7107664a7924.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/e64743a0-568a-4fd6-adab-7107664a7924#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\e64743a0-568a-4fd6-adab-7107664a7924.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ecd4785f-075d-4318-8dcd-4482bd5128f6.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/ecd4785f-075d-4318-8dcd-4482bd5128f6#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "d2dyzvdsvr",
-      "Integrity": "W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\ecd4785f-075d-4318-8dcd-4482bd5128f6.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ed377327-ec65-4273-9e1f-d23d28641243.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/courses/ed377327-ec65-4273-9e1f-d23d28641243#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\courses\\ed377327-ec65-4273-9e1f-d23d28641243.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\03fb888a-17fd-48db-a506-539af397572d.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/03fb888a-17fd-48db-a506-539af397572d#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\03fb888a-17fd-48db-a506-539af397572d.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/0a1d43c9-bca9-4b8c-b42a-b8568e572f24#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "n8tuj793sc",
-      "Integrity": "h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1f3b2234-fd55-4260-96bd-dcd2f059d194.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/1f3b2234-fd55-4260-96bd-dcd2f059d194#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "uzv1gypvdk",
-      "Integrity": "OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\1f3b2234-fd55-4260-96bd-dcd2f059d194.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/5e0e9f46-d7d3-4115-b666-0e46eea17e7b#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "uzv1gypvdk",
-      "Integrity": "OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/6fa9ad1a-bc79-47ae-ad94-d2d317d2b233#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "uzv1gypvdk",
-      "Integrity": "OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/8f8c9792-50bc-4560-8a76-1ae14b95eab7#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\af86af57-f067-4023-9c04-d5c235d54d98.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/af86af57-f067-4023-9c04-d5c235d54d98#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "8jw76tgka9",
-      "Integrity": "jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\af86af57-f067-4023-9c04-d5c235d54d98.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b1c74586-e623-4a29-b0e5-df24db406ed1.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/b1c74586-e623-4a29-b0e5-df24db406ed1#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "uzv1gypvdk",
-      "Integrity": "OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\b1c74586-e623-4a29-b0e5-df24db406ed1.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c30e1749-95c7-4c5e-84f9-a243a2709f33.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/c30e1749-95c7-4c5e-84f9-a243a2709f33#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "yl3rwvdlvn",
-      "Integrity": "BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\c30e1749-95c7-4c5e-84f9-a243a2709f33.png"
-    },
-    {
-      "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png",
-      "SourceId": "CyberSecurity-new",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\",
-      "BasePath": "_content/CyberSecurity-new",
-      "RelativePath": "images/topics/e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "uzv1gypvdk",
-      "Integrity": "OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\topics\\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png"
+      "OriginalItemSpec": "wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\Uploads\\Images\\76189695-650c-4d35-9021-fee23aad06a2.png",
@@ -817,8 +523,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "images/courses/0061552e-df30-49b1-a5b6-d690a4ce3379.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0061552e-df30-49b1-a5b6-d690a4ce3379.png",
+      "Route": "images/courses/2a403bd5-703a-45ad-a8d2-7f647aca88f1.1rb94c13xd.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -827,7 +533,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "873959"
         },
         {
           "Name": "Content-Type",
@@ -835,11 +541,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:00 GMT"
+          "Value": "Sat, 18 Jan 2025 07:02:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -849,21 +555,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8sx823t6bw"
+          "Value": "1rb94c13xd"
         },
         {
           "Name": "label",
-          "Value": "images/courses/0061552e-df30-49b1-a5b6-d690a4ce3379.png"
+          "Value": "images/courses/2a403bd5-703a-45ad-a8d2-7f647aca88f1.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
         }
       ]
     },
     {
-      "Route": "images/courses/0061552e-df30-49b1-a5b6-d690a4ce3379.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0061552e-df30-49b1-a5b6-d690a4ce3379.png",
+      "Route": "images/courses/2a403bd5-703a-45ad-a8d2-7f647aca88f1.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -872,7 +578,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "873959"
         },
         {
           "Name": "Content-Type",
@@ -880,11 +586,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:00 GMT"
+          "Value": "Sat, 18 Jan 2025 07:02:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -894,13 +600,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
         }
       ]
     },
     {
-      "Route": "images/courses/06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png",
+      "Route": "images/courses/57973e87-12bb-4dbc-a9a3-4809c2fc8a01.bwbz7uumnu.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -909,7 +615,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "314093"
+          "Value": "103242"
         },
         {
           "Name": "Content-Type",
@@ -917,48 +623,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
+          "Value": "\"+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/06eb54ce-ef71-4d64-8cba-fe21ccc6885a.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:40 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -968,21 +637,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
+          "Value": "bwbz7uumnu"
         },
         {
           "Name": "label",
-          "Value": "images/courses/06eb54ce-ef71-4d64-8cba-fe21ccc6885a.png"
+          "Value": "images/courses/57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
+          "Value": "sha256-+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY="
         }
       ]
     },
     {
-      "Route": "images/courses/0bb80c16-3312-4792-a38b-e66b1ab54d09.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0bb80c16-3312-4792-a38b-e66b1ab54d09.png",
+      "Route": "images/courses/57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -991,7 +660,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "103242"
         },
         {
           "Name": "Content-Type",
@@ -999,56 +668,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:25:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fttjp90ayt"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/0bb80c16-3312-4792-a38b-e66b1ab54d09.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/0bb80c16-3312-4792-a38b-e66b1ab54d09.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0bb80c16-3312-4792-a38b-e66b1ab54d09.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:25:39 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1058,13 +682,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+          "Value": "sha256-+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY="
         }
       ]
     },
     {
-      "Route": "images/courses/0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png",
+      "Route": "images/courses/8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1085,7 +709,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:17:11 GMT"
+          "Value": "Tue, 21 Jan 2025 11:08:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1100,8 +724,8 @@
       ]
     },
     {
-      "Route": "images/courses/0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.zqxddzdkto.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png",
+      "Route": "images/courses/8acb6bd8-5396-44de-ad5f-320d0b91b4ee.zqxddzdkto.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1122,7 +746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:17:11 GMT"
+          "Value": "Tue, 21 Jan 2025 11:08:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1136,7 +760,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/courses/0e421cd9-68d1-4b8e-a29a-cfb3368fb95f.png"
+          "Value": "images/courses/8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png"
         },
         {
           "Name": "integrity",
@@ -1145,8 +769,8 @@
       ]
     },
     {
-      "Route": "images/courses/118ed143-d436-46cb-a253-8f02cc02ade7.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\118ed143-d436-46cb-a253-8f02cc02ade7.png",
+      "Route": "images/courses/d7f77ec9-4e14-46bd-9eee-bed94377af29.1rb94c13xd.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d7f77ec9-4e14-46bd-9eee-bed94377af29.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1155,7 +779,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "314093"
+          "Value": "873959"
         },
         {
           "Name": "Content-Type",
@@ -1163,48 +787,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/118ed143-d436-46cb-a253-8f02cc02ade7.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\118ed143-d436-46cb-a253-8f02cc02ade7.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:32 GMT"
+          "Value": "Sat, 18 Jan 2025 07:03:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1214,21 +801,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
+          "Value": "1rb94c13xd"
         },
         {
           "Name": "label",
-          "Value": "images/courses/118ed143-d436-46cb-a253-8f02cc02ade7.png"
+          "Value": "images/courses/d7f77ec9-4e14-46bd-9eee-bed94377af29.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
         }
       ]
     },
     {
-      "Route": "images/courses/19801657-df38-4819-9f99-5c1e22358fbd.lva6mptnns.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\19801657-df38-4819-9f99-5c1e22358fbd.png",
+      "Route": "images/courses/d7f77ec9-4e14-46bd-9eee-bed94377af29.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d7f77ec9-4e14-46bd-9eee-bed94377af29.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1237,7 +824,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "93774"
+          "Value": "873959"
         },
         {
           "Name": "Content-Type",
@@ -1245,56 +832,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8=\""
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:01:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lva6mptnns"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/19801657-df38-4819-9f99-5c1e22358fbd.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/19801657-df38-4819-9f99-5c1e22358fbd.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\19801657-df38-4819-9f99-5c1e22358fbd.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "93774"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:01:19 GMT"
+          "Value": "Sat, 18 Jan 2025 07:03:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1304,13 +846,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-keZ11sfSRk1PDlDtVvwaTjJorczXjgSg9PvD64eyOB8="
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
         }
       ]
     },
     {
-      "Route": "images/courses/1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png",
+      "Route": "images/topics/1963d37c-2265-4d7c-90a9-f77f489fd069.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1963d37c-2265-4d7c-90a9-f77f489fd069.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1319,7 +861,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "114333"
+          "Value": "67178"
         },
         {
           "Name": "Content-Type",
@@ -1327,11 +869,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=\""
+          "Value": "\"RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:18:09 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1341,13 +883,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA="
+          "Value": "sha256-RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY="
         }
       ]
     },
     {
-      "Route": "images/courses/1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.zqxddzdkto.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png",
+      "Route": "images/topics/1963d37c-2265-4d7c-90a9-f77f489fd069.u6l43jd5d6.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1963d37c-2265-4d7c-90a9-f77f489fd069.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1356,7 +898,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "114333"
+          "Value": "67178"
         },
         {
           "Name": "Content-Type",
@@ -1364,11 +906,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=\""
+          "Value": "\"RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:18:09 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1378,21 +920,185 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "zqxddzdkto"
+          "Value": "u6l43jd5d6"
         },
         {
           "Name": "label",
-          "Value": "images/courses/1b9ce22c-6203-44fc-a28c-e984e9fe3ad6.png"
+          "Value": "images/topics/1963d37c-2265-4d7c-90a9-f77f489fd069.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA="
+          "Value": "sha256-RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY="
         }
       ]
     },
     {
-      "Route": "images/courses/398898f8-e71e-45b9-9369-1f85be5a3e2c.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\398898f8-e71e-45b9-9369-1f85be5a3e2c.png",
+      "Route": "images/topics/27398a06-6715-4f6a-8f77-6fe822cf5c53.1rb94c13xd.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\27398a06-6715-4f6a-8f77-6fe822cf5c53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "873959"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1rb94c13xd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/27398a06-6715-4f6a-8f77-6fe822cf5c53.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/27398a06-6715-4f6a-8f77-6fe822cf5c53.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\27398a06-6715-4f6a-8f77-6fe822cf5c53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "873959"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q1jEpusLp3ri5C8d8gmXL32tHM/ohYqiMxYgAdiLMrk="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/2c3aa922-5564-4455-82c2-3502aad6a566.ml2tvcvbid.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\2c3aa922-5564-4455-82c2-3502aad6a566.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190095"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ml2tvcvbid"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/2c3aa922-5564-4455-82c2-3502aad6a566.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/2c3aa922-5564-4455-82c2-3502aad6a566.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\2c3aa922-5564-4455-82c2-3502aad6a566.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190095"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lm5LGc6prAPs4QBowiYj4NioaEMwdYzwaPjfoXASxDw="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/4adfe50d-5df0-4091-a5fa-827b2c382f62.fttjp90ayt.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\4adfe50d-5df0-4091-a5fa-827b2c382f62.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1413,7 +1119,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:58:11 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1427,7 +1133,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/courses/398898f8-e71e-45b9-9369-1f85be5a3e2c.png"
+          "Value": "images/topics/4adfe50d-5df0-4091-a5fa-827b2c382f62.png"
         },
         {
           "Name": "integrity",
@@ -1436,8 +1142,8 @@
       ]
     },
     {
-      "Route": "images/courses/398898f8-e71e-45b9-9369-1f85be5a3e2c.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\398898f8-e71e-45b9-9369-1f85be5a3e2c.png",
+      "Route": "images/topics/4adfe50d-5df0-4091-a5fa-827b2c382f62.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\4adfe50d-5df0-4091-a5fa-827b2c382f62.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1458,7 +1164,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:58:11 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1473,8 +1179,336 @@
       ]
     },
     {
-      "Route": "images/courses/44d36207-78e9-42b5-a1f1-4eeaf7d72cba.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png",
+      "Route": "images/topics/602b6bfd-a871-4324-941a-c2b2aa9dcf77.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87600"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/602b6bfd-a871-4324-941a-c2b2aa9dcf77.w9iou32ey1.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\602b6bfd-a871-4324-941a-c2b2aa9dcf77.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87600"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w9iou32ey1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/602b6bfd-a871-4324-941a-c2b2aa9dcf77.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.05vwf1of7p.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "05vwf1of7p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\680dc1cc-923a-43e1-8dd6-fd8ec5bf43e6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/6c0bda93-a855-48a5-b0e8-4bd2b70ed660.09j3amzp8h.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "09j3amzp8h"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zKmDkWyg77jjR00s8M88HKk2SRd6yVQrGJzvLKkrYQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/8066e5a2-3224-474b-9f0b-316a087cb6de.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8066e5a2-3224-474b-9f0b-316a087cb6de.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "240154"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/8066e5a2-3224-474b-9f0b-316a087cb6de.wrtdxtb45c.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8066e5a2-3224-474b-9f0b-316a087cb6de.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "240154"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wrtdxtb45c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/8066e5a2-3224-474b-9f0b-316a087cb6de.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCMgLrzCoMvB/4butQ4LK09K3Wi+A6iVWAU9XpWYNto="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/83953f70-dc7a-4194-a221-d508f19e0353.8sx823t6bw.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\83953f70-dc7a-4194-a221-d508f19e0353.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1495,7 +1529,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:25:37 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1509,7 +1543,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/courses/44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png"
+          "Value": "images/topics/83953f70-dc7a-4194-a221-d508f19e0353.png"
         },
         {
           "Name": "integrity",
@@ -1518,8 +1552,8 @@
       ]
     },
     {
-      "Route": "images/courses/44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\44d36207-78e9-42b5-a1f1-4eeaf7d72cba.png",
+      "Route": "images/topics/83953f70-dc7a-4194-a221-d508f19e0353.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\83953f70-dc7a-4194-a221-d508f19e0353.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1540,7 +1574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:25:37 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1555,8 +1589,8 @@
       ]
     },
     {
-      "Route": "images/courses/55a4b6c9-9a8d-4fa5-853b-797837aa0247.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png",
+      "Route": "images/topics/8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1565,7 +1599,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "73306"
         },
         {
           "Name": "Content-Type",
@@ -1573,56 +1607,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:35:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fttjp90ayt"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/55a4b6c9-9a8d-4fa5-853b-797837aa0247.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/55a4b6c9-9a8d-4fa5-853b-797837aa0247.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\55a4b6c9-9a8d-4fa5-853b-797837aa0247.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:35:35 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1632,13 +1621,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+          "Value": "sha256-OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4="
         }
       ]
     },
     {
-      "Route": "images/courses/5879af5c-ed33-4288-9083-e6a0a9a73902.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\5879af5c-ed33-4288-9083-e6a0a9a73902.png",
+      "Route": "images/topics/8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.sr5clgvjzf.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1647,7 +1636,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "73306"
         },
         {
           "Name": "Content-Type",
@@ -1655,11 +1644,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:57:42 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1669,21 +1658,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fttjp90ayt"
+          "Value": "sr5clgvjzf"
         },
         {
           "Name": "label",
-          "Value": "images/courses/5879af5c-ed33-4288-9083-e6a0a9a73902.png"
+          "Value": "images/topics/8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+          "Value": "sha256-OM3t4JoTBYtRZI/N2sq/kUfAEJxtqS2RAqEskkGk6a4="
         }
       ]
     },
     {
-      "Route": "images/courses/5879af5c-ed33-4288-9083-e6a0a9a73902.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\5879af5c-ed33-4288-9083-e6a0a9a73902.png",
+      "Route": "images/topics/8e22efaa-23be-4ea2-97a3-07d28f135a49.fig7hdx7yq.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8e22efaa-23be-4ea2-97a3-07d28f135a49.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1692,7 +1681,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "26892"
         },
         {
           "Name": "Content-Type",
@@ -1700,48 +1689,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:57:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/6f268b6a-6936-4959-a388-d0357307cd07.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\6f268b6a-6936-4959-a388-d0357307cd07.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "49470"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:43 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1751,21 +1703,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8sx823t6bw"
+          "Value": "fig7hdx7yq"
         },
         {
           "Name": "label",
-          "Value": "images/courses/6f268b6a-6936-4959-a388-d0357307cd07.png"
+          "Value": "images/topics/8e22efaa-23be-4ea2-97a3-07d28f135a49.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs="
         }
       ]
     },
     {
-      "Route": "images/courses/6f268b6a-6936-4959-a388-d0357307cd07.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\6f268b6a-6936-4959-a388-d0357307cd07.png",
+      "Route": "images/topics/8e22efaa-23be-4ea2-97a3-07d28f135a49.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8e22efaa-23be-4ea2-97a3-07d28f135a49.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1774,7 +1726,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "26892"
         },
         {
           "Name": "Content-Type",
@@ -1782,11 +1734,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:43 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1796,13 +1748,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs="
         }
       ]
     },
     {
-      "Route": "images/courses/a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png",
+      "Route": "images/topics/b6db2bdc-ef37-4a0d-969e-346cc2b11ede.hlluq8053z.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1811,7 +1763,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "184021"
         },
         {
           "Name": "Content-Type",
@@ -1819,11 +1771,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:00 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1833,21 +1785,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8sx823t6bw"
+          "Value": "hlluq8053z"
         },
         {
           "Name": "label",
-          "Value": "images/courses/a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png"
+          "Value": "images/topics/b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M="
         }
       ]
     },
     {
-      "Route": "images/courses/a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a0a4ef3b-fb2a-4db1-9b0f-b504005eb0df.png",
+      "Route": "images/topics/b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1856,7 +1808,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "184021"
         },
         {
           "Name": "Content-Type",
@@ -1864,11 +1816,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:24:00 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1878,13 +1830,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M="
         }
       ]
     },
     {
-      "Route": "images/courses/a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.n8tuj793sc.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png",
+      "Route": "images/topics/c2b22b7c-e69a-489e-b052-d86559989b14.5f5hn5gi4l.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1893,7 +1845,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47404"
+          "Value": "37613"
         },
         {
           "Name": "Content-Type",
@@ -1901,11 +1853,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:38:51 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1915,21 +1867,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n8tuj793sc"
+          "Value": "5f5hn5gi4l"
         },
         {
           "Name": "label",
-          "Value": "images/courses/a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png"
+          "Value": "images/topics/c2b22b7c-e69a-489e-b052-d86559989b14.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
         }
       ]
     },
     {
-      "Route": "images/courses/a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\a7dc3e95-8e5c-4e98-ba5f-0c9c20de84bf.png",
+      "Route": "images/topics/c2b22b7c-e69a-489e-b052-d86559989b14.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1938,7 +1890,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47404"
+          "Value": "37613"
         },
         {
           "Name": "Content-Type",
@@ -1946,11 +1898,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:38:51 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1960,13 +1912,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
         }
       ]
     },
     {
-      "Route": "images/courses/ae9ce19b-cbf0-4806-a41b-4b0340646a81.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png",
+      "Route": "images/topics/c938676a-b135-40c1-9655-77733076bccc.9hwc0axjau.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c938676a-b135-40c1-9655-77733076bccc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1975,7 +1927,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "46929"
         },
         {
           "Name": "Content-Type",
@@ -1983,11 +1935,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:59:24 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1997,21 +1949,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fttjp90ayt"
+          "Value": "9hwc0axjau"
         },
         {
           "Name": "label",
-          "Value": "images/courses/ae9ce19b-cbf0-4806-a41b-4b0340646a81.png"
+          "Value": "images/topics/c938676a-b135-40c1-9655-77733076bccc.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+          "Value": "sha256-k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ="
         }
       ]
     },
     {
-      "Route": "images/courses/ae9ce19b-cbf0-4806-a41b-4b0340646a81.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ae9ce19b-cbf0-4806-a41b-4b0340646a81.png",
+      "Route": "images/topics/c938676a-b135-40c1-9655-77733076bccc.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c938676a-b135-40c1-9655-77733076bccc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2020,7 +1972,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "154442"
+          "Value": "46929"
         },
         {
           "Name": "Content-Type",
@@ -2028,11 +1980,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+          "Value": "\"k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:59:24 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2042,13 +1994,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+          "Value": "sha256-k5haLR9VZCznu/2RukFmhujHYxYY7nZXRS3BjLr44MQ="
         }
       ]
     },
     {
-      "Route": "images/courses/b95e4527-8fe5-4063-8418-095c51c156d5.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\b95e4527-8fe5-4063-8418-095c51c156d5.png",
+      "Route": "images/topics/d531bbe4-fb14-481c-b95e-a39bf85e01ee.pau3j32wng.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2057,7 +2009,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "124010"
         },
         {
           "Name": "Content-Type",
@@ -2065,11 +2017,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2079,21 +2031,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8sx823t6bw"
+          "Value": "pau3j32wng"
         },
         {
           "Name": "label",
-          "Value": "images/courses/b95e4527-8fe5-4063-8418-095c51c156d5.png"
+          "Value": "images/topics/d531bbe4-fb14-481c-b95e-a39bf85e01ee.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q="
         }
       ]
     },
     {
-      "Route": "images/courses/b95e4527-8fe5-4063-8418-095c51c156d5.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\b95e4527-8fe5-4063-8418-095c51c156d5.png",
+      "Route": "images/topics/d531bbe4-fb14-481c-b95e-a39bf85e01ee.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2102,7 +2054,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "49470"
+          "Value": "124010"
         },
         {
           "Name": "Content-Type",
@@ -2110,11 +2062,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+          "Value": "\"30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2124,13 +2076,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+          "Value": "sha256-30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q="
         }
       ]
     },
     {
-      "Route": "images/courses/c6b2dd0d-00eb-4d66-a930-fa7974de7c23.n8tuj793sc.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png",
+      "Route": "images/topics/fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.510yw2axrh.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2139,7 +2091,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47404"
+          "Value": "350052"
         },
         {
           "Name": "Content-Type",
@@ -2147,11 +2099,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
+          "Value": "\"V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:33:20 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2161,21 +2113,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n8tuj793sc"
+          "Value": "510yw2axrh"
         },
         {
           "Name": "label",
-          "Value": "images/courses/c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png"
+          "Value": "images/topics/fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
+          "Value": "sha256-V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw="
         }
       ]
     },
     {
-      "Route": "images/courses/c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\c6b2dd0d-00eb-4d66-a930-fa7974de7c23.png",
+      "Route": "images/topics/fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2184,7 +2136,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47404"
+          "Value": "350052"
         },
         {
           "Name": "Content-Type",
@@ -2192,11 +2144,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
+          "Value": "\"V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:33:20 GMT"
+          "Value": "Fri, 17 Jan 2025 10:14:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2206,1401 +2158,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ced3befc-631a-422f-8b58-4791d2cdb842.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ced3befc-631a-422f-8b58-4791d2cdb842.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:36:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fttjp90ayt"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/ced3befc-631a-422f-8b58-4791d2cdb842.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ced3befc-631a-422f-8b58-4791d2cdb842.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ced3befc-631a-422f-8b58-4791d2cdb842.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:36:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.8sx823t6bw.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "49470"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8sx823t6bw"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\d00e3ea1-447c-48d4-8a3f-b3e1c357a93a.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "49470"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e04eba59-ec85-4b7c-ae9e-c4838002c0c2.fttjp90ayt.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:59:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fttjp90ayt"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e04eba59-ec85-4b7c-ae9e-c4838002c0c2.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "154442"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:59:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e20c4530-8f60-4650-8b6f-6890c4a4075e.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e20c4530-8f60-4650-8b6f-6890c4a4075e.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "114333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:17:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e20c4530-8f60-4650-8b6f-6890c4a4075e.zqxddzdkto.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e20c4530-8f60-4650-8b6f-6890c4a4075e.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "114333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:17:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zqxddzdkto"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/e20c4530-8f60-4650-8b6f-6890c4a4075e.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-5aqW4ZleFanhi/Aya0/XMymdATq2iY/fCAu33OIx9QA="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e64743a0-568a-4fd6-adab-7107664a7924.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e64743a0-568a-4fd6-adab-7107664a7924.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/e64743a0-568a-4fd6-adab-7107664a7924.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\e64743a0-568a-4fd6-adab-7107664a7924.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:37:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/e64743a0-568a-4fd6-adab-7107664a7924.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ecd4785f-075d-4318-8dcd-4482bd5128f6.d2dyzvdsvr.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ecd4785f-075d-4318-8dcd-4482bd5128f6.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "80620"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 17 Jan 2025 04:53:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d2dyzvdsvr"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/ecd4785f-075d-4318-8dcd-4482bd5128f6.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ecd4785f-075d-4318-8dcd-4482bd5128f6.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ecd4785f-075d-4318-8dcd-4482bd5128f6.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "80620"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 17 Jan 2025 04:53:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-W9oeY1OXIf3vJbenx6Jx3QdEB//w/0o0V7aZgh/DUVE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ed377327-ec65-4273-9e1f-d23d28641243.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ed377327-ec65-4273-9e1f-d23d28641243.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:38:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/courses/ed377327-ec65-4273-9e1f-d23d28641243.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\courses\\ed377327-ec65-4273-9e1f-d23d28641243.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:38:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/courses/ed377327-ec65-4273-9e1f-d23d28641243.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/03fb888a-17fd-48db-a506-539af397572d.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\03fb888a-17fd-48db-a506-539af397572d.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/03fb888a-17fd-48db-a506-539af397572d.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\03fb888a-17fd-48db-a506-539af397572d.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/03fb888a-17fd-48db-a506-539af397572d.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/0a1d43c9-bca9-4b8c-b42a-b8568e572f24.n8tuj793sc.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47404"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "n8tuj793sc"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\0a1d43c9-bca9-4b8c-b42a-b8568e572f24.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47404"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-h67lPwp3yXdolkyaisimYJlQcVNHhBrcnn8mD137PuE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/1f3b2234-fd55-4260-96bd-dcd2f059d194.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1f3b2234-fd55-4260-96bd-dcd2f059d194.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:18:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/1f3b2234-fd55-4260-96bd-dcd2f059d194.uzv1gypvdk.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\1f3b2234-fd55-4260-96bd-dcd2f059d194.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 12:18:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uzv1gypvdk"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/1f3b2234-fd55-4260-96bd-dcd2f059d194.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:36:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/5e0e9f46-d7d3-4115-b666-0e46eea17e7b.uzv1gypvdk.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:36:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uzv1gypvdk"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/5e0e9f46-d7d3-4115-b666-0e46eea17e7b.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.uzv1gypvdk.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uzv1gypvdk"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/6fa9ad1a-bc79-47ae-ad94-d2d317d2b233.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/8f8c9792-50bc-4560-8a76-1ae14b95eab7.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:38:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/8f8c9792-50bc-4560-8a76-1ae14b95eab7.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\8f8c9792-50bc-4560-8a76-1ae14b95eab7.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:38:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/8f8c9792-50bc-4560-8a76-1ae14b95eab7.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/af86af57-f067-4023-9c04-d5c235d54d98.8jw76tgka9.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\af86af57-f067-4023-9c04-d5c235d54d98.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2283"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 17 Jan 2025 04:53:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8jw76tgka9"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/af86af57-f067-4023-9c04-d5c235d54d98.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/af86af57-f067-4023-9c04-d5c235d54d98.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\af86af57-f067-4023-9c04-d5c235d54d98.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2283"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 17 Jan 2025 04:53:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jAVwxxdj6QuhCSl8qxHTF5EFqdkNzZYANsENzQiUnSY="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/b1c74586-e623-4a29-b0e5-df24db406ed1.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b1c74586-e623-4a29-b0e5-df24db406ed1.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:25:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/b1c74586-e623-4a29-b0e5-df24db406ed1.uzv1gypvdk.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\b1c74586-e623-4a29-b0e5-df24db406ed1.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:25:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uzv1gypvdk"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/b1c74586-e623-4a29-b0e5-df24db406ed1.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/c30e1749-95c7-4c5e-84f9-a243a2709f33.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c30e1749-95c7-4c5e-84f9-a243a2709f33.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/c30e1749-95c7-4c5e-84f9-a243a2709f33.yl3rwvdlvn.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\c30e1749-95c7-4c5e-84f9-a243a2709f33.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "314093"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yl3rwvdlvn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/c30e1749-95c7-4c5e-84f9-a243a2709f33.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BlfL1TEknFwOY8MEFJc6d40NHOejnrLrtDOMeLIfDEE="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
-        }
-      ]
-    },
-    {
-      "Route": "images/topics/e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.uzv1gypvdk.png",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\wwwroot\\images\\topics\\e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "338386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 11:26:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uzv1gypvdk"
-        },
-        {
-          "Name": "label",
-          "Value": "images/topics/e3ad880c-af9a-41a4-9d4b-45d4ad89a5ac.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OoD0MsuKlBAU04iDmq3lX4aoPX2y57JxkO+wFcvQsFI="
+          "Value": "sha256-V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw="
         }
       ]
     },

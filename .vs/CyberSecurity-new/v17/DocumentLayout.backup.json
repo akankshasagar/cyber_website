@@ -7,24 +7,20 @@
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\models\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,13 +34,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Models.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\Models.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\Models.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\Models.cs",
               "RelativeToolTip": "CyberSecurity-new\\Models\\Models.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T13:07:12.509Z",
               "IsPinned": true,
@@ -58,7 +54,7 @@
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\CourseController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAAQwNwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAALQAAAAAZmZmZmYpwMAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T13:24:43.491Z",
               "IsPinned": true,
@@ -66,54 +62,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Context\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Context\\AppDbContext.cs",
               "RelativeToolTip": "CyberSecurity-new\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAADwAAAAAmpmZmZkBwEEAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAACAZmZmZmYgwFAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T13:06:19.372Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DTO.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\DTO.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\DTO.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\DTO.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Models\\DTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T10:36:35.992Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAEBAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T05:05:03.179Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\User.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\User.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ModuleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "ViewState": "AgIAAA0AAABAMzMzMzMrwCEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T12:41:35.752Z",
+              "WhenOpened": "2025-01-17T11:02:29.613Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TopicController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\TopicController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\TopicController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\TopicController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\TopicController.cs",
+              "ViewState": "AgIAADAAAADAmZmZmZkvwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T11:18:58.703Z",
+              "IsPinned": true,
               "EditorCaption": ""
             }
           ]

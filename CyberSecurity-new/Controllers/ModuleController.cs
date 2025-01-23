@@ -17,6 +17,23 @@ namespace CyberSecurity_new.Controllers
             _context = context;
         }
 
+        // GET: api/Modules/{courseId}
+        [HttpGet("{courseId}")]
+        public async Task<ActionResult<IEnumerable<Module>>> GetModulesByCourse(int courseId)
+        {
+            var modules = await _context.modules
+                .Where(m => m.CourseId == courseId)
+                .Include(m => m.Courses) // To include the Course details, if needed.
+                .ToListAsync();
+
+            if (modules == null || !modules.Any())
+            {
+                return NotFound($"No modules found for the course with ID {courseId}.");
+            }
+
+            return Ok(modules);
+        }
+
         //[HttpPost]
         //public async Task<IActionResult> AddModule([FromBody] ModuleDto moduleDto)
         //{

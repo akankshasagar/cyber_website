@@ -29,6 +29,7 @@ namespace CyberSecurity_new.Context
         public DbSet<Courses> course { get; set; }
         public DbSet<Module> modules { get; set; }
         public DbSet<Topic> topics { get; set; }
+        public DbSet<Question> questions { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
         public DbSet<OTPVerification> OTPVerifications { get; set; }
@@ -77,6 +78,7 @@ namespace CyberSecurity_new.Context
             .HasForeignKey(t => t.CourseId)
             .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Courses
 
+            modelBuilder.Entity<Question>().ToTable("Question");
 
             modelBuilder.Entity<CourseEnrollment>().ToTable("coursesEnrolled");
             modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");
