@@ -238,11 +238,24 @@ namespace CyberSecurity_new.Controllers
             }
 
             // Validate that each module has at least one topic
+            //foreach (var module in request.Modules)
+            //{
+            //    if (module.Topics == null || module.Topics.Count == 0)
+            //    {
+            //        return BadRequest(new { message = "Each module must have at least one topic." });
+            //    }
+            //}
+
             foreach (var module in request.Modules)
             {
                 if (module.Topics == null || module.Topics.Count == 0)
                 {
                     return BadRequest(new { message = "Each module must have at least one topic." });
+                }
+
+                if (module.Questions == null || module.Questions.Count == 0)
+                {
+                    return BadRequest(new { message = "Each module must have Questions." });
                 }
             }
 

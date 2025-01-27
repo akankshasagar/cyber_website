@@ -30,7 +30,8 @@ namespace CyberSecurity_new.Context
         public DbSet<Module> modules { get; set; }
         public DbSet<Topic> topics { get; set; }
         public DbSet<Question> questions { get; set; }
-        public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
+        public DbSet<Answer> Answer { get; set; }
+        public DbSet<CourseEnrollment> CourseEnrollment { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
         public DbSet<OTPVerification> OTPVerifications { get; set; }
 
@@ -79,8 +80,39 @@ namespace CyberSecurity_new.Context
             .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Courses
 
             modelBuilder.Entity<Question>().ToTable("Question");
+            // Answer -> Question
+            modelBuilder.Entity<Answer>()
+                .HasOne(a => a.Question)
+                .WithMany()
+                .HasForeignKey(a => a.QuestionId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<CourseEnrollment>().ToTable("coursesEnrolled");
+            // Answer -> Module
+            modelBuilder.Entity<Answer>()
+                .HasOne(a => a.Module)
+                .WithMany()
+                .HasForeignKey(a => a.ModuleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Answer -> Courses
+            modelBuilder.Entity<Answer>()
+                .HasOne(a => a.Courses)
+                .WithMany()
+                .HasForeignKey(a => a.CourseId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<CourseEnrollment>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.UserID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<CourseEnrollment>()
+                .HasOne(c => c.Courses)
+                .WithMany()
+                .HasForeignKey(c => c.CourseId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");
 
 

@@ -72,4 +72,31 @@ namespace CyberSecurity_new.Models
         // Navigation Property
         public virtual Module Module { get; set; }
     }
+
+    public class Answer
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [ForeignKey("Question")]
+        public int QuestionId { get; set; } // Foreign key to the Question table
+
+        [ForeignKey("Module")]
+        public int ModuleId { get; set; } // Foreign key to the Module table
+
+        [ForeignKey("Courses")]
+        public int CourseId { get; set; } // Foreign key to the Course table
+
+        [Required]
+        public string AnswerText { get; set; } // User's submitted answer
+        public bool IsCorrect { get; set; } // Indicates whether the answer is correct
+        public DateTime SubmittedAt { get; set; } // Timestamp of the answer submission
+        public string SubmittedBy { get; set; } // User who submitted the answer
+
+        // Navigation properties
+        public virtual Question Question { get; set; }
+        public virtual Module Module { get; set; }
+        public virtual Courses Courses { get; set; }
+    }
+
 }

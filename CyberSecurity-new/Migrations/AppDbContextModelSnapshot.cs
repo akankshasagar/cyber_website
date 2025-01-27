@@ -22,6 +22,47 @@ namespace CyberSecurity_new.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CyberSecurity_new.Models.Answer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AnswerText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SubmittedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SubmittedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("ModuleId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("Answer");
+                });
+
             modelBuilder.Entity("CyberSecurity_new.Models.AttackSurfaces", b =>
                 {
                     b.Property<int>("Id")
@@ -126,15 +167,25 @@ namespace CyberSecurity_new.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Course")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EnrolledAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("coursesEnrolled", (string)null);
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("CourseEnrollment");
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.Courses", b =>
@@ -825,6 +876,52 @@ namespace CyberSecurity_new.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("wirelessenvironmenttest001", (string)null);
+                });
+
+            modelBuilder.Entity("CyberSecurity_new.Models.Answer", b =>
+                {
+                    b.HasOne("CyberSecurity_new.Models.Courses", "Courses")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CyberSecurity_new.Models.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CyberSecurity_new.Models.Question", "Question")
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Courses");
+
+                    b.Navigation("Module");
+
+                    b.Navigation("Question");
+                });
+
+            modelBuilder.Entity("CyberSecurity_new.Models.CourseEnrollment", b =>
+                {
+                    b.HasOne("CyberSecurity_new.Models.Courses", "Courses")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CyberSecurity_new.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Courses");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.LoginHistory", b =>

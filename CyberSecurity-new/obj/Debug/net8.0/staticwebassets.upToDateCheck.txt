@@ -1,7 +1,13 @@
 wwwroot\images\courses\2a403bd5-703a-45ad-a8d2-7f647aca88f1.png
+wwwroot\images\courses\3b65510a-327b-4e27-a764-d16c2dc905bb.png
 wwwroot\images\courses\57973e87-12bb-4dbc-a9a3-4809c2fc8a01.png
+wwwroot\images\courses\6f972a97-6ec4-4eda-a2c7-4ff339da9eeb.png
+wwwroot\images\courses\7df93519-5f41-45cf-a95e-f0bfd2ffb7b4.png
 wwwroot\images\courses\8acb6bd8-5396-44de-ad5f-320d0b91b4ee.png
+wwwroot\images\courses\a0006d54-cf50-428d-9e3b-beb4b9c04856.png
 wwwroot\images\courses\d7f77ec9-4e14-46bd-9eee-bed94377af29.png
+wwwroot\images\courses\e36b85f4-4217-421b-8c9d-6737f7792653.png
+wwwroot\images\courses\f1caa89f-eab3-4471-ab1f-38671ed3cd6b.png
 wwwroot\images\topics\1963d37c-2265-4d7c-90a9-f77f489fd069.png
 wwwroot\images\topics\27398a06-6715-4f6a-8f77-6fe822cf5c53.png
 wwwroot\images\topics\2c3aa922-5564-4455-82c2-3502aad6a566.png

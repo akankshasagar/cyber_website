@@ -85,7 +85,7 @@ namespace CyberSecurity_new.Controllers
             return Ok(topics);
         }
 
-
+        
 
 
 
@@ -126,10 +126,10 @@ namespace CyberSecurity_new.Controllers
                 })
                 .FirstOrDefault();
 
-            if (topic == null)
-            {
-                return NotFound(new { message = "Topic not found" });
-            }
+            //if (topic == null)
+            //{
+            //    return NotFound(new { message = "Topic not found" });
+            //}
 
             return Ok(topic);
         }

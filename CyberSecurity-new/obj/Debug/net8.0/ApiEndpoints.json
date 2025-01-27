@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "CyberSecurity_new.Controllers.AnswersController",
+    "Method": "SubmitAnswers",
+    "RelativePath": "api/Answers/SubmitAnswers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "answers",
+        "Type": "System.Collections.Generic.List\u00601[[CyberSecurity_new.Models.Answer, CyberSecurity-new, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.AttackSurfacesAnswers001",
     "Method": "SubmitForm",
     "RelativePath": "api/AttackSurfacesAnswers001",
@@ -105,15 +121,31 @@
   {
     "ContainingType": "CyberSecurity_new.Controllers.CourseEnrollmentsController",
     "Method": "Enroll",
-    "RelativePath": "api/CourseEnrollments",
+    "RelativePath": "api/CourseEnrollments/Enroll",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "course",
+        "Name": "request",
+        "Type": "CyberSecurity_new.Controllers.EnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.CourseEnrollmentsController",
+    "Method": "GetUserByEmail",
+    "RelativePath": "api/CourseEnrollments/GetUserByEmail/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -700,6 +732,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.QuestionsController",
+    "Method": "GetQuestionsByModuleId",
+    "RelativePath": "api/Questions/Module/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CyberSecurity_new.Models.Question, CyberSecurity-new, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
