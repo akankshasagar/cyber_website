@@ -37,6 +37,24 @@ export class AdminpageComponent {
   
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
+    console.log('Decoded Token:', tokenPayload);
+
+  const userEmail = tokenPayload?.email;
+  if (!userEmail) {
+    console.error('Email is missing in the token.');
+    return;
+  }
+
+  this.auth.getUserByEmail(userEmail).subscribe({
+    next: (user) => {
+      this.user.id = user.id; // Assuming the backend returns a user object with an `id` field
+      console.log('UserId fetched successfully:', this.user.id);
+    },
+    error: (error) => {
+      console.error('Failed to fetch UserId:', error);
+    },
+  });
+
     this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token 
     this.loadDepartments();   
     this.loadRoles();
@@ -133,17 +151,17 @@ export class AdminpageComponent {
     this.auth.signOut();
   }
 
-  enroll(email: string, course: string) {
-    this.auth.enroll(email, course)
-      .subscribe({
-        next: (response)  => {
-          console.log('Enrollment successful', response);
-        },
-        error: (error) => {
-          console.error('Error occurred during enrollment', error);
-        }
-      });
-  }
+  // enroll(email: string, course: string) {
+  //   this.auth.enroll(email, course)
+  //     .subscribe({
+  //       next: (response)  => {
+  //         console.log('Enrollment successful', response);
+  //       },
+  //       error: (error) => {
+  //         console.error('Error occurred during enrollment', error);
+  //       }
+  //     });
+  // }
 
   showForm(): void {
     this.isFormVisible = true;
@@ -167,4 +185,31 @@ export class AdminpageComponent {
     document.body.style.overflow = '';
   }
 
+  enroll(): void {
+    if (!this.user.id || !this.selectedCourse) {
+      console.error('User or course information is missing.');
+      alert('Please ensure you are logged in and have selected a course.');
+      return;
+    }
+  
+    const enrollmentRequest = {
+      UserId: this.user.id,
+      CourseId: this.selectedCourse.id,
+    };
+  
+    this.http.post('https://localhost:7243/api/CourseEnrollments/Enroll', enrollmentRequest).subscribe({
+      next: (response: any) => {
+        // console.log('Enrollment successful', response);
+        // alert(response.Message);
+        this.start = false; // Close the modal
+      },
+      error: (error) => {
+        // console.error('Error occurred during enrollment:', error);
+        // const errorMessage = error?.error?.message || 'An unknown error occurred.';
+        // alert(errorMessage);
+      },
+    });
+  }
+  
+  
 }

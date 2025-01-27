@@ -88,9 +88,204 @@
     <div class="container">
       <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h6 class="section-title bg-white text-center text-primary px-3">Add Course</h6>
-      </div>
-  
+      </div>      
+
       <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <form (ngSubmit)="onSubmit()" [formGroup]="courseForm" enctype="multipart/form-data">
+            <!-- Course Details -->
+            <div class="formbold-input-group">
+              <label for="name" class="formbold-form-label">Course Name</label>
+              <input
+                type="text"
+                formControlName="courseName"
+                placeholder="Enter Course Name"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+      
+            <div class="formbold-input-group">
+              <label for="description" class="formbold-form-label">Course Description</label>
+              <input
+                type="text"
+                formControlName="courseDescription"
+                placeholder="Enter Course Description"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+      
+            <div class="formbold-input-group">
+              <label for="image" class="formbold-form-label">Upload Image</label>
+              <input
+                id="imageInput"
+                type="file"
+                (change)="onFileSelect($event, 'image')"
+                class="formbold-form-input"
+                required
+              />
+              <div *ngIf="courseForm.get('image')?.touched && courseForm.get('image')?.invalid" class="text-danger">
+                Course image is required.
+              </div>
+            </div>
+      
+            <!-- Modules Section -->
+            <div formArrayName="modules" *ngFor="let module of modules.controls; let i = index">
+              <div [formGroupName]="i">
+                <h5>Module {{ i + 1 }}</h5>
+                <div class="formbold-input-group">
+                  <label for="moduleName" class="formbold-form-label">Module Name</label>
+                  <input
+                    type="text"
+                    formControlName="moduleName"
+                    placeholder="Enter Module Name"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+      
+                <!-- Topics -->
+                <div formArrayName="topics" *ngFor="let topic of getTopics(i).controls; let j = index">
+                  <div [formGroupName]="j">
+                    <h6>Topic {{ j + 1 }}</h6>
+                    <div class="formbold-input-group">
+                      <label for="topicName" class="formbold-form-label">Topic Name</label>
+                      <input
+                        type="text"
+                        formControlName="topicName"
+                        placeholder="Enter Topic Name"
+                        class="formbold-form-input"
+                        required
+                      />
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label for="topicDescription" class="formbold-form-label">Topic Description</label>
+                      <textarea
+                        formControlName="topicDescription"
+                        placeholder="Enter Topic Description"
+                        class="formbold-form-input"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label for="topicImage" class="formbold-form-label">Upload Topic Image</label>
+                      <input
+                        id="topicImage{{i}}{{j}}"
+                        type="file"
+                        (change)="onFileSelect($event, 'topic', i, j)"
+                        class="formbold-form-input"
+                      />
+                      <button 
+                        class="formbold-btn btn-danger mt-2" 
+                        *ngIf="getTopics(i)?.at(j)?.get('topicImage')?.value"
+                        type="button" 
+                        (click)="removeTopicImage(i, j)"
+                      >
+                        Remove Topic Image
+                      </button>
+                    </div>
+                    <button class="formbold-btn btn-danger" type="button" (click)="removeTopic(i, j)">
+                      Remove Topic
+                    </button>
+                  </div>
+                </div>
+                <button class="formbold-btn" type="button" (click)="addTopic(i)">Add Topic</button>
+      
+                <!-- Questions -->
+                <div formArrayName="questions" *ngFor="let question of getQuestions(i).controls; let k = index">
+                  <div [formGroupName]="k">
+                    <h6>Question {{ k + 1 }}</h6>
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Question Text</label>
+                      <textarea
+                        formControlName="questionText"
+                        placeholder="Enter Question"
+                        class="formbold-form-input"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Option A</label>
+                      <input
+                        type="text"
+                        formControlName="optionA"
+                        placeholder="Enter Option A"
+                        class="formbold-form-input"
+                        required
+                      />
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Option B</label>
+                      <input
+                        type="text"
+                        formControlName="optionB"
+                        placeholder="Enter Option B"
+                        class="formbold-form-input"
+                        required
+                      />
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Option C</label>
+                      <input
+                        type="text"
+                        formControlName="optionC"
+                        placeholder="Enter Option C"
+                        class="formbold-form-input"
+                      />
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Option D</label>
+                      <input
+                        type="text"
+                        formControlName="optionD"
+                        placeholder="Enter Option D"
+                        class="formbold-form-input"
+                      />
+                    </div>
+      
+                    <div class="formbold-input-group">
+                      <label class="formbold-form-label">Correct Option</label>
+                      <input
+                        type="text"
+                        formControlName="correctOption"
+                        placeholder="Enter Correct Answer"
+                        class="formbold-form-input"
+                        required
+                      />
+                    </div>
+                    <button class="formbold-btn btn-danger" type="button" (click)="removeQuestion(i, k)">
+                      Remove Question
+                    </button>
+                  </div>
+                </div>
+                <button class="formbold-btn" type="button" (click)="addQuestion(i)">Add Question</button>
+      
+                <button class="formbold-btn btn-danger" type="button" (click)="removeModule(i)">
+                  Remove Module
+                </button>
+              </div>
+            </div>
+      
+            <button class="formbold-btn" type="button" (click)="addModule()">Add Module</button>
+            <button class="formbold-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  
+
+  <!-- <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
           <form (ngSubmit)="onSubmit()" [formGroup]="courseForm" enctype="multipart/form-data">
             <div class="formbold-input-group">
@@ -196,11 +391,7 @@
             <button class="formbold-btn" type="submit">Submit</button>
           </form>
         </div>
-      </div>
-    </div>
-  </div> 
-  
-
+      </div> -->
 
 
 <!-- Footer Start -->

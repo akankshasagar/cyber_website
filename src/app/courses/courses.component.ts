@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { UserstoreService } from '../services/userstore.service';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
+import { User } from '../Model/user.model';
 
 @Component({
   selector: 'app-courses',
@@ -18,12 +19,29 @@ export class CoursesComponent {
   currentPage: number = 1; // Current page number
   coursesPerPage: number = 3; // Number of courses per page
   paginatedCourses: any[] = []; // Courses to display on the current page
+  user: User = new User();
   constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService) { 
 
   }
 
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
+
+    const userEmail = tokenPayload?.email;
+    if (!userEmail) {
+      console.error('Email is missing in the token.');
+      return;
+    }
+
+    this.auth.getUserByEmail(userEmail).subscribe({
+      next: (user) => {
+        this.user.id = user.id; // Assuming the backend returns a user object with an `id` field
+        console.log('UserId fetched successfully:', this.user.id);
+      },
+      error: (error) => {
+        console.error('Failed to fetch UserId:', error);
+      },
+    });
     this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token
     this.courseService.getCourses().subscribe({
       next: (data) => {
@@ -65,17 +83,17 @@ export class CoursesComponent {
     return Math.ceil(this.courses.length / this.coursesPerPage);
   }
 
-  enroll(email: string, course: string) {
-    this.auth.enroll(email, course)
-      .subscribe({
-        next: (response)  => {
-          console.log('Enrollment successful', response);
-        },
-        error: (error) => {
-          console.error('Error occurred during enrollment', error);
-        }
-      });
-  }
+  // enroll(email: string, course: string) {
+  //   this.auth.enroll(email, course)
+  //     .subscribe({
+  //       next: (response)  => {
+  //         console.log('Enrollment successful', response);
+  //       },
+  //       error: (error) => {
+  //         console.error('Error occurred during enrollment', error);
+  //       }
+  //     });
+  // }
 
   // Start(){
   //   this.start = true;
@@ -98,5 +116,31 @@ export class CoursesComponent {
 
   logout() {
     this.auth.signOut();
+  }
+
+  enroll(): void {
+    if (!this.user.id || !this.selectedCourse) {
+      console.error('User or course information is missing.');
+      alert('Please ensure you are logged in and have selected a course.');
+      return;
+    }
+  
+    const enrollmentRequest = {
+      UserId: this.user.id,
+      CourseId: this.selectedCourse.id,
+    };
+  
+    this.http.post('https://localhost:7243/api/CourseEnrollments/Enroll', enrollmentRequest).subscribe({
+      next: (response: any) => {
+        // console.log('Enrollment successful', response);
+        // alert(response.Message);
+        this.start = false; // Close the modal
+      },
+      error: (error) => {
+        // console.error('Error occurred during enrollment:', error);
+        // const errorMessage = error?.error?.message || 'An unknown error occurred.';
+        // alert(errorMessage);
+      },
+    });
   }
 }

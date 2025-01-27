@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from '../services/course.service';
 import { AuthService } from '../services/auth.service';
 import { UserstoreService } from '../services/userstore.service';
+import { ToastrService } from 'ngx-toastr';
 // import * as pdfjsLib from 'pdfjs-dist';
 
 @Component({
@@ -35,6 +36,10 @@ export class CourseDetailsComponent {
   topics: any[] = [];  // List of topics for the selected module
   showTopics: { [key: number]: boolean } = {};
   selectedTopic: any;
+  isTestPage: boolean = false;
+  questions: any[] = [];
+  currentModuleId: number | null = null;
+  currentModule: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -42,7 +47,8 @@ export class CourseDetailsComponent {
     private auth: AuthService,
     private userStore: UserstoreService,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {
   }
 
@@ -109,48 +115,50 @@ export class CourseDetailsComponent {
     );
   }
 
-  // Fetch topics for a specific module
-  // getTopics(moduleId: number): void {   
-  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
-  //     .subscribe({
-  //       next: (data) => {
-  //         this.topics = data;
-  //         // this.showTopics[moduleId] = true;
-  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
-  //         if (data && data.length > 0) {
-  //           this.selectedTopic = data[0]; // Automatically select the first topic in the module
-  //           console.log(data[0]);
+  // getTopics(moduleId: number): void {
+  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId).subscribe({
+  //     next: (data) => {
+  //       this.topics = data;
+  //       this.showTopics[moduleId] = !this.showTopics[moduleId];
+  //       this.currentModuleId = moduleId; // Save the current module ID
+  //       if (data && data.length > 0) {
+  //         this.selectedTopic = data[0];
+  //         if (this.selectedTopic?.t_ImagePath) {
+  //           this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
+  //           this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
   //         }
-  //       },
-  //       error: (err) => console.error(err)
-  //     });
+  //       }
+  //     },
+  //     error: (err) => console.error(err)
+  //   });
   // }
 
-  getTopics(moduleId: number): void {   
-    this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId)  // Replace 1 with the actual courseId
-      .subscribe({
-        next: (data) => {
-          this.topics = data;
-          // Toggle the visibility of topics
-          this.showTopics[moduleId] = !this.showTopics[moduleId];
-          
-          if (data && data.length > 0) {
-            // Select the first topic in the module
-            this.selectedTopic = data[0];  // Automatically select the first topic in the module
-            console.log(this.selectedTopic);  // Log the selected topic for debugging
+  getTopics(moduleId: number): void {
+    // Hide topics for all other modules before showing the current module's topics
+    for (const key in this.showTopics) {
+      if (this.showTopics.hasOwnProperty(key) && Number(key) !== moduleId) {
+        this.showTopics[key] = false; // Hide topics for other modules
+      }
+    }
   
-            // Ensure the image path is correct and update if needed
-            if (this.selectedTopic?.t_ImagePath) {
-              // Normalize the image path if necessary (in case backslashes exist)
-              this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
-              // Now the imagePath will hold the correct value
-              this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
-            }
+    // Fetch topics for the clicked module
+    this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId).subscribe({
+      next: (data) => {
+        this.topics = data;
+        this.showTopics[moduleId] = !this.showTopics[moduleId]; // Toggle visibility for the clicked module
+        this.currentModuleId = moduleId; // Save the current module ID
+        if (data && data.length > 0) {
+          this.selectedTopic = data[0];
+          if (this.selectedTopic?.t_ImagePath) {
+            this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
+            this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
           }
-        },
-        error: (err) => console.error(err)
-      });
+        }
+      },
+      error: (err) => console.error(err)
+    });
   }
+  
   
   
 
@@ -172,14 +180,7 @@ export class CourseDetailsComponent {
       // Call viewTopicDetails to simulate clicking on the next topic
       this.viewTopicDetails(nextTopic.id);
     }
-  }
-
-  goToTest(): void {
-    // You can implement your test redirection logic here
-    console.log('Redirecting to the test page...');
-    // Example: Navigate to a test page
-    // this.router.navigate(['/test']);
-  }
+  }  
 
   isLastTopic(): boolean {
     if (this.selectedTopic) {
@@ -211,4 +212,119 @@ export class CourseDetailsComponent {
     });
   }  
  
+  goToTest(moduleId: number): void {
+    console.log(`Fetching questions for module ID: ${this.currentModuleId!}`);
+  this.getQuestionsForModule(this.currentModuleId!); // Fetch questions for the selected module
+  }
+
+  getQuestionsForModule(moduleId: number): void {
+    this.courseService.getQuestionsByModule(moduleId).subscribe({
+      next: (data) => {
+        this.questions = data; // Store the fetched questions
+        this.isTestPage = true; // Display the test page
+        if (data.length > 0) {
+          this.currentModule = data[0].module; // Assuming all questions belong to the same module
+        }
+      },
+      error: (err) => console.error('Error fetching questions:', err)
+    });
+  }
+
+  selectedOptions: string[] = [];
+  answersCorrectness: boolean[] = [];
+  isSubmitted: boolean = false;
+
+  
+  selectOption(index: number, optionText: string): void {
+    if (this.isSubmitted) return;
+    
+    this.selectedOptions[index] = optionText;
+  }
+
+  submitAnswers(): void {
+    // Create a list of answers to be submitted
+    const answers: any[] = this.selectedOptions.map((option, index) => {
+      const question = this.questions[index];
+      return {
+        QuestionId: question.id,
+        CourseId: this.courseId,
+        ModuleId: this.currentModuleId,
+        AnswerText: option,
+        SubmittedBy: this.email // Assuming the user's name is stored
+      };
+    });
+  
+    // Send the answers to the backend API
+    this.http.post('https://localhost:7243/api/Answers/SubmitAnswers', answers).subscribe({
+      next: (response) => {
+        this.toastr.success('Answers submitted successfully.');
+        console.log('Answers submitted successfully', response);
+        // Optionally, you can show success message or navigate
+        this.isSubmitted = true;
+        // Process the API response to update answersCorrectness
+      this.answersCorrectness = this.questions.map((question, index) =>
+        this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase()
+      );
+      
+      },
+      error: (err) => {
+        console.error('Error submitting answers', err);
+      }
+    });
+  }
+  
+  
+  // submitAnswers() {
+  //   // Log the selected options to the console along with courseId and moduleId
+  //   console.log("Selected Answers:", this.selectedOptions);
+  //   console.log("Course ID:", this.courseId);
+  //   console.log("Module ID:", this.currentModuleId);
+    
+  //   // Now you can make an API call to submit the answers
+  // }
+  
+  
+  
+  // Fetch topics for a specific module
+  // getTopics(moduleId: number): void {   
+  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
+  //     .subscribe({
+  //       next: (data) => {
+  //         this.topics = data;
+  //         // this.showTopics[moduleId] = true;
+  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
+  //         if (data && data.length > 0) {
+  //           this.selectedTopic = data[0]; // Automatically select the first topic in the module
+  //           console.log(data[0]);
+  //         }
+  //       },
+  //       error: (err) => console.error(err)
+  //     });
+  // }
+
+  // getTopics(moduleId: number): void {   
+  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId)  // Replace 1 with the actual courseId
+  //     .subscribe({
+  //       next: (data) => {
+  //         this.topics = data;
+  //         // Toggle the visibility of topics
+  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
+          
+  //         if (data && data.length > 0) {
+  //           // Select the first topic in the module
+  //           this.selectedTopic = data[0];  // Automatically select the first topic in the module
+  //           console.log(this.selectedTopic);  // Log the selected topic for debugging
+  
+  //           // Ensure the image path is correct and update if needed
+  //           if (this.selectedTopic?.t_ImagePath) {
+  //             // Normalize the image path if necessary (in case backslashes exist)
+  //             this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
+  //             // Now the imagePath will hold the correct value
+  //             this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
+  //           }
+  //         }
+  //       },
+  //       error: (err) => console.error(err)
+  //     });
+  // }
 }

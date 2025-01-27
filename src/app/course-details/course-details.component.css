@@ -609,4 +609,75 @@
     /* border: 1px solid #555; */
   }
   
+  button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
   
+/* Existing styles */
+.question-container {
+  margin-bottom: 1.5em;
+}
+
+.option-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option-box:hover {
+  background-color: #e6f7ff;
+}
+
+.option-box input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Selected option styling */
+.selected-option {
+  border-color: #1890ff; /* Change border color to your desired outline color */
+  background-color: #e6f7ff; /* Optional: Match hover background */
+}
+
+
+
+
+
+.correct-icon {
+  color: #28a745;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.incorrect-icon {
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input[type="radio"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.active {
+  background-color: #007bff; /* Change to your preferred color */
+  color: white;
+}

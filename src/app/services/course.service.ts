@@ -11,6 +11,8 @@ export class CourseService {
   private apiUrl2 = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';
   private baseUrl = 'https://localhost:7243/api/Module';
   private topicurl = 'https://localhost:7243/api/Topic';
+  private moduleurl = 'https://localhost:7243/api/Questions/Module';
+  private quesurl = 'https://localhost:7243/api/Answers';
 
   constructor(private http: HttpClient) { }
 
@@ -52,4 +54,7 @@ export class CourseService {
     return this.http.get(`${this.topicurl}/${topicId}`);
   }
 
+  getQuestionsByModule(moduleId: number): Observable<any[]> {
+    return this.http.get<any[]>(`https://localhost:7243/api/Questions/Module/${moduleId}`);
+  }  
 }

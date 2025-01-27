@@ -36,7 +36,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
           <!-----------Chapter 1--------------------------------------------->
   
           <li *ngFor="let module of modules">
-            <a (click)="getTopics(module.id)">
+            <a (click)="getTopics(module.id)" [ngClass]="{'active': currentModuleId === module.id}">
               <i class="bx bx-task"></i>
               <span class="links_name2">{{ module.module_Name }}</span>            
               <i class="bx"
@@ -49,7 +49,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <span class="tooltip">{{ module.module_Name }}</span>
             <ul *ngIf="showTopics[module.id]">
               <li *ngFor="let topic of topics">
-                <a (click)="viewTopicDetails(topic.id)">
+                <a (click)="viewTopicDetails(topic.id)" [ngClass]="{'active': selectedTopic?.id === topic.id}">
                   <i class='bx bx-task'></i>
                   <span class="links_name2">{{ topic.topic_Name }}</span>
                 </a>
@@ -71,13 +71,12 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         </mat-sidenav>
         <mat-sidenav-content>          
 
-          <div class="container-xxl py-5" *ngIf="selectedTopic">
+          <ng-container *ngIf="!isTestPage; else testPageTemplate">
+          <!-- <div class="container-xxl py-5" *ngIf="selectedTopic">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                        <div class="position-relative h-100">
-                            <!-- <img class="img-fluid position-absolute w-100 h-100" 
-                            src="../../../../assets/img2/attacksurfaces.png" alt="" style="object-fit: cover;"> -->
+                        <div class="position-relative h-100">                            
                             <img *ngIf="selectedTopic?.imagePath" 
                               [src]="selectedTopic.imagePath" 
                               class="img-fluid position-absolute w-100 h-100" 
@@ -94,15 +93,211 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                                   {{ selectedTopic.topic_Description }}                                  
                                 </p>
                             </div>                            
-                        </div>
-                        <!-- <a class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a> -->
-                        <a *ngIf="!isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a>
-                        <a *ngIf="isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToTest()">Take the Test</a>
+                        </div>                        
+                        <a *ngIf="!isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a>                        
+                        <a
+                        *ngIf="isLastTopic()"
+                        class="btn btn-primary py-3 px-5 mt-2"
+                        (click)="currentModuleId ? goToTest(currentModuleId) : null">
+                        Take the Test
+                      </a>
+                      
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="container-xxl py-5" *ngIf="selectedTopic">
+          <div class="container">
+            <div class="row g-5">
+            
+              <!-- Image Column (For Topics With Image) -->
+              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length >= 50; else noImage" class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                  <img [src]="selectedTopic.imagePath" class="img-fluid position-absolute w-100 h-100" alt="Topic Image" style="object-fit: cover;">
+                </div>
+              </div>
+        
+              <!-- No Image Version -->
+              <ng-template #noImage>
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s" style="height: 100vh;">
+                  <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>
+                  <h1 class="mb-4">{{ selectedTopic.topic_Name }}</h1>
+                  <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-m-6">
+                      <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>
+                        {{ selectedTopic.topic_Description }}                                  
+                      </p>
+                    </div>                            
+                  </div>
+                  <!-- Adjusted Button Placement -->
+                  <a *ngIf="!isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a>
+                  <a *ngIf="isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="currentModuleId ? goToTest(currentModuleId) : null">Take the Test</a>
+                </div>
+              </ng-template>
+        
+              <!-- Regular Version With Image -->
+              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length >= 50" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>
+                <h1 class="mb-4">{{ selectedTopic.topic_Name }}</h1>                        
+                <div class="row gy-2 gx-4 mb-4">
+                  <div class="col-m-6">
+                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>
+                      {{ selectedTopic.topic_Description }}                                  
+                    </p>
+                  </div>                            
+                </div>
+        
+                <!-- Adjusted Button Placement -->
+                <a *ngIf="!isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextTopic()">Next</a>
+                <a *ngIf="isLastTopic()" class="btn btn-primary py-3 px-5 mt-2" (click)="currentModuleId ? goToTest(currentModuleId) : null">Take the Test</a>
+              </div>
+        
+              <!-- Image Below the Description for Short Descriptions (Above Button) -->
+              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length < 50" class="col-lg-12 mt-4 d-flex justify-content-center">
+                <img [src]="selectedTopic.imagePath" class="img-fluid" alt="Topic Image" style="max-height: 400px; object-fit: cover;">
+              </div>
+              
+            </div>
+          </div>
         </div>
+        
+        
+        
+      
           <router-outlet></router-outlet>
+        </ng-container>
+
+        <ng-template #testPageTemplate>
+          <div class="container-xxl py-5">
+            <div class="container">
+              <div class="row g-5">
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                  <h6 class="section-title bg-white text-start text-primary pe-3" style="font-size: larger;">
+                    Test On {{ currentModule?.module_Name }}
+                  </h6>
+                  <br /><br />
+                  <div *ngIf="questions.length > 0">
+                    <form (ngSubmit)="submitAnswers()">
+                      <ol>
+                        <li *ngFor="let question of questions; let i = index">
+                          <div class="question-container">
+                            <!-- Display question text -->
+                            <p>{{ question.questionText }}</p>
+        
+                            <!-- Display options dynamically -->
+                            <div
+                              class="option-box"
+                              *ngIf="question.optionA"
+                              [ngClass]="{ 
+                                'correct': answersCorrectness[i] && selectedOptions[i] === question.optionA,
+                                'incorrect': !answersCorrectness[i] && selectedOptions[i] === question.optionA
+                               }"
+                              (click)="selectOption(i, question.optionA)"
+                            > <!--'selected-option': selectedOptions[i] === question.optionA,-->
+                              <input
+                                type="radio"
+                                name="q{{ i }}"
+                                [(ngModel)]="selectedOptions[i]"
+                                [value]="question.optionA"
+                                id="q{{ i }}a"
+                                [disabled]="isSubmitted"
+                              />
+                              <label for="q{{ i }}a">{{ question.optionA }}</label>
+                              <span *ngIf="isSubmitted && selectedOptions[i] === question.optionA">
+                                <i *ngIf="answersCorrectness[i]" class="correct-icon">✔</i>
+                                <i *ngIf="!answersCorrectness[i]" class="incorrect-icon">✘</i>
+                              </span>
+                            </div>
+        
+                            <div
+                              class="option-box"
+                              *ngIf="question.optionB"
+                              [ngClass]="{ 
+                                'correct': answersCorrectness[i] && selectedOptions[i] === question.optionB,
+                                'incorrect': !answersCorrectness[i] && selectedOptions[i] === question.optionB
+                               }"
+                              (click)="selectOption(i, question.optionB)"
+                            > <!--'selected-option': selectedOptions[i] === question.optionB,-->
+                              <input
+                                type="radio"
+                                name="q{{ i }}"
+                                [(ngModel)]="selectedOptions[i]"
+                                [value]="question.optionB"
+                                id="q{{ i }}b"
+                                [disabled]="isSubmitted"
+                              />
+                              <label for="q{{ i }}b">{{ question.optionB }}</label>
+                              <span *ngIf="isSubmitted && selectedOptions[i] === question.optionB">
+                                <i *ngIf="answersCorrectness[i]" class="correct-icon">✔</i>
+                                <i *ngIf="!answersCorrectness[i]" class="incorrect-icon">✘</i>
+                              </span>
+                            </div>
+        
+                            <div
+                              class="option-box"
+                              *ngIf="question.optionC"
+                              [ngClass]="{ 
+                                'correct': answersCorrectness[i] && selectedOptions[i] === question.optionC,
+                                'incorrect': !answersCorrectness[i] && selectedOptions[i] === question.optionC
+                               }"
+                              (click)="selectOption(i, question.optionC)"
+                            > <!--'selected-option': selectedOptions[i] === question.optionC,-->
+                              <input
+                                type="radio"
+                                name="q{{ i }}"
+                                [(ngModel)]="selectedOptions[i]"
+                                [value]="question.optionC"
+                                id="q{{ i }}c"
+                                [disabled]="isSubmitted"
+                              />
+                              <label for="q{{ i }}c">{{ question.optionC }}</label>
+                              <span *ngIf="isSubmitted && selectedOptions[i] === question.optionC">
+                                <i *ngIf="answersCorrectness[i]" class="correct-icon">✔</i>
+                                <i *ngIf="!answersCorrectness[i]" class="incorrect-icon">✘</i>
+                              </span>
+                            </div>
+        
+                            <div
+                              class="option-box"
+                              *ngIf="question.optionD"
+                              [ngClass]="{ 
+                                'correct': answersCorrectness[i] && selectedOptions[i] === question.optionD,
+                                'incorrect': !answersCorrectness[i] && selectedOptions[i] === question.optionD
+                               }"
+                              (click)="selectOption(i, question.optionD)"
+                            > <!--'selected-option': selectedOptions[i] === question.optionD,-->
+                              <input
+                                type="radio"
+                                name="q{{ i }}"
+                                [(ngModel)]="selectedOptions[i]"
+                                [value]="question.optionD"
+                                id="q{{ i }}d"
+                                [disabled]="isSubmitted"
+                              />
+                              <label for="q{{ i }}d">{{ question.optionD }}</label>
+                              <span *ngIf="isSubmitted && selectedOptions[i] === question.optionD">
+                                <i *ngIf="answersCorrectness[i]" class="correct-icon">✔</i>
+                                <i *ngIf="!answersCorrectness[i]" class="incorrect-icon">✘</i>
+                              </span>
+                            </div>
+                          </div>
+                          <br />
+                        </li>
+                      </ol>
+        
+                      <!-- Submit button -->
+                      <button type="submit" [disabled]="isSubmitted">Submit Answers</button>
+                    </form>
+        
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+                       
         </mat-sidenav-content>
         </mat-sidenav-container>
 
@@ -169,3 +364,69 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
       
   </mat-sidenav-container> -->
   
+<!-- <form>
+                      <ol>
+                        
+                        <li *ngFor="let question of questions; let i = index">
+                      <div  class="question-container">
+                        <p>{{ question.questionText }}</p>
+                        
+                        <div *ngIf="question.optionA">
+                          <input type="radio" name="q{{i}}" [value]="'A'" id="q{{i}}a" style="margin-right: 3vh;">
+                          <label for="q{{i}}a">{{ question.optionA }}</label>
+                        </div>
+                        
+                        <div *ngIf="question.optionB">
+                          <input type="radio" name="q{{i}}" [value]="'B'" id="q{{i}}b" style="margin-right: 3vh;">
+                          <label for="q{{i}}b">{{ question.optionB }}</label>
+                        </div>
+                        
+                        <div *ngIf="question.optionC">
+                          <input type="radio" name="q{{i}}" [value]="'C'" id="q{{i}}c" style="margin-right: 3vh;">
+                          <label for="q{{i}}c">{{ question.optionC }}</label>
+                        </div>
+                        
+                        <div *ngIf="question.optionD">
+                          <input type="radio" name="q{{i}}" [value]="'D'" id="q{{i}}d" style="margin-right: 3vh;">
+                          <label for="q{{i}}d">{{ question.optionD }}</label>
+                        </div>
+                      </div><br>
+                      </li>
+                      </ol>
+                      
+                      <button type="submit">Submit Answers</button>
+                    </form> -->
+        
+        <!-- <ng-template #testPageTemplate>
+          <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">                    
+                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                        <h6 class="section-title bg-white text-start text-primary pe-3" style="font-size: larger;">Test On Attack Surfaces & It's Types</h6><br><br>
+                        <form>
+                            <ol>                                                                
+                                <li>
+                                    <p>Digital attack surfaces do NOT include:</p>
+                                    <input type="radio" id="q10a" name="q10" value="a" style="margin-right: 3vh;">
+                                    <label for="q10a">Poorly maintained software</label><br>
+                                    <input type="radio" id="q10b" name="q10" value="b" style="margin-right: 3vh;">
+                                    <label for="q10b">Websites</label><br>
+        
+                                    <input type="radio" id="q10c" name="q10" value="c" style="margin-right: 3vh;">
+                                    <label for="q10c">Properly discarded hardware</label><br>
+        
+                                    <input type="radio" id="q10d" name="q10" value="d" style="margin-right: 3vh;">
+                                    <label for="q10d">Exposed application programming interfaces</label><br>
+        
+                                    <input type="radio" id="q10e" name="q10" value="e" style="margin-right: 3vh;">
+                                    <label for="q10e">Vulnerabilities left by weak passwords</label><br>
+                                </li>
+                            </ol>
+                            <button type="submit" >Submit Answers</button>
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        </ng-template> -->
+

@@ -192,4 +192,9 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl, user);
   }
 
+  getUserByEmail(email: string): Observable<any> {
+    const url = `https://localhost:7243/api/CourseEnrollments/GetUserByEmail/${email}`;
+    return this.http.get(url);
+  }
+  
 }
