@@ -65,7 +65,7 @@ const routes: Routes = [
   { path: 'homepage/signin', component: SigninComponent },
   { path: 'homepage/signup', component: SignupComponent },
   { path: 'adminpage', component: AdminpageComponent, canActivate:[AuthGuard] },
-  { path: 'adminpage/editcourse', component: EditcourseComponent, canActivate: [AuthGuard] },
+  { path: 'adminpage/editcourse/:courseId/:courseName', component: EditcourseComponent, canActivate: [AuthGuard] },
   { path: 'adminpage/addcourse', component: AddcourseComponent, canActivate: [AuthGuard] },
     // { path: '', pathMatch: 'full', redirectTo: 'editcourse' },
 

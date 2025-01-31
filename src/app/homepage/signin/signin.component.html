@@ -1,9 +1,13 @@
+<body>
 <!-- Navbar Start -->
 <nav
     class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="homepage"
         class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        <h2 class="m-0">
+            <!-- <i class="fa fa-book me-3"></i> -->
+            <mat-icon>library_books</mat-icon>
+            eLEARNING</h2>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse">
@@ -41,7 +45,8 @@
                         <div class="input-boxes">
                             <div class="input-box"
                                 [class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
-                                <i class="fas fa-envelope"></i>
+                                <mat-icon> email</mat-icon>
+                                <!-- <i class="fas fa-envelope"></i> -->
                                 <input type="email"
                                     placeholder="Enter your email"
                                     formControlName="email" required>
@@ -52,7 +57,8 @@
 
                             <div class="input-box"
                                 [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">
-                                <i class="fas fa-lock"></i>
+                                <mat-icon>lock</mat-icon>
+                                <!-- <i class="fas fa-lock"></i> -->
                                 <input
                                     type="{{ showPassword ? 'text' : 'password' }}"
                                     placeholder="Enter your password"
@@ -140,6 +146,7 @@
     </div>    
 
 </div>
+</body>
 
 <!-- <div class="container-xxl py-5 justify-content-center align-items-center modal-open" *ngIf="start"> 
     <div class="container">

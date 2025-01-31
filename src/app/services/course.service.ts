@@ -57,4 +57,8 @@ export class CourseService {
   getQuestionsByModule(moduleId: number): Observable<any[]> {
     return this.http.get<any[]>(`https://localhost:7243/api/Questions/Module/${moduleId}`);
   }  
+
+  editCourse(courseId: number, courseData: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/EditCourse/${courseId}`, courseData);
+  }
 }

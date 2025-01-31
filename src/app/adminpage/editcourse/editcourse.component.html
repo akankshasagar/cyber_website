@@ -1,1 +1,80 @@
-<p>editcourse works!</p>
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="homepage" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0">
+          <!-- <i class="fa fa-book me-3"></i> -->
+          <mat-icon>library_books</mat-icon>
+          eLEARNING</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a class="nav-item nav-link" href="adminpage">Home</a>
+            <!-- <a class="nav-item nav-link">About</a> -->
+            <!-- <a class="nav-item nav-link active" href="adminpage">Courses</a> -->
+            <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+        </div>
+        <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Manage Course</h6>
+        </div>
+        
+        <div class="text-center mb-4">
+            <label for="optionSelect" class="form-label">Choose an action:</label>
+            <select id="optionSelect" class="form-select" onchange="toggleForms()">
+                <option value="editCourse">Edit Course Details</option>
+                <option value="addModule">Add Module</option>
+            </select>
+        </div>
+        
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                
+                <!-- Edit Course Details Form -->
+                <div id="editCourseForm">
+                    <h5>Edit Course Details</h5>
+                    <form (ngSubmit)="saveChanges()">
+                        <div class="mb-3">
+                          <label class="form-label">Course Name</label>
+                          <input [(ngModel)]="courseName" name="courseName" class="form-control" placeholder="Enter course name" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Course Description</label>
+                          <textarea [(ngModel)]="courseDescription" name="courseDescription" class="form-control" placeholder="Enter course description"></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Upload Course Image</label>
+                          <input [(ngModel)]="imagePath" name="imagePath" type="file" class="form-control" (change)="onFileSelect($event)" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                      </form>
+                      
+                </div>
+                
+                <!-- Add Module Form (Initially Hidden) -->
+                <div id="addModuleForm" style="display: none;">
+                    <h5>Add Module</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Module Name</label>
+                            <input type="text" class="form-control" placeholder="Enter module name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Module Description</label>
+                            <textarea class="form-control" placeholder="Enter module description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Module</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

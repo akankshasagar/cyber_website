@@ -99,5 +99,13 @@
     <!----Courses js starts------>
     <script src="assets/js3/style.js"></script>
     <!----Courses js ends------>       
+
+    <script>
+      function toggleForms() {
+          var selectedOption = document.getElementById("optionSelect").value;
+          document.getElementById("editCourseForm").style.display = selectedOption === "editCourse" ? "block" : "none";
+          document.getElementById("addModuleForm").style.display = selectedOption === "addModule" ? "block" : "none";
+      }
+      </script>
   </body>
 </html>

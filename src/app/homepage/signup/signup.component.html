@@ -2,7 +2,10 @@
 <nav
 	class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
 	<a href="homepage" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-		<h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+		<h2 class="m-0">
+			<!-- <i class="fa fa-book me-3"></i> -->
+			<mat-icon>library_books</mat-icon>
+			eLEARNING</h2>
 	</a>
 	<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
 		data-bs-target="#navbarCollapse">
@@ -51,7 +54,8 @@
 						<div class="input-boxes">
 							<div class="input-box"
 								[class.error]="signupForm.controls['name'].dirty && signupForm.hasError('required', 'name')">
-								<i class="fas fa-user"></i>
+								<!-- <i class="fas fa-user"></i> -->
+								<mat-icon>person</mat-icon>
 								<input type="text" formControlName="name" placeholder="Enter your name"
 									required>
 							</div>
@@ -61,7 +65,8 @@
 
 							<div class="input-box"
 								[class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">
-								<i class="fas fa-envelope"></i>
+								<!-- <i class="fas fa-envelope"></i> -->
+								<mat-icon> email</mat-icon>
 								<input type="text" placeholder="Enter your email"
 									formControlName="email" required>
 							</div>
@@ -80,7 +85,8 @@
 
 							<div class="input-box"
 								[class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">
-								<i class="fas fa-lock"></i>
+								<!-- <i class="fas fa-lock"></i> -->
+								<mat-icon>lock</mat-icon>
 								<input type="{{ showPassword ? 'text' : 'password' }}"
 									placeholder="Enter your password"
 									formControlName="password" required>

@@ -3,7 +3,10 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="homepage" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        <h2 class="m-0">
+          <!-- <i class="fa fa-book me-3"></i> -->
+          <mat-icon>library_books</mat-icon>
+          eLEARNING</h2>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +41,7 @@
                     <img class="img-fluid" [src]="course.imagePath" [alt]="course.courseName" />
                     <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                         <a (click)="Start(course)" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
-                        <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
+                        <a [routerLink]="['/adminpage/editcourse', course.id, course.courseName]" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
                     </div>
                 </div>
                 <div class="text-center p-4 pb-0">
