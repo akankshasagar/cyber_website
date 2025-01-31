@@ -45,93 +45,6 @@
         }
       }
     },
-    "/api/AttackSurfacesAnswers001": {
-      "post": {
-        "tags": [
-          "AttackSurfacesAnswers001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AttackSurfaces"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AttackSurfaces"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AttackSurfaces"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "AttackSurfacesAnswers001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AttackSurfaces"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AttackSurfaces"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AttackSurfaces"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/AttackSurfacesAnswers001/attacksurfacestest001": {
-      "post": {
-        "tags": [
-          "AttackSurfacesAnswers001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Course/AddCourseWithModulesAndTopics": {
       "post": {
         "tags": [
@@ -206,6 +119,134 @@
         }
       }
     },
+    "/api/Course/AddModuleToCourse": {
+      "post": {
+        "tags": [
+          "Course"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModuleWithTopicsAndQuestionsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModuleWithTopicsAndQuestionsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModuleWithTopicsAndQuestionsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Course/EditCourse/{courseId}": {
+      "put": {
+        "tags": [
+          "Course"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "CourseName": {
+                    "type": "string"
+                  },
+                  "CourseDescription": {
+                    "type": "string"
+                  },
+                  "ImagePath": {
+                    "type": "string"
+                  },
+                  "ContentType": {
+                    "type": "string"
+                  },
+                  "ContentDisposition": {
+                    "type": "string"
+                  },
+                  "Headers": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Length": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Name": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "CourseName": {
+                  "style": "form"
+                },
+                "CourseDescription": {
+                  "style": "form"
+                },
+                "ImagePath": {
+                  "style": "form"
+                },
+                "ContentType": {
+                  "style": "form"
+                },
+                "ContentDisposition": {
+                  "style": "form"
+                },
+                "Headers": {
+                  "style": "form"
+                },
+                "Length": {
+                  "style": "form"
+                },
+                "Name": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/CourseEnrollments/Enroll": {
       "post": {
         "tags": [
@@ -259,115 +300,6 @@
         }
       }
     },
-    "/api/Courses/add": {
-      "post": {
-        "tags": [
-          "Courses"
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "Name": {
-                    "type": "string"
-                  },
-                  "Description": {
-                    "type": "string"
-                  },
-                  "Image": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "File": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "Name": {
-                  "style": "form"
-                },
-                "Description": {
-                  "style": "form"
-                },
-                "Image": {
-                  "style": "form"
-                },
-                "File": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Courses": {
-      "get": {
-        "tags": [
-          "Courses"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Courses/{id}": {
-      "get": {
-        "tags": [
-          "Courses"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Courses/download/{id}": {
-      "get": {
-        "tags": [
-          "Courses"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/CoursesCompleted": {
       "post": {
         "tags": [
@@ -385,180 +317,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/CyberStalkBullyAnswer001": {
-      "post": {
-        "tags": [
-          "CyberStalkBullyAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CyberStalkBullyTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CyberStalkBullyTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CyberStalkBullyTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "CyberStalkBullyAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CyberStalkBullyTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CyberStalkBullyTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CyberStalkBullyTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/CyberStalkBullyAnswer001/cyberstalkbullytest001": {
-      "post": {
-        "tags": [
-          "CyberStalkBullyAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/DataProtectAnswer001": {
-      "post": {
-        "tags": [
-          "DataProtectAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DataProtectTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DataProtectTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DataProtectTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "DataProtectAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataProtectTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataProtectTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataProtectTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/DataProtectAnswer001/dataprotecttest001": {
-      "post": {
-        "tags": [
-          "DataProtectAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
           }
         }
       }
@@ -602,354 +360,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/DnsAptAnswer001": {
-      "post": {
-        "tags": [
-          "DnsAptAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DnsAptTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DnsAptTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DnsAptTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "DnsAptAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DnsAptTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DnsAptTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DnsAptTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/DnsAptAnswer001/dnsapttest001": {
-      "post": {
-        "tags": [
-          "DnsAptAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/DosDontsAnswer001": {
-      "post": {
-        "tags": [
-          "DosDontsAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DosDontsTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DosDontsTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DosDontsTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "DosDontsAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DosDontsTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DosDontsTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DosDontsTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/DosDontsAnswer001/dosdontstest001": {
-      "post": {
-        "tags": [
-          "DosDontsAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/IRMngmntAnswer001": {
-      "post": {
-        "tags": [
-          "IRMngmntAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/IRMngmntTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/IRMngmntTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/IRMngmntTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "IRMngmntAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/IRMngmntTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IRMngmntTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IRMngmntTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/IRMngmntAnswer001/irmngmnttest001": {
-      "post": {
-        "tags": [
-          "IRMngmntAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/IsactAnswers001": {
-      "post": {
-        "tags": [
-          "IsactAnswers001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/IsactTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/IsactTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/IsactTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "IsactAnswers001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/IsactTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IsactTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IsactTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/IsactAnswers001/isactest001": {
-      "post": {
-        "tags": [
-          "IsactAnswers001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
           }
         }
       }
@@ -1080,93 +490,6 @@
         }
       }
     },
-    "/api/PhishingSpoofingAnswer001": {
-      "post": {
-        "tags": [
-          "PhishingSpoofingAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PhishingSpoofingTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PhishingSpoofingTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PhishingSpoofingTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "PhishingSpoofingAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/PhishingSpoofingTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PhishingSpoofingTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PhishingSpoofingTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/PhishingSpoofingAnswer001/phishingspoofingtest001": {
-      "post": {
-        "tags": [
-          "PhishingSpoofingAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Questions/Module/{moduleId}": {
       "get": {
         "tags": [
@@ -1255,93 +578,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/TestAnswers01": {
-      "post": {
-        "tags": [
-          "TestAnswers01"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Test01"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Test01"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Test01"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "TestAnswers01"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Test01"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Test01"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Test01"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TestAnswers01/test01": {
-      "post": {
-        "tags": [
-          "TestAnswers01"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
           }
         }
       }
@@ -1638,93 +874,6 @@
           }
         }
       }
-    },
-    "/api/WirelessEnvironmentAnswer001": {
-      "post": {
-        "tags": [
-          "WirelessEnvironmentAnswer001"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "WirelessEnvironmentAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WirelessEnvironmentTest001"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/WirelessEnvironmentAnswer001/wirelessenvironmenttest001": {
-      "post": {
-        "tags": [
-          "WirelessEnvironmentAnswer001"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -1774,65 +923,6 @@
           },
           "courses": {
             "$ref": "#/components/schemas/Courses"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AttackSurfaces": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -1888,124 +978,6 @@
           "createdBy": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CyberStalkBullyTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DataProtectTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -2072,124 +1044,6 @@
         },
         "additionalProperties": false
       },
-      "DnsAptTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DosDontsTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EnrollmentRequest": {
         "type": "object",
         "properties": {
@@ -2200,124 +1054,6 @@
           "courseId": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "IRMngmntTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IsactTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -2375,61 +1111,30 @@
         },
         "additionalProperties": false
       },
-      "PhishingSpoofingTest001": {
+      "ModuleWithTopicsAndQuestionsDto": {
         "type": "object",
         "properties": {
-          "id": {
+          "courseId": {
             "type": "integer",
             "format": "int32"
           },
-          "email": {
+          "moduleName": {
             "type": "string",
             "nullable": true
           },
-          "q1": {
-            "type": "string",
+          "topics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TopicDto2"
+            },
             "nullable": true
           },
-          "q2": {
-            "type": "string",
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuestionDto2"
+            },
             "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -2516,6 +1221,36 @@
         },
         "additionalProperties": false
       },
+      "QuestionDto2": {
+        "type": "object",
+        "properties": {
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionA": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionB": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionC": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionD": {
+            "type": "string",
+            "nullable": true
+          },
+          "correctOption": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Rolemaster": {
         "type": "object",
         "properties": {
@@ -2530,45 +1265,6 @@
           "roleName": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Test01": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -2618,6 +1314,24 @@
         "additionalProperties": false
       },
       "TopicDto": {
+        "type": "object",
+        "properties": {
+          "topicName": {
+            "type": "string",
+            "nullable": true
+          },
+          "topicDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "tImagePath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TopicDto2": {
         "type": "object",
         "properties": {
           "topicName": {
@@ -2706,65 +1420,6 @@
           "summary": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "WirelessEnvironmentTest001": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "q1": {
-            "type": "string",
-            "nullable": true
-          },
-          "q2": {
-            "type": "string",
-            "nullable": true
-          },
-          "q3": {
-            "type": "string",
-            "nullable": true
-          },
-          "q4": {
-            "type": "string",
-            "nullable": true
-          },
-          "q5": {
-            "type": "string",
-            "nullable": true
-          },
-          "q6": {
-            "type": "string",
-            "nullable": true
-          },
-          "q7": {
-            "type": "string",
-            "nullable": true
-          },
-          "q8": {
-            "type": "string",
-            "nullable": true
-          },
-          "q9": {
-            "type": "string",
-            "nullable": true
-          },
-          "q10": {
-            "type": "string",
-            "nullable": true
-          },
-          "marks": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false

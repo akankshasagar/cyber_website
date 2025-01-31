@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\cyber_website\\",
+  "WorkspaceRootPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\irmngmntanswer001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\irmngmntanswer001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\cyber_website\\cybersecurity-new\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,27 +50,26 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Models.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\Models.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Models\\Models.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\Models.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Models\\Models.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Models\\Models.cs",
               "RelativeToolTip": "CyberSecurity-new\\Models\\Models.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T13:07:12.509Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CourseController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\CourseController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\CourseController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAqwM4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGMCAAAAAAAAAAAkwGcCAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T13:24:43.491Z",
               "IsPinned": true,
@@ -74,86 +77,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ModuleController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\ModuleController.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\ModuleController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\ModuleController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\ModuleController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\ModuleController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T11:02:29.613Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "TopicController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\TopicController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\TopicController.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\TopicController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\TopicController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\TopicController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\TopicController.cs",
-              "ViewState": "AgIAAFoAAACAZWZmZmYwwFcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T11:18:58.703Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AnswersController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\AnswersController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\AnswersController.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\AnswersController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\AnswersController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\AnswersController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\AnswersController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAhwEMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAwwG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T06:22:08.588Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "CourseEnrollmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
               "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
               "RelativeToolTip": "CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
               "ViewState": "AgIAAE8AAAAAZmZmZmYOwGkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T08:56:11.622Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T11:55:38.48Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAABQAAAAAzczMzMw9wBwAAAAkAAAAAAAAAA==",
+              "Title": "QuestionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\QuestionsController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\QuestionsController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\QuestionsController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\QuestionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T11:55:38.48Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T13:06:34.466Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuestionsController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\QuestionsController.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\QuestionsController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\cyber_website\\CyberSecurity-new\\Controllers\\QuestionsController.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\QuestionsController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAowCgAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IRMngmntAnswer001.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\IRMngmntAnswer001.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\IRMngmntAnswer001.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\Controllers\\IRMngmntAnswer001.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\IRMngmntAnswer001.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T13:06:34.466Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T10:40:35.255Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

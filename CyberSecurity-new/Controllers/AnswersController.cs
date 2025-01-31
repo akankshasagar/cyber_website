@@ -105,7 +105,7 @@ namespace CyberSecurity_new.Controllers
                     answer.SubmittedAt = DateTime.Now;
 
                     // Save the answer
-                    _context.Answer.Add(answer);
+                    _context.Answers.Add(answer);
                 }
 
                 await _context.SaveChangesAsync();

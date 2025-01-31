@@ -279,7 +279,7 @@ namespace CyberSecurity_new.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = identity,
-                Expires = DateTime.Now.AddHours(1),
+                //Expires = DateTime.Now.AddHours(1),
                 SigningCredentials = credentials
             };
 

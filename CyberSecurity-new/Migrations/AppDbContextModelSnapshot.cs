@@ -60,84 +60,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Answer");
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.AttackSurfaces", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("attacksurfaces", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.Course", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("CourseDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CourseName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CourseAdded", (string)null);
+                    b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.CourseCompleted", b =>
@@ -156,7 +79,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("coursesCompleted", (string)null);
+                    b.ToTable("CoursesCompleted", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.CourseEnrollment", b =>
@@ -213,105 +136,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Course", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.CyberStalkBullyTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("cyberstalkbullytest001", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.DataProtectTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("dataprotectiontest001", (string)null);
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.Department", b =>
@@ -330,203 +155,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasKey("DeptId");
 
-                    b.ToTable("Department", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.DnsAptTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("dnsapttest001", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.DosDontsTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("dosanddontstest001", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.IRMngmntTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("irmngmnttest001", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.IsactTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("isactest001", (string)null);
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.LoginHistory", b =>
@@ -577,7 +206,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Module", (string)null);
+                    b.ToTable("Modules", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.OTPVerification", b =>
@@ -599,56 +228,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("otpverification", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.PhishingSpoofingTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("phishingspoofingtest001", (string)null);
+                    b.ToTable("OtpVerification", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.Question", b =>
@@ -713,40 +293,6 @@ namespace CyberSecurity_new.Migrations
                     b.ToTable("RoleMaster", (string)null);
                 });
 
-            modelBuilder.Entity("CyberSecurity_new.Models.Test01", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("test01", (string)null);
-                });
-
             modelBuilder.Entity("CyberSecurity_new.Models.Topic", b =>
                 {
                     b.Property<int>("Id")
@@ -782,7 +328,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("topics");
+                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.User", b =>
@@ -826,56 +372,7 @@ namespace CyberSecurity_new.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("users", (string)null);
-                });
-
-            modelBuilder.Entity("CyberSecurity_new.Models.WirelessEnvironmentTest001", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Q1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Q9")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("wirelessenvironmenttest001", (string)null);
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("CyberSecurity_new.Models.Answer", b =>

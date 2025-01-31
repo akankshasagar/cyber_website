@@ -1015,7 +1015,6 @@ C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CyberSecurity-new.props
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CyberSecurity-new.props
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\CyberSec.EEE9AAD3.Up2Date
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.dll
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\refint\CyberSecurity-new.dll
@@ -1280,3 +1279,5 @@ C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\Cybe
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.genruntimeconfig.cache
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\obj\Debug\net8.0\ref\CyberSecurity-new.dll
 C:\Users\USER\source\repos\cyber_website\CyberSecurity-new\bin\Debug\net8.0\CyberSecurity-new.staticwebassets.runtime.json
+C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\bin\Debug\net8.0\CyberSecurity-new.staticwebassets.runtime.json
+C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -21,7 +21,7 @@ namespace CyberSecurity_new.Controllers
         [HttpGet("{courseId}/Topics")]
         public async Task<ActionResult<IEnumerable<Topic>>> GetTopicsByCourse(int courseId)
         {
-            var topics = await _context.topics
+            var topics = await _context.Topics
                 .Where(t => t.CourseId == courseId)
                 .Include(t => t.Courses)  // To include course details
                 .ToListAsync();
@@ -57,7 +57,7 @@ namespace CyberSecurity_new.Controllers
         [HttpGet("{courseId}/{moduleId}/Topics")]
         public async Task<ActionResult<IEnumerable<Topic>>> GetTopicsByCourseAndModule(int courseId, int moduleId)
         {
-            var topics = await _context.topics
+            var topics = await _context.Topics
                 .Where(t => t.CourseId == courseId && t.ModuleId == moduleId)
                 .Include(t => t.Courses) // To include course details if needed
                 .Include(t => t.Module)  // To include module details if needed
@@ -113,7 +113,7 @@ namespace CyberSecurity_new.Controllers
         [HttpGet("{id}")]
         public IActionResult GetTopicById(int id)
         {
-            var topic = _context.topics
+            var topic = _context.Topics
                 .Where(t => t.Id == id)
                 .Select(t => new
                 {

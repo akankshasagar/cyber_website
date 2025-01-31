@@ -13,60 +13,28 @@ namespace CyberSecurity_new.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Department> Departments { get; set; }        
         public DbSet<Rolemaster> rolemasters { get; set; }
-        public DbSet<LoginHistory> loginhistory { get; set; }
-        public DbSet<Test01> Test01 { get; set; }
-        public DbSet<IsactTest001> IsactTest001s { get; set; }
-        public DbSet<AttackSurfaces> AttackSurfacesTest { get; set; }
-        public DbSet<PhishingSpoofingTest001> PhishingSpoofingTest001s { get; set; }
-        public DbSet<WirelessEnvironmentTest001> WirelessEnvironmentTest001s { get; set; }
-        public DbSet<DosDontsTest001> DosDontsTest001s { get; set; }
-        public DbSet<IRMngmntTest001> iRMngmntTest001s { get; set; }
-        public DbSet<DataProtectTest001> DataProtectTest001s { get; set; }
-        public DbSet<DnsAptTest001> DnsAptTest001s { get; set; }
-        public DbSet<CyberStalkBullyTest001> CyberStalkBullyTest001s { get; set; }
-        public DbSet<Course> Courses { get; set; }
-
+        public DbSet<LoginHistory> loginhistory { get; set; }        
         public DbSet<Courses> course { get; set; }
         public DbSet<Module> modules { get; set; }
-        public DbSet<Topic> topics { get; set; }
+        public DbSet<Topic> Topics { get; set; }
         public DbSet<Question> questions { get; set; }
-        public DbSet<Answer> Answer { get; set; }
+        public DbSet<Answer> Answers { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollment { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
         public DbSet<OTPVerification> OTPVerifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("users");                     
+            modelBuilder.Entity<User>().ToTable("Users");                     
 
-            modelBuilder.Entity<Department>().ToTable("Department");                        
+            modelBuilder.Entity<Department>().ToTable("Departments");                        
 
             modelBuilder.Entity<Rolemaster>().ToTable("RoleMaster");
 
             modelBuilder.Entity<LoginHistory>().ToTable("LoginHistory");
 
-            modelBuilder.Entity<Test01>().ToTable("test01");
-            modelBuilder.Entity<IsactTest001>().ToTable("isactest001");
-            modelBuilder.Entity<AttackSurfaces>().ToTable("attacksurfaces");
-
-            modelBuilder.Entity<PhishingSpoofingTest001>().ToTable("phishingspoofingtest001");
-
-            modelBuilder.Entity<WirelessEnvironmentTest001>().ToTable("wirelessenvironmenttest001");
-
-            modelBuilder.Entity<DosDontsTest001>().ToTable("dosanddontstest001");
-
-            modelBuilder.Entity<IRMngmntTest001>().ToTable("irmngmnttest001");
-
-            modelBuilder.Entity<DataProtectTest001>().ToTable("dataprotectiontest001");
-
-            modelBuilder.Entity<DnsAptTest001>().ToTable("dnsapttest001");
-
-            modelBuilder.Entity<CyberStalkBullyTest001>().ToTable("cyberstalkbullytest001");
-
-            modelBuilder.Entity<Course>().ToTable("CourseAdded");
-
-            modelBuilder.Entity<Courses>().ToTable("Course");
-            modelBuilder.Entity<Module>().ToTable("Module");
+            modelBuilder.Entity<Courses>().ToTable("Courses");
+            modelBuilder.Entity<Module>().ToTable("Modules");
             modelBuilder.Entity<Topic>()
             .HasOne(t => t.Module)
             .WithMany()
@@ -113,11 +81,11 @@ namespace CyberSecurity_new.Context
                 .HasForeignKey(c => c.CourseId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");
+            modelBuilder.Entity<CourseCompleted>().ToTable("CoursesCompleted");
 
 
             //OTPVerification
-            modelBuilder.Entity<OTPVerification>().ToTable("otpverification");
+            modelBuilder.Entity<OTPVerification>().ToTable("OtpVerification");
         }
     }
 }

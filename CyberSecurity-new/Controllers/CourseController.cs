@@ -313,7 +313,7 @@ namespace CyberSecurity_new.Controllers
                         CreatedBy = userEmail
                     };
 
-                    _context.topics.Add(topic);
+                    _context.Topics.Add(topic);
                 }
                 await _context.SaveChangesAsync();
 
@@ -405,9 +405,190 @@ namespace CyberSecurity_new.Controllers
             }
 
             return Ok(course);
+        }        
+
+
+        [HttpPost("AddModuleToCourse")]
+        public async Task<IActionResult> AddModuleToCourse([FromBody] ModuleWithTopicsAndQuestionsDto request)
+        {
+            // Get the logged-in user's email from the claims (e.g., from JWT or session)
+            //var userEmail = HttpContext.User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+
+            //if (string.IsNullOrEmpty(userEmail))
+            //{
+            //    return Unauthorized(new { message = "User not authenticated." });
+            //}
+
+            // Fetch the logged-in user's details from the database
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == "it.developer@hrjohnsonindia.com");
+
+            //if (user == null)
+            //{
+            //    return Unauthorized(new { message = "User not found." });
+            //}
+
+            // Validate user's role (RoleId != 3 is required)
+            //if (user.RoleId == 3)
+            //{
+            //    return Forbid("You do not have permission to add a module.");
+            //}
+
+            // Validate request
+            if (request == null || request.CourseId <= 0 || string.IsNullOrEmpty(request.ModuleName))
+            {
+                return BadRequest(new { message = "Course ID and Module Name are required." });
+            }
+
+            // Check if the course exists
+            var course = await _context.course.FirstOrDefaultAsync(c => c.Id == request.CourseId);
+            if (course == null)
+            {
+                return NotFound(new { message = "Course not found." });
+            }
+
+            // Validate that at least one topic is provided
+            if (request.Topics == null || request.Topics.Count == 0)
+            {
+                return BadRequest(new { message = "At least one topic is required to add a module." });
+            }
+
+            // Validate that at least one question is provided
+            if (request.Questions == null || request.Questions.Count == 0)
+            {
+                return BadRequest(new { message = "Each module must have at least one question." });
+            }
+
+            // Create and save the module
+            var module = new Module
+            {
+                Module_Name = request.ModuleName,
+                CourseId = request.CourseId,
+                CreatedAt = DateTime.Now,
+                CreatedBy = user.Email
+            };
+
+            _context.modules.Add(module);
+            await _context.SaveChangesAsync();
+
+            // Add topics to the module
+            foreach (var topicDto in request.Topics)
+            {
+                // Save topic image if provided
+                var topicImagePath = !string.IsNullOrEmpty(topicDto.TImagePath)
+                    ? SaveBase64Image(topicDto.TImagePath, "wwwroot/images/topics", $"{Guid.NewGuid()}.png")
+                    : null;
+
+                var topic = new Topic
+                {
+                    Topic_Name = topicDto.TopicName,
+                    Topic_Description = topicDto.TopicDescription,
+                    T_ImagePath = topicImagePath,
+                    ModuleId = module.Id,
+                    CourseId = request.CourseId,
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = user.Email
+                };
+
+                _context.Topics.Add(topic);
+            }
+            await _context.SaveChangesAsync();
+
+            // Add questions to the module
+            foreach (var questionDto in request.Questions)
+            {
+                var question = new Question
+                {
+                    QuestionText = questionDto.QuestionText,
+                    OptionA = questionDto.OptionA,
+                    OptionB = questionDto.OptionB,
+                    OptionC = questionDto.OptionC,
+                    OptionD = questionDto.OptionD,
+                    CorrectOption = questionDto.CorrectOption,
+                    ModuleId = module.Id,
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = user.Email
+                };
+
+                _context.questions.Add(question);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Module added successfully.", moduleId = module.Id });
         }
 
+        [HttpPut("EditCourse/{courseId}")]
+        public async Task<IActionResult> EditCourse(int courseId, [FromForm] EditCourseDto request, [FromForm] IFormFile imagePath)
+        {
+            // Get the logged-in user's email from the claims
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == "it.developer@hrjohnsonindia.com");
 
+            if (user == null)
+            {
+                return Unauthorized(new { message = "User not found." });
+            }
+
+            // Check if the course exists
+            var course = await _context.course.FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null)
+            {
+                return NotFound(new { message = "Course not found." });
+            }
+
+            // Validate that the user has permission to edit the course
+            if (user.RoleId == 3)
+            {
+                return Forbid("You do not have permission to edit this course.");
+            }
+
+            // Update course details
+            if (!string.IsNullOrEmpty(request.CourseName))
+            {
+                course.CourseName = request.CourseName;
+            }
+
+            if (!string.IsNullOrEmpty(request.CourseDescription))
+            {
+                course.CourseDescription = request.CourseDescription;
+            }
+
+            // Update course image if provided
+            if (imagePath != null)
+            {
+                var newImagePath = SaveImage(imagePath, "wwwroot/images/courses", $"{Guid.NewGuid()}.png");
+                course.ImagePath = newImagePath;
+            }
+
+            _context.course.Update(course);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Course details updated successfully.", courseId = course.Id });
+        }
+
+        private string SaveImage(IFormFile imageFile, string targetDirectory, string fileName)
+        {
+            // Ensure the directory exists
+            var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), targetDirectory);
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            // Define the full file path to save the image
+            var filePath = Path.Combine(directoryPath, fileName);
+
+            // Save the image to the file system
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                imageFile.CopyTo(stream);
+            }
+
+            // Return the relative path to the image file with the required slash format
+            var relativePath = Path.Combine(targetDirectory, fileName);  // wwwroot/images/courses/filename.png
+            var finalPath = relativePath.Replace("/", "\\");  // Replaces all forward slashes with backslashes
+            finalPath = finalPath.Replace("\\courses\\", "/courses\\");  // Ensures the correct format for the courses directory
+            return finalPath;
+        }
 
 
     }
@@ -450,6 +631,38 @@ namespace CyberSecurity_new.Controllers
         public string OptionC { get; set; }     // Option C
         public string OptionD { get; set; }     // Option D
         public string CorrectOption { get; set; } // Correct answer
+    }
+
+    public class ModuleWithTopicsAndQuestionsDto
+    {
+        public int CourseId { get; set; }
+        public string ModuleName { get; set; }
+        public List<TopicDto2> Topics { get; set; }
+        public List<QuestionDto2> Questions { get; set; }
+    }
+
+    public class TopicDto2
+    {
+        public string TopicName { get; set; }
+        public string TopicDescription { get; set; }
+        public string? TImagePath { get; set; }  // Optional topic image
+    }
+
+    public class QuestionDto2
+    {
+        public string QuestionText { get; set; }
+        public string OptionA { get; set; }
+        public string OptionB { get; set; }
+        public string OptionC { get; set; }
+        public string OptionD { get; set; }
+        public string CorrectOption { get; set; }
+    }
+
+    public class EditCourseDto
+    {
+        public string CourseName { get; set; }
+        public string CourseDescription { get; set; }
+        public string ImagePath { get; set; } // Base64 encoded image
     }
 
 
