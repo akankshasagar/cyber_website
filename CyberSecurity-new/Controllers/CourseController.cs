@@ -520,8 +520,15 @@ namespace CyberSecurity_new.Controllers
         [HttpPut("EditCourse/{courseId}")]
         public async Task<IActionResult> EditCourse(int courseId, [FromForm] EditCourseDto request, [FromForm] IFormFile imagePath)
         {
+            // Get the logged-in user's email from claims (JWT or session)
+            var userEmail = HttpContext.User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            if (string.IsNullOrEmpty(userEmail))
+            {
+                return Unauthorized(new { message = "User not authenticated." });
+            }
+
             // Get the logged-in user's email from the claims
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == "it.developer@hrjohnsonindia.com");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
 
             if (user == null)
             {
@@ -558,6 +565,9 @@ namespace CyberSecurity_new.Controllers
                 var newImagePath = SaveImage(imagePath, "wwwroot/images/courses", $"{Guid.NewGuid()}.png");
                 course.ImagePath = newImagePath;
             }
+
+            course.UpdatedAt = DateTime.Now;  // Set the current date and time for UpdatedAt
+            course.UpdatedBy = userEmail;
 
             _context.course.Update(course);
             await _context.SaveChangesAsync();

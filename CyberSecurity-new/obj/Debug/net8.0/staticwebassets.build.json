@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w7R/MECPVkClpKvgHTXltcXkfK0RDI7BoFpGBqb19Aw=",
+  "Hash": "w+XTe0Cmjx99Q9RPCxo+UpnV8bqoWOjj8d7l2V5ibgw=",
   "Source": "CyberSecurity-new",
   "BasePath": "_content/CyberSecurity-new",
   "Mode": "Default",
@@ -372,6 +372,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\courses\\599ebd81-85ff-4a41-8e58-00eda3b4a851.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\courses\\5e9dcba2-d64c-459a-ab7a-c6982a248092.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/courses/5e9dcba2-d64c-459a-ab7a-c6982a248092#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bwbz7uumnu",
+      "Integrity": "+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\courses\\5e9dcba2-d64c-459a-ab7a-c6982a248092.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\courses\\6f972a97-6ec4-4eda-a2c7-4ff339da9eeb.png",
@@ -857,6 +878,27 @@
       "OriginalItemSpec": "wwwroot\\images\\courses\\ff370b7d-a779-4719-a55d-214b25bd79fc.png"
     },
     {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\0cac325d-11b0-475d-b691-189f0f81686e.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/0cac325d-11b0-475d-b691-189f0f81686e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fttjp90ayt",
+      "Integrity": "sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\0cac325d-11b0-475d-b691-189f0f81686e.png"
+    },
+    {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\0f19eca6-fd05-432d-b48c-4f3fc345b809.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
@@ -1067,6 +1109,27 @@
       "OriginalItemSpec": "wwwroot\\images\\topics\\4adfe50d-5df0-4091-a5fa-827b2c382f62.png"
     },
     {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fig7hdx7yq",
+      "Integrity": "VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png"
+    },
+    {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\4f7ab572-ec22-4925-b46b-8a18eec3883b.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
@@ -1107,6 +1170,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\topics\\529a785e-90cf-4852-b652-6f2d23f5a53c.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\54455645-5e85-48aa-afb8-33042ef5db83.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/54455645-5e85-48aa-afb8-33042ef5db83#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pau3j32wng",
+      "Integrity": "30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\54455645-5e85-48aa-afb8-33042ef5db83.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\57ee6ba3-a563-4f73-b975-05500c1602ed.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/57ee6ba3-a563-4f73-b975-05500c1602ed#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j6ihdyhkgg",
+      "Integrity": "tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\57ee6ba3-a563-4f73-b975-05500c1602ed.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\5cdaa145-3691-4ef1-9e97-f5ab6e1d142b.png",
@@ -1256,6 +1361,27 @@
       "OriginalItemSpec": "wwwroot\\images\\topics\\6c0bda93-a855-48a5-b0e8-4bd2b70ed660.png"
     },
     {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\71ac74f8-e829-49cd-a33a-2c89adfc85c5.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/71ac74f8-e829-49cd-a33a-2c89adfc85c5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6l43jd5d6",
+      "Integrity": "RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\71ac74f8-e829-49cd-a33a-2c89adfc85c5.png"
+    },
+    {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\7405ecf1-0578-48fb-a908-3184b47d51f6.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
@@ -1338,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\topics\\8a3fbc04-9635-4e3c-949f-b72537c026e5.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/8aa95000-3fcd-445d-9a2b-e9e12421ca8a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xfcnp66ac4",
+      "Integrity": "Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
@@ -1487,6 +1634,27 @@
       "OriginalItemSpec": "wwwroot\\images\\topics\\9aa083e3-006f-4f2a-b975-c92c4101aede.png"
     },
     {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/a40ab030-b8c6-46a5-afcd-d76ff6c3af44#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "510yw2axrh",
+      "Integrity": "V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png"
+    },
+    {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b29a6ba6-9bde-4173-a7db-73bbe3e2956f.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
@@ -1527,6 +1695,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\topics\\b6db2bdc-ef37-4a0d-969e-346cc2b11ede.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b877e8f2-57f1-4b8e-941d-9320be41b8da.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/b877e8f2-57f1-4b8e-941d-9320be41b8da#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "05vwf1of7p",
+      "Integrity": "XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\b877e8f2-57f1-4b8e-941d-9320be41b8da.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/be06713f-5d86-470c-b2fc-18251694cde3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8sx823t6bw",
+      "Integrity": "+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/c0d441ba-322e-4e27-853d-64a2c8d0a07e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5f5hn5gi4l",
+      "Integrity": "T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png",
@@ -1592,6 +1823,27 @@
       "OriginalItemSpec": "wwwroot\\images\\topics\\c938676a-b135-40c1-9655-77733076bccc.png"
     },
     {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d344d2d5-1188-4d4f-9724-de7c2e426466.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/d344d2d5-1188-4d4f-9724-de7c2e426466#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5f5hn5gi4l",
+      "Integrity": "T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\d344d2d5-1188-4d4f-9724-de7c2e426466.png"
+    },
+    {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d4b017b2-8068-42d8-969e-3e375fa99ae4.png",
       "SourceId": "CyberSecurity-new",
       "SourceType": "Discovered",
@@ -1632,6 +1884,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\topics\\d531bbe4-fb14-481c-b95e-a39bf85e01ee.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/d66dfabb-6e34-4781-af2f-3d7e54e6b2c6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n98kjycnav",
+      "Integrity": "26HxWcCyhxoA6feY/R40+vj8AVWz5ZsQ/3VSU/HMmY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/e5676aac-839b-4f41-9e84-5d0926efbb69#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xfcnp66ac4",
+      "Integrity": "Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\eed06adf-4b7f-4c03-b0f7-79b90045e005.png",
@@ -1716,6 +2010,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png",
+      "SourceId": "CyberSecurity-new",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\",
+      "BasePath": "_content/CyberSecurity-new",
+      "RelativePath": "images/topics/fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xfcnp66ac4",
+      "Integrity": "Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png"
     },
     {
       "Identity": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\ffbf5acf-3720-434a-9ae5-131b1e261d2b.png",
@@ -3205,6 +3520,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 28 Jan 2025 07:38:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY="
+        }
+      ]
+    },
+    {
+      "Route": "images/courses/5e9dcba2-d64c-459a-ab7a-c6982a248092.bwbz7uumnu.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\courses\\5e9dcba2-d64c-459a-ab7a-c6982a248092.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103242"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bwbz7uumnu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/courses/5e9dcba2-d64c-459a-ab7a-c6982a248092.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY="
+        }
+      ]
+    },
+    {
+      "Route": "images/courses/5e9dcba2-d64c-459a-ab7a-c6982a248092.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\courses\\5e9dcba2-d64c-459a-ab7a-c6982a248092.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103242"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+yUI0d6Xomhwb8ZTKw6Y4SeAk1GlmIMsg8Yc80MmsUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5105,6 +5502,88 @@
       ]
     },
     {
+      "Route": "images/topics/0cac325d-11b0-475d-b691-189f0f81686e.fttjp90ayt.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\0cac325d-11b0-475d-b691-189f0f81686e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "154442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fttjp90ayt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/0cac325d-11b0-475d-b691-189f0f81686e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/0cac325d-11b0-475d-b691-189f0f81686e.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\0cac325d-11b0-475d-b691-189f0f81686e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "154442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sxrTwrLwtCYpF/VsP1lG6DcLMzM1lWPw2+bdOUI32ZA="
+        }
+      ]
+    },
+    {
       "Route": "images/topics/0f19eca6-fd05-432d-b48c-4f3fc345b809.5f5hn5gi4l.png",
       "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\0f19eca6-fd05-432d-b48c-4f3fc345b809.png",
       "Selectors": [],
@@ -5925,6 +6404,88 @@
       ]
     },
     {
+      "Route": "images/topics/4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.fig7hdx7yq.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fig7hdx7yq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\4e92aac7-3ad7-4984-ab4d-f2dfb878f4d6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyQS7xDeq0FbfJOGYCQg3KrEYzRZh+fZu8BfdgdUAAs="
+        }
+      ]
+    },
+    {
       "Route": "images/topics/4f7ab572-ec22-4925-b46b-8a18eec3883b.ml2tvcvbid.png",
       "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\4f7ab572-ec22-4925-b46b-8a18eec3883b.png",
       "Selectors": [],
@@ -6085,6 +6646,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-hNzNMIolMlpy/X8KhvOCrbB9z4iYazNtd+ULtn585IA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/54455645-5e85-48aa-afb8-33042ef5db83.pau3j32wng.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\54455645-5e85-48aa-afb8-33042ef5db83.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pau3j32wng"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/54455645-5e85-48aa-afb8-33042ef5db83.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/54455645-5e85-48aa-afb8-33042ef5db83.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\54455645-5e85-48aa-afb8-33042ef5db83.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/57ee6ba3-a563-4f73-b975-05500c1602ed.j6ihdyhkgg.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\57ee6ba3-a563-4f73-b975-05500c1602ed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j6ihdyhkgg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/57ee6ba3-a563-4f73-b975-05500c1602ed.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/57ee6ba3-a563-4f73-b975-05500c1602ed.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\57ee6ba3-a563-4f73-b975-05500c1602ed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg="
         }
       ]
     },
@@ -6663,6 +7388,88 @@
       ]
     },
     {
+      "Route": "images/topics/71ac74f8-e829-49cd-a33a-2c89adfc85c5.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\71ac74f8-e829-49cd-a33a-2c89adfc85c5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67178"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/71ac74f8-e829-49cd-a33a-2c89adfc85c5.u6l43jd5d6.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\71ac74f8-e829-49cd-a33a-2c89adfc85c5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67178"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6l43jd5d6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/71ac74f8-e829-49cd-a33a-2c89adfc85c5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RmMKKm47yflvgwuEnFs9pxnIdgR1kXnd5oiGRCmwprY="
+        }
+      ]
+    },
+    {
       "Route": "images/topics/7405ecf1-0578-48fb-a908-3184b47d51f6.9hwc0axjau.png",
       "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\7405ecf1-0578-48fb-a908-3184b47d51f6.png",
       "Selectors": [],
@@ -6987,6 +7794,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-tYRvHJ2VIsXQAaFBshgyZCZqzrXB7GQQ8I0imnxUPIg="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 10:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/8aa95000-3fcd-445d-9a2b-e9e12421ca8a.xfcnp66ac4.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 10:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xfcnp66ac4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
         }
       ]
     },
@@ -7565,6 +8454,88 @@
       ]
     },
     {
+      "Route": "images/topics/a40ab030-b8c6-46a5-afcd-d76ff6c3af44.510yw2axrh.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "350052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "510yw2axrh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "350052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw="
+        }
+      ]
+    },
+    {
       "Route": "images/topics/b29a6ba6-9bde-4173-a7db-73bbe3e2956f.8sx823t6bw.png",
       "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b29a6ba6-9bde-4173-a7db-73bbe3e2956f.png",
       "Selectors": [],
@@ -7725,6 +8696,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-1YL7Pslt0X9uuwo/vYPp42/eBThnTDjJTnSa9Nsn91M="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/b877e8f2-57f1-4b8e-941d-9320be41b8da.05vwf1of7p.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b877e8f2-57f1-4b8e-941d-9320be41b8da.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "05vwf1of7p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/b877e8f2-57f1-4b8e-941d-9320be41b8da.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/b877e8f2-57f1-4b8e-941d-9320be41b8da.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b877e8f2-57f1-4b8e-941d-9320be41b8da.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XEdDpSWL0YCY87krh2xP50bWxFmR6kgHl4yzuzau0Qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/be06713f-5d86-470c-b2fc-18251694cde3.8sx823t6bw.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8sx823t6bw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/be06713f-5d86-470c-b2fc-18251694cde3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/be06713f-5d86-470c-b2fc-18251694cde3.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+CShKN5/P5Lw8YKqG7d7Jnm/K6JqmmCtG2JvyD8bfhE="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/c0d441ba-322e-4e27-853d-64a2c8d0a07e.5f5hn5gi4l.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:14:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5f5hn5gi4l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/c0d441ba-322e-4e27-853d-64a2c8d0a07e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/c0d441ba-322e-4e27-853d-64a2c8d0a07e.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:14:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
         }
       ]
     },
@@ -7975,6 +9192,88 @@
       ]
     },
     {
+      "Route": "images/topics/d344d2d5-1188-4d4f-9724-de7c2e426466.5f5hn5gi4l.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d344d2d5-1188-4d4f-9724-de7c2e426466.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5f5hn5gi4l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/d344d2d5-1188-4d4f-9724-de7c2e426466.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/d344d2d5-1188-4d4f-9724-de7c2e426466.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d344d2d5-1188-4d4f-9724-de7c2e426466.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T59XptgllTvNsq+K3SLcUTBBkgZ1lnRWxUi25bLw9LA="
+        }
+      ]
+    },
+    {
       "Route": "images/topics/d4b017b2-8068-42d8-969e-3e375fa99ae4.09j3amzp8h.png",
       "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d4b017b2-8068-42d8-969e-3e375fa99ae4.png",
       "Selectors": [],
@@ -8135,6 +9434,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-30RpDaOmePGqUBWZjAiyv9GVL0MBW6lXeANvcclas8Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.n98kjycnav.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23439"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26HxWcCyhxoA6feY/R40+vj8AVWz5ZsQ/3VSU/HMmY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n98kjycnav"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-26HxWcCyhxoA6feY/R40+vj8AVWz5ZsQ/3VSU/HMmY0="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23439"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26HxWcCyhxoA6feY/R40+vj8AVWz5ZsQ/3VSU/HMmY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 07:01:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-26HxWcCyhxoA6feY/R40+vj8AVWz5ZsQ/3VSU/HMmY0="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/e5676aac-839b-4f41-9e84-5d0926efbb69.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:10:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/e5676aac-839b-4f41-9e84-5d0926efbb69.xfcnp66ac4.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:10:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xfcnp66ac4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/e5676aac-839b-4f41-9e84-5d0926efbb69.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
         }
       ]
     },
@@ -8463,6 +9926,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-V4PiO/RuFbm18ykPL6+JdD+Dw94r2QlDbrwZ1JYn+qw="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 09:37:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
+        }
+      ]
+    },
+    {
+      "Route": "images/topics/fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.xfcnp66ac4.png",
+      "AssetFile": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 09:37:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xfcnp66ac4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/topics/fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q/A50IkK5baDXnwzb1MpzQrHDgIrbb883/JX406rieI="
         }
       ]
     },

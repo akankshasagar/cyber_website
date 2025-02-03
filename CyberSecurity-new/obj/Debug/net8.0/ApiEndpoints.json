@@ -240,6 +240,59 @@
     ]
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.ModuleController",
+    "Method": "AddModuleToCourse",
+    "RelativePath": "api/Module/AddModuleToCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CyberSecurity_new.Controllers.ModuleWithTopicsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.ModuleController",
+    "Method": "DeleteModule",
+    "RelativePath": "api/Module/DeleteModule/{courseId}/{moduleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.ModuleController",
+    "Method": "EditModuleDetails",
+    "RelativePath": "api/Module/EditModuleDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CyberSecurity_new.Controllers.EditModuleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.OTPSender",
     "Method": "ResetPassword",
     "RelativePath": "api/OTPSender/reset",
