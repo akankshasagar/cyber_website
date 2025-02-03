@@ -11,7 +11,8 @@ export class CourseService {
   private apiUrl2 = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';
   private baseUrl = 'https://localhost:7243/api/Module';
   private topicurl = 'https://localhost:7243/api/Topic';
-  private moduleurl = 'https://localhost:7243/api/Questions/Module';
+  private moduleurl = 'https://localhost:7243/api/Module/AddModuleToCourse';
+  private delmodule = 'https://localhost:7243/api/Module/DeleteModule'
   private quesurl = 'https://localhost:7243/api/Answers';
 
   constructor(private http: HttpClient) { }
@@ -60,5 +61,13 @@ export class CourseService {
 
   editCourse(courseId: number, courseData: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/EditCourse/${courseId}`, courseData);
+  }
+
+  addModuleToCourse(payload: any): Observable<any> {
+    return this.http.post<any>(this.moduleurl, payload);
+  }
+
+  deleteModule(courseId: number, moduleId: number): Observable<any> {
+    return this.http.delete(`${this.delmodule}/${courseId}/${moduleId}`);
   }
 }

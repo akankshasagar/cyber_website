@@ -100,12 +100,37 @@
     <script src="assets/js3/style.js"></script>
     <!----Courses js ends------>       
 
-    <script>
+    <!-- <script>
       function toggleForms() {
           var selectedOption = document.getElementById("optionSelect").value;
           document.getElementById("editCourseForm").style.display = selectedOption === "editCourse" ? "block" : "none";
           document.getElementById("addModuleForm").style.display = selectedOption === "addModule" ? "block" : "none";
       }
-      </script>
+      </script> -->
+
+      <script>
+        function toggleForms() {
+            var selectedOption = document.getElementById("optionSelect").value;
+            
+            // Show/Hide based on selected option
+            document.getElementById("editCourseForm").style.display = selectedOption === "editCourse" ? "block" : "none";
+            document.getElementById("moduleActionForm").style.display = selectedOption === "editModule" ? "block" : "none";
+            
+            // Hide module forms initially
+            document.getElementById("addModuleForm").style.display = "none";
+            document.getElementById("editModuleForm").style.display = "none";
+        }
+    
+        function showModuleForm(action) {
+            if (action === "add") {
+                document.getElementById("addModuleForm").style.display = "block";
+                document.getElementById("editModuleForm").style.display = "none";
+            } else if (action === "edit") {
+                document.getElementById("addModuleForm").style.display = "none";
+                document.getElementById("editModuleForm").style.display = "block";
+            }
+        }
+    </script>
+    
   </body>
 </html>

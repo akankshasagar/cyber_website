@@ -31,7 +31,7 @@
             <label for="optionSelect" class="form-label">Choose an action:</label>
             <select id="optionSelect" class="form-select" onchange="toggleForms()">
                 <option value="editCourse">Edit Course Details</option>
-                <option value="addModule">Add Module</option>
+                <option value="editModule">Edit Module Details</option>
             </select>
         </div>
         
@@ -41,7 +41,7 @@
                 <!-- Edit Course Details Form -->
                 <div id="editCourseForm">
                     <h5>Edit Course Details</h5>
-                    <form (ngSubmit)="saveChanges()">
+                    <form (ngSubmit)="saveChanges(form)" #form="ngForm">
                         <div class="mb-3">
                           <label class="form-label">Course Name</label>
                           <input [(ngModel)]="courseName" name="courseName" class="form-control" placeholder="Enter course name" />
@@ -60,7 +60,7 @@
                 </div>
                 
                 <!-- Add Module Form (Initially Hidden) -->
-                <div id="addModuleForm" style="display: none;">
+                <!-- <div id="addModuleForm" style="display: none;">
                     <h5>Add Module</h5>
                     <form>
                         <div class="mb-3">
@@ -73,7 +73,135 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Add Module</button>
                     </form>
+                </div>                 -->
+
+                <!-- Module Action Selection -->
+                <div id="moduleActionForm" style="display: none;">
+                    <h5>What would you like to do?</h5>
+                    <div class="text-center">
+                        <button class="btn btn-primary" style="margin-right: 5vh;" onclick="showModuleForm('add')">Add Module</button>
+                        <button class="btn btn-primary" onclick="showModuleForm('edit')">Edit Module</button>
+                    </div>
                 </div>
+
+                <!-- Add Module Form -->
+                <div id="addModuleForm" style="display: none;">
+                    <h5>Add Module</h5>                    
+
+                    <form [formGroup]="moduleForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="moduleName">Module Name</label>
+                            <input id="moduleName" formControlName="moduleName" class="form-control" type="text" />
+                            <div *ngIf="moduleForm.get('moduleName')?.invalid && moduleForm.get('moduleName')?.touched" class="text-danger">
+                                Module name is required
+                            </div>
+                        </div>
+                    
+                        <!-- Topics Section -->
+                        <div formArrayName="topics">
+                            <div *ngFor="let topic of topics.controls; let i = index" [formGroupName]="i" class="topic-group">
+                                <h5 style="margin-top: 2vh;">Topic {{ i + 1 }}</h5>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="topicName">Topic Name</label>
+                                    <input id="topicName" formControlName="topicName" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="topicDescription">Topic Description</label>
+                                    <input id="topicDescription" formControlName="topicDescription" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="tImagePath">Topic Image</label>
+                                    <input type="file" (change)="onImageSelected($event, i)" class="form-control" />
+                                </div>
+                                <button type="button" (click)="removeTopic(i)" class="btn btn-danger" style="margin-top: 3vh;">Remove Topic</button>
+                            </div>
+                        </div>                                        
+                    
+                        <!-- Questions Section -->
+                        <div formArrayName="questions">
+                            <div *ngIf="questions.controls.length === 0" class="text-danger">
+                                At least one question must be added.
+                            </div>
+
+                            <div *ngFor="let question of questions.controls; let i = index" [formGroupName]="i" class="question-group">
+                                <h5 style="margin-top: 2vh;">Question {{ i + 1 }}</h5>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="questionText">Question</label>
+                                    <input id="questionText" formControlName="questionText" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="optionA">Option A</label>
+                                    <input id="optionA" formControlName="optionA" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="optionB">Option B</label>
+                                    <input id="optionB" formControlName="optionB" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="optionC">Option C</label>
+                                    <input id="optionC" formControlName="optionC" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="optionD">Option D</label>
+                                    <input id="optionD" formControlName="optionD" class="form-control" type="text" />
+                                </div>
+                                <div class="form-group" style="margin-top: 3vh;">
+                                    <label for="correctOption">Correct Option</label>
+                                    <input id="correctOption" formControlName="correctOption" class="form-control" type="text" />                                    
+                                </div>
+                                <button type="button" (click)="removeQuestion(i)" class="btn btn-danger" style="margin-top: 3vh;">Remove Question</button>
+                            </div>
+                        </div>
+
+                        <button type="button" (click)="addTopic()" class="btn btn-primary" style="margin-right: 5vh; margin-top: 3vh;">Add Topic</button>
+                    
+                        <button type="button" (click)="addQuestion()" class="btn btn-primary" style="margin-right: 5vh; margin-top: 3vh;">Add Question</button>
+                    
+                        <button type="submit" [disabled]="moduleForm.invalid" class="btn btn-primary" style="margin-top: 3vh;">Submit</button>
+                    </form>
+                    
+                </div>
+
+                <!-- Edit Module Form -->
+                <div id="editModuleForm" style="display: none;">
+                    <h5>Edit Module Details</h5>                    
+                    <form (ngSubmit)="onSubmitM(form)" #form="ngForm">
+                        <div class="mb-3">
+                            <label class="form-label">Select Module</label>
+                            <select name="selectedModuleId" class="form-control" (change)="onModuleSelect($event)">
+                                <option *ngFor="let module of modules" [value]="module.id">{{ module.module_Name }}</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Updated Module Name</label>
+                            <input name="moduleName" type="text" class="form-control" [(ngModel)]="moduleName" placeholder="Enter module name">
+                        </div>                        
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="button" class="btn btn-danger" (click)="confirmDelete()">Delete Module</button>
+                    </form>    
+                    
+                    <!-- Confirmation Modal -->
+                    <div *ngIf="showConfirmDeletePopup" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Confirm Deletion</h5>
+                                    <button type="button" class="close" (click)="closeConfirmDeletePopup()">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete the module "{{ moduleName }}"?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" (click)="closeConfirmDeletePopup()">Cancel</button>
+                                    <button type="button" class="btn btn-danger" (click)="deleteModule()">Yes, Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
