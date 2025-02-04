@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-editcourse',
@@ -22,6 +23,7 @@ export class EditcourseComponent {
   selectedModuleId?: number;
   moduleName: string = '';
   showConfirmDeletePopup: boolean = false;
+  userRole: string | null = null;
 
   constructor(private auth: AuthService,
     private courseService: CourseService,
@@ -133,6 +135,8 @@ export class EditcourseComponent {
 
 
   ngOnInit(): void {
+    const tokenPayload = this.auth.decodeToken();
+    this.userRole = tokenPayload?.role || null;
     // Get the courseId from the route parameters
     this.route.paramMap.subscribe(params => {
       this.courseId = +params.get('courseId')!;  // Extract courseId from route, and convert it to a number
@@ -235,7 +239,7 @@ export class EditcourseComponent {
 
     // const courseId = 1;  // Example courseId, replace with actual course ID
 
-    this.http.put(`https://localhost:7243/api/Course/EditCourse/${this.courseId}`, formData)
+    this.http.put(`${environment.apiUrl}Course/EditCourse/${this.courseId}`, formData)
       .subscribe({
         next: (response) => {
           this.toastr.success("Course Details updated successfully");
@@ -250,7 +254,7 @@ export class EditcourseComponent {
   }  
 
   fetchModulesByCourse(): void {
-    this.http.get<any[]>(`https://localhost:7243/api/Module/${this.courseId}`)
+    this.http.get<any[]>(`${environment.apiUrl}Module/${this.courseId}`)
       .subscribe(
         (data) => {
           this.modules = data;
@@ -284,7 +288,7 @@ export class EditcourseComponent {
       moduleName: this.moduleName
     };
 
-    this.http.put('https://localhost:7243/api/Module/EditModuleDetails', requestPayload)
+    this.http.put(`${environment.apiUrl}Module/EditModuleDetails`, requestPayload)
       .subscribe(
         (response) => {
           alert('Module details updated successfully!');
@@ -329,3 +333,8 @@ export class EditcourseComponent {
     this.auth.signOut();
   }
 }
+
+
+    // this.http.put(`https://localhost:7243/api/Course/EditCourse/${this.courseId}`, formData)
+    // this.http.get<any[]>(`https://localhost:7243/api/Module/${this.courseId}`)
+    // this.http.put('https://localhost:7243/api/Module/EditModuleDetails', requestPayload)

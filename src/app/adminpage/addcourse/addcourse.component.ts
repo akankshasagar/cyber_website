@@ -4,6 +4,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-addcourse',
@@ -242,7 +243,7 @@ export class AddcourseComponent {
 
   courseForm!: FormGroup;
   imageError: string = '';
-  apiUrl: string = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';
+  apiUrl: string = environment.apiUrl + "Course/AddCourseWithModulesAndTopics";
 
   constructor(
     private fb: FormBuilder,
@@ -407,3 +408,6 @@ export class AddcourseComponent {
   }
   
 }
+
+
+  // apiUrl: string = 'https://localhost:7243/api/Course/AddCourseWithModulesAndTopics';

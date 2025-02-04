@@ -5,6 +5,7 @@ import { CourseService } from '../services/course.service';
 import { AuthService } from '../services/auth.service';
 import { UserstoreService } from '../services/userstore.service';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environment/environment';
 // import * as pdfjsLib from 'pdfjs-dist';
 
 @Component({
@@ -242,6 +243,12 @@ export class CourseDetailsComponent {
   }
 
   submitAnswers(): void {
+    // Ensure all questions have been answered
+    if (this.selectedOptions.length !== this.questions.length || this.selectedOptions.some(option => !option)) {
+      this.toastr.error('Please answer all the questions before submitting.');
+      return;
+    }
+
     // Create a list of answers to be submitted
     const answers: any[] = this.selectedOptions.map((option, index) => {
       const question = this.questions[index];
@@ -250,27 +257,39 @@ export class CourseDetailsComponent {
         CourseId: this.courseId,
         ModuleId: this.currentModuleId,
         AnswerText: option,
-        SubmittedBy: this.email // Assuming the user's name is stored
+        SubmittedBy: this.email // Assuming the user's email is stored
       };
     });
-  
+
     // Send the answers to the backend API
-    this.http.post('https://localhost:7243/api/Answers/SubmitAnswers', answers).subscribe({
+    this.http.post( environment.apiUrl + "Answers/SubmitAnswers", answers).subscribe({
       next: (response) => {
         this.toastr.success('Answers submitted successfully.');
         console.log('Answers submitted successfully', response);
-        // Optionally, you can show success message or navigate
         this.isSubmitted = true;
+        this.goToNextModule();
+
         // Process the API response to update answersCorrectness
-      this.answersCorrectness = this.questions.map((question, index) =>
-        this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase()
-      );
-      
+        this.answersCorrectness = this.questions.map((question, index) => {
+          return this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase();
+        });
       },
       error: (err) => {
         console.error('Error submitting answers', err);
+        this.toastr.error('There was an error submitting your answers. Please try again.');
       }
     });
+  }
+  
+  goToNextModule(): void {
+    // Find the current module and determine the next module
+    const currentIndex = this.modules.findIndex(module => module.id === this.currentModuleId);
+    if (currentIndex !== -1 && currentIndex < this.modules.length - 1) {
+      const nextModule = this.modules[currentIndex + 1];
+      this.currentModuleId = nextModule.id; // Update the current module ID
+      this.getTopics(nextModule.id); // Optionally, load topics for the next module
+      this.isTestPage = false;
+    }
   }
   
   
@@ -328,3 +347,6 @@ export class CourseDetailsComponent {
   //     });
   // }
 }
+
+
+    // this.http.post('https://localhost:7243/api/Answers/SubmitAnswers', answers).subscribe({

@@ -7,6 +7,7 @@ import { User } from '../Model/user.model';
 import { RoleService } from '../services/role.service';
 import { RoleMaster } from '../Model/rolemaster.model';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-adminpage',
@@ -22,7 +23,7 @@ export class AdminpageComponent {
   selectedCourse: any = null;
   isFormVisible: boolean = false;
   user: User = new User();
-  apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
+  apiUrl = environment.apiUrl + "User/RegisterAdminOrManager";
   departments: { deptId: number, deptName: string }[] = [];
   selectedDeptId: number = 0;
   roles: RoleMaster[] = [];
@@ -100,26 +101,48 @@ export class AdminpageComponent {
 
   onSubmit(): void {
     // Set the departmentId and roleId based on the selected values
-    this.user.deptId = this.selectedDeptId;
-    this.user.roleId = this.selectedRoleId;
+    // this.user.deptId = this.selectedDeptId;
+    // this.user.roleId = this.selectedRoleId;
+    // console.log("Submitting user:", this.user);
+    // // Send the user data to the backend for registration
+    // this.auth.registerUser(this.user).subscribe(
+    //   (response) => {
+    //     console.log('Registration Successful:', response);
+    //     // alert('Registration Successful');
+    //     this.toastr.success(response.message);
+    //     this.isFormVisible = false;  // Hide form on success
+    //   },
+    //   (error) => {
+    //     console.error('Registration Failed:', error);
+    //     // let errorMessage = 'Some Other Error Occured';
+    //     // if (error?.error?.Message) {
+    //     //   errorMessage = error.error.Message;
+    //     // }
+    //     this.toastr.error(error?.error.message);
+    //   }
+    // );
 
-    // Send the user data to the backend for registration
-    this.auth.registerUser(this.user).subscribe(
-      (response) => {
-        // console.log('Registration Successful:', response);
-        // alert('Registration Successful');
-        this.toastr.success(response.message);
-        this.isFormVisible = false;  // Hide form on success
-      },
-      (error) => {
-        console.error('Registration Failed:', error);
-        let errorMessage = 'Some Other Error Occured';
-        if (error?.error?.Message) {
-          errorMessage = error.error.Message;
+    const requestData = {
+      name: this.user.name,
+      email: this.user.email,
+      password: this.user.password,
+      roleId: this.selectedRoleId,
+      deptId: this.selectedDeptId
+    };
+
+    this.http.post(`${environment.apiUrl}User/RegisterAdminOrManager`, requestData)
+      .subscribe(
+        (response) => {
+          console.log('Registration successful', response);
+          alert('User registered successfully!');
+          this.closeForm();
+        },
+        (error) => {
+          console.error('Error during registration', error);
+          alert(error.error?.Message || 'Registration failed!');
         }
-        this.toastr.error(error?.error.message);
-      }
-    );
+      );
+
   }
 
 
@@ -197,7 +220,7 @@ export class AdminpageComponent {
       CourseId: this.selectedCourse.id,
     };
   
-    this.http.post('https://localhost:7243/api/CourseEnrollments/Enroll', enrollmentRequest).subscribe({
+    this.http.post( `${environment.apiUrl}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
       next: (response: any) => {
         // console.log('Enrollment successful', response);
         // alert(response.Message);
@@ -213,3 +236,8 @@ export class AdminpageComponent {
   
   
 }
+
+
+  // apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
+    // this.http.post('https://localhost:7243/api/CourseEnrollments/Enroll', enrollmentRequest).subscribe({
+    // this.http.post('https://localhost:7243/api/User/RegisterAdminOrManager', requestData)

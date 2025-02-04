@@ -4,29 +4,28 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
 import { User } from '../Model/user.model';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
-  private baseUrl:string = "https://localhost:7243/api/User/";
-  private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
-  private apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
-
-  private isacttest001: string = "https://localhost:7243/api/IsactAnswers001";
-  private attacksurfacestest001: string = "https://localhost:7243/api/AttackSurfacesAnswers001";
-  private phishingspoofingtest001url: string = "https://localhost:7243/api/PhishingSpoofingAnswer001";
-  private wirelessenvurl: string = "https://localhost:7243/api/WirelessEnvironmentAnswer001";
-  private dosdontsurl: string = "https://localhost:7243/api/DosDontsAnswer001";
-  private irmngmnturl: string = "https://localhost:7243/api/IRMngmntAnswer001";
-  private dataprotecturl: string = "https://localhost:7243/api/DataProtectAnswer001";
-  private dnsapturl: string = "https://localhost:7243/api/DnsAptAnswer001";
-  private cyberstalkurl: string = "https://localhost:7243/api/CyberStalkBullyAnswer001";  
-
-  private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
-  private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
-  private forgotpwd: string = "https://localhost:7243/api/User/forgot-password";
+  
+  private baseUrl: string = environment.apiUrl + "User/";  
+  private ansapiurl: string = environment.apiUrl + "TestAnswers01";  
+  private apiUrl = environment.apiUrl + "User/RegisterAdminOrManager";  
+  private isacttest001: string = environment.apiUrl + "IsactAnswers001";  
+  private attacksurfacestest001: string = environment.apiUrl + "AttackSurfacesAnswers001";  
+  private phishingspoofingtest001url: string = environment.apiUrl + "PhishingSpoofingAnswer001";  
+  private wirelessenvurl: string = environment.apiUrl + "WirelessEnvironmentAnswer001";  
+  private dosdontsurl: string = environment.apiUrl + "DosDontsAnswer001";  
+  private irmngmnturl: string = environment.apiUrl + "IRMngmntAnswer001";  
+  private dataprotecturl: string = environment.apiUrl + "DataProtectAnswer001";  
+  private dnsapturl: string = environment.apiUrl + "DnsAptAnswer001";   
+  private cyberstalkurl: string = environment.apiUrl + "CyberStalkBullyAnswer001";  
+  private courseurl: string = environment.apiUrl + "CourseEnrollments";  
+  private coursecompl: string = environment.apiUrl + "CoursesCompleted";  
+  private forgotpwd: string = environment.apiUrl + "User/forgot-password";
   // private test01: string = ""
   private userPayload: any;
 
@@ -173,28 +172,48 @@ export class AuthService {
     return this.http.post<any>(`${this.cyberstalkurl}/cyberstalkbullytest001?email= ${email.toString()}`, {email});
   }
 
-  sendOTP(email: string): Observable<any> {
-    const url = `https://localhost:7243/api/OTPSender/send?email=${email.toString()}`;
+  sendOTP(email: string): Observable<any> {    
+    const url = `${environment.apiUrl}OTPSender/send?email=${email.toString()}`;
     return this.http.post<any>(url, {email});
   }
 
-  VerifyOTP(email: string, otp: string): Observable<any> {      
-    const url = `https://localhost:7243/api/OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
+  VerifyOTP(email: string, otp: string): Observable<any> {          
+    const url = `${environment.apiUrl}OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
     return this.http.post<any>(url, {email, otp});    
   }
 
-  UpdatePassword(email: string, newPassword: string): Observable<any> {
-    const url = `https://localhost:7243/api/OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
+  UpdatePassword(email: string, newPassword: string): Observable<any> {    
+    const url = `${environment.apiUrl}OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
     return this.http.post<any>(url, {email, newPassword});
   }
 
-  registerUser(user: User): Observable<any> {
+  registerUser(user: any) {
     return this.http.post<any>(this.apiUrl, user);
   }
 
-  getUserByEmail(email: string): Observable<any> {
-    const url = `https://localhost:7243/api/CourseEnrollments/GetUserByEmail/${email}`;
+  getUserByEmail(email: string): Observable<any> {    
+    const url = `${environment.apiUrl}CourseEnrollments/GetUserByEmail/${email}`;
     return this.http.get(url);
   }
   
 }
+
+// private baseUrl:string = "https://localhost:7243/api/User/";
+// private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
+// private apiUrl = 'https://localhost:7243/api/User/RegisterAdminOrManager';
+// private isacttest001: string = "https://localhost:7243/api/IsactAnswers001";
+// private attacksurfacestest001: string = "https://localhost:7243/api/AttackSurfacesAnswers001";
+// private phishingspoofingtest001url: string = "https://localhost:7243/api/PhishingSpoofingAnswer001";
+// private wirelessenvurl: string = "https://localhost:7243/api/WirelessEnvironmentAnswer001";
+// private dosdontsurl: string = "https://localhost:7243/api/DosDontsAnswer001";
+// private irmngmnturl: string = "https://localhost:7243/api/IRMngmntAnswer001";
+// private dataprotecturl: string = "https://localhost:7243/api/DataProtectAnswer001";
+// private dnsapturl: string = "https://localhost:7243/api/DnsAptAnswer001";
+// private cyberstalkurl: string = "https://localhost:7243/api/CyberStalkBullyAnswer001"; 
+// private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
+// private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
+// private forgotpwd: string = "https://localhost:7243/api/User/forgot-password";
+// const url = `https://localhost:7243/api/OTPSender/send?email=${email.toString()}`;
+// const url = `https://localhost:7243/api/OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
+// const url = `https://localhost:7243/api/OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
+// const url = `https://localhost:7243/api/CourseEnrollments/GetUserByEmail/${email}`;
