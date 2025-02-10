@@ -38,23 +38,20 @@ export class AdminpageComponent {
   
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
-    console.log('Decoded Token:', tokenPayload);
+    const userEmail = tokenPayload?.email;
+    if (!userEmail) {
+      this.toastr.error('You are not logged in');      
+      return;
+    }
 
-  const userEmail = tokenPayload?.email;
-  if (!userEmail) {
-    console.error('Email is missing in the token.');
-    return;
-  }
-
-  this.auth.getUserByEmail(userEmail).subscribe({
-    next: (user) => {
-      this.user.id = user.id; // Assuming the backend returns a user object with an `id` field
-      console.log('UserId fetched successfully:', this.user.id);
-    },
-    error: (error) => {
-      console.error('Failed to fetch UserId:', error);
-    },
-  });
+    this.auth.getUserByEmail(userEmail).subscribe({
+      next: (user) => {
+        this.user.id = user.id; // Assuming the backend returns a user object with an `id` field        
+      },
+      error: (error) => {
+        this.toastr.error("Failed to fetch User");        
+      },
+    });
 
     this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token 
     this.loadDepartments();   
@@ -65,7 +62,7 @@ export class AdminpageComponent {
         this.updatePaginatedCourses();
       },
       error: (error) => {
-        console.error('Failed to fetch courses:', error);
+        this.toastr.error("Failed to fetch Courses", error);        
       },
     });
   }  
@@ -112,13 +109,11 @@ export class AdminpageComponent {
     this.http.post(`${environment.apiUrl}User/RegisterAdminOrManager`, requestData)
       .subscribe(
         (response) => {
-          console.log('Registration successful', response);
-          alert('User registered successfully!');
+          this.toastr.success("Registration successful");
           this.closeForm();
         },
         (error) => {
-          console.error('Error during registration', error);
-          alert(error.error?.Message || 'Registration failed!');
+          this.toastr.error("Registration failed", error);          
         }
       );
 
@@ -132,7 +127,7 @@ export class AdminpageComponent {
         this.departments = data;
       },
       (error) => {
-        console.error('Error loading departments', error);
+        this.toastr.error("No Departments found");        
       }
     );
   }
@@ -144,7 +139,7 @@ export class AdminpageComponent {
         this.roles = data;
       },
       (error) => {
-        console.error('Error loading roles', error);
+        this.toastr.error("No Roles found");        
       }
     );
   }
@@ -164,9 +159,7 @@ export class AdminpageComponent {
 
   Start(course: any): void {
     this.selectedCourse = course;
-    this.start = true; // Display the modal
-    console.log(course);
-    console.log(this.selectedCourse);
+    this.start = true; // Display the modal    
     document.body.style.overflow = 'hidden';
   }
 
@@ -178,8 +171,7 @@ export class AdminpageComponent {
 
   enroll(): void {
     if (!this.user.id || !this.selectedCourse) {
-      console.error('User or course information is missing.');
-      alert('Please ensure you are logged in and have selected a course.');
+      this.toastr.error("User or course information is missing.");
       return;
     }
   

@@ -66,11 +66,10 @@ export class HomepageComponent {
     this.auth.enroll(email, course)
       .subscribe({
         next: (response)  => {
-          console.log('Enrollment successful', response);
           // Handle success (e.g., show a success message)
         },
         error: (error) => {
-          console.error('Error occurred during enrollment', error);
+          console.error('Error occurred during accessing course', error);
           // Handle error (e.g., show an error message)
         }
       });
@@ -80,7 +79,6 @@ export class HomepageComponent {
   Start(course: any): void {
     this.selectedCourse = course;
     this.start = true; // Display the modal
-    console.log('Selected course:', this.selectedCourse);    
     document.body.style.overflow = 'hidden';
   }
 

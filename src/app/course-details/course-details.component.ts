@@ -43,7 +43,6 @@ export class CourseDetailsComponent {
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
-    console.log('Dropdown state:', this.isDropdownOpen);
   }
 
   toggleChapter1Topics() {
@@ -98,8 +97,8 @@ export class CourseDetailsComponent {
       (data) => {
         this.modules = data; // Store the modules in an array
       },
-      (error) => {
-        console.error('Error loading modules:', error);
+      (error) => {        
+        console.error('Error loading modules');
       }
     );
   }
@@ -184,7 +183,6 @@ export class CourseDetailsComponent {
   }  
  
   goToTest(moduleId: number): void {
-    console.log(`Fetching questions for module ID: ${this.currentModuleId!}`);
   this.getQuestionsForModule(this.currentModuleId!); // Fetch questions for the selected module
   }
 
@@ -235,7 +233,6 @@ export class CourseDetailsComponent {
     this.http.post( environment.apiUrl + "Answers/SubmitAnswers", answers).subscribe({
       next: (response) => {
         this.toastr.success('Answers submitted successfully.');
-        console.log('Answers submitted successfully', response);
         this.isSubmitted = true;
         this.goToNextModule();
 

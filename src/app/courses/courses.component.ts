@@ -30,14 +30,13 @@ export class CoursesComponent {
 
     const userEmail = tokenPayload?.email;
     if (!userEmail) {
-      console.error('Email is missing in the token.');
+      console.error('Email Not Found');
       return;
     }
 
     this.auth.getUserByEmail(userEmail).subscribe({
       next: (user) => {
         this.user.id = user.id; // Assuming the backend returns a user object with an `id` field
-        console.log('UserId fetched successfully:', this.user.id);
       },
       error: (error) => {
         console.error('Failed to fetch UserId:', error);
@@ -86,9 +85,7 @@ export class CoursesComponent {
 
   Start(course: any): void {
     this.selectedCourse = course;
-    this.start = true; // Display the modal
-    console.log(course);
-    console.log(this.selectedCourse);
+    this.start = true; // Display the modal    
     document.body.style.overflow = 'hidden';
   }
 
@@ -106,7 +103,6 @@ export class CoursesComponent {
   enroll(): void {
     if (!this.user.id || !this.selectedCourse) {
       console.error('User or course information is missing.');
-      alert('Please ensure you are logged in and have selected a course.');
       return;
     }
   

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-allcourses',
@@ -17,7 +18,7 @@ export class AllcoursesComponent {
   coursesPerPage: number = 3; // Number of courses per page
   paginatedCourses: any[] = []; // Courses to display on the current page
 
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService) { 
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private toastr: ToastrService) { 
 
   }
 
@@ -28,7 +29,7 @@ export class AllcoursesComponent {
         this.updatePaginatedCourses();
       },
       error: (error) => {
-        console.error('Failed to fetch courses:', error);
+        this.toastr.error("Error Fetching Courses");      
       },
     });
   }
@@ -66,11 +67,9 @@ export class AllcoursesComponent {
     this.auth.enroll(email, course)
       .subscribe({
         next: (response)  => {
-          console.log('Enrollment successful', response);
           // Handle success (e.g., show a success message)
         },
         error: (error) => {
-          console.error('Error occurred during enrollment', error);
           // Handle error (e.g., show an error message)
         }
       });
@@ -78,9 +77,7 @@ export class AllcoursesComponent {
 
   Start(course: any): void {
     this.selectedCourse = course;
-    this.start = true; // Display the modal
-    console.log(course);
-    console.log(this.selectedCourse);
+    this.start = true; // Display the modal    
     document.body.style.overflow = 'hidden';
   }
 

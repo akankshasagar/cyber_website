@@ -33,7 +33,6 @@ export class SignupComponent {
 
   ngOnInit(): void {
     this.departmentService.getDepartments().subscribe((data) => {
-      console.log(this.departments);
       this.departments = data;
     });
   }
@@ -53,7 +52,6 @@ export class SignupComponent {
         }
       };
   
-      console.log('Payload being sent:', payload); 
 
       this.auth.signUp(payload)
       .subscribe({

@@ -84,7 +84,6 @@ export class EditcourseComponent {
     // Get the courseId from the route parameters
     this.route.paramMap.subscribe(params => {
       this.courseId = +params.get('courseId')!;  // Extract courseId from route, and convert it to a number
-      console.log('Editing course with ID:', this.courseId);
     });
 
     if (this.courseId) {
@@ -104,7 +103,7 @@ export class EditcourseComponent {
           this.modules = data;
         },
         (error) => {
-          console.error('Error fetching modules:', error);
+          this.toastr.error("Error fetching modules:", error);          
         }
       );
   }
@@ -125,12 +124,11 @@ export class EditcourseComponent {
       .subscribe({
         next: (response) => {
           this.toastr.success("Course Details updated successfully");
-          console.log('Course updated successfully:', response);
 
           form.reset();
         },
         error: (error) => {
-          console.error('Error updating course:', error);
+          this.toastr.error("Error updating course:", error);
         }
       });
   }  
@@ -220,7 +218,6 @@ export class EditcourseComponent {
         (response) => {
           this.toastr.success(response.message);
           this.moduleForm.reset();
-          console.log('Module added successfully', response);
         },
         (error) => {          
           this.toastr.error("Error adding module");
@@ -304,8 +301,7 @@ export class EditcourseComponent {
           form.reset();
         },
         (error) => {
-          console.error('Error updating module:', error);          
-          this.toastr.error("Error updating module details.");
+          this.toastr.error("Error updating module details.", error);
         }
       );
   }
@@ -335,18 +331,18 @@ export class EditcourseComponent {
     this.courseService.deleteModule(this.courseId, this.selectedModuleId).subscribe(
       (response) => {
         // Handle successful deletion (show success message or refresh data)
-        console.log('Module deleted successfully', response);
+        this.toastr.success("Module deleted successfully!");
         this.closeConfirmDeletePopup(); // Close the popup
         window.location.reload();
         // Optionally, you can also refresh the module list here
       },
       (error) => {
         // Handle error (show error message)
-        console.error('Error deleting module', error);
+        this.toastr.error("Error deleting module.", error);
       }
     );
   }else {
-    console.error('Module ID is not selected or invalid.');
+    this.toastr.error("Please select a module to delete.");
   }
   }  
     
@@ -426,8 +422,8 @@ export class EditcourseComponent {
             this.topics2 = response; // Store fetched topics
         },
         (error) => {
-            console.error('Error fetching topics:', error);
-            this.topics2 = []; // Clear topics if there's an error
+          this.toastr.error("Error fetching topics:", error);          
+          this.topics2 = []; // Clear topics if there's an error
         }
     );
   }
@@ -442,7 +438,7 @@ export class EditcourseComponent {
 
   onSubmitET() {
     if (!this.selectedModuleId || !this.selectedTopicId) {
-      alert('Please select a module and a topic.');
+      this.toastr.warning("Please select a module and topic.");
       return;
     }
 
