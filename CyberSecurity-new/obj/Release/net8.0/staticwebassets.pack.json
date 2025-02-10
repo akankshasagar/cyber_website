@@ -293,6 +293,10 @@
       "PackagePath": "staticwebassets\\images\\topics\\8a3fbc04-9635-4e3c-949f-b72537c026e5.png"
     },
     {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png",
+      "PackagePath": "staticwebassets\\images\\topics\\8aa95000-3fcd-445d-9a2b-e9e12421ca8a.png"
+    },
+    {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png",
       "PackagePath": "staticwebassets\\images\\topics\\8ade3de9-f5f0-4869-bd7d-1a3f1d0a0e60.png"
     },
@@ -325,6 +329,10 @@
       "PackagePath": "staticwebassets\\images\\topics\\a40ab030-b8c6-46a5-afcd-d76ff6c3af44.png"
     },
     {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b2635f5a-04cd-47b4-b214-f01ad5ad15fa.png",
+      "PackagePath": "staticwebassets\\images\\topics\\b2635f5a-04cd-47b4-b214-f01ad5ad15fa.png"
+    },
+    {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\b29a6ba6-9bde-4173-a7db-73bbe3e2956f.png",
       "PackagePath": "staticwebassets\\images\\topics\\b29a6ba6-9bde-4173-a7db-73bbe3e2956f.png"
     },
@@ -339,6 +347,10 @@
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png",
       "PackagePath": "staticwebassets\\images\\topics\\be06713f-5d86-470c-b2fc-18251694cde3.png"
+    },
+    {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png",
+      "PackagePath": "staticwebassets\\images\\topics\\c0d441ba-322e-4e27-853d-64a2c8d0a07e.png"
     },
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\c2b22b7c-e69a-489e-b052-d86559989b14.png",
@@ -357,6 +369,10 @@
       "PackagePath": "staticwebassets\\images\\topics\\d344d2d5-1188-4d4f-9724-de7c2e426466.png"
     },
     {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d45ad8bb-896e-4d03-9862-cea09c51bf89.png",
+      "PackagePath": "staticwebassets\\images\\topics\\d45ad8bb-896e-4d03-9862-cea09c51bf89.png"
+    },
+    {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d4b017b2-8068-42d8-969e-3e375fa99ae4.png",
       "PackagePath": "staticwebassets\\images\\topics\\d4b017b2-8068-42d8-969e-3e375fa99ae4.png"
     },
@@ -367,6 +383,14 @@
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png",
       "PackagePath": "staticwebassets\\images\\topics\\d66dfabb-6e34-4781-af2f-3d7e54e6b2c6.png"
+    },
+    {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\dbfc4d7d-8555-40a7-883e-52abff09e1dc.png",
+      "PackagePath": "staticwebassets\\images\\topics\\dbfc4d7d-8555-40a7-883e-52abff09e1dc.png"
+    },
+    {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png",
+      "PackagePath": "staticwebassets\\images\\topics\\e5676aac-839b-4f41-9e84-5d0926efbb69.png"
     },
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\eed06adf-4b7f-4c03-b0f7-79b90045e005.png",
@@ -383,6 +407,10 @@
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png",
       "PackagePath": "staticwebassets\\images\\topics\\fc2c24ed-1901-4c5c-85d8-cb6f0bbae9c3.png"
+    },
+    {
+      "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png",
+      "PackagePath": "staticwebassets\\images\\topics\\fd91c5e9-ba8a-4ec2-b94b-f4778e6ea019.png"
     },
     {
       "Id": "C:\\Users\\Akanksha Mudge\\source\\repos\\trainingsite-netframework (1)\\trainingsite-netframework\\CyberSecurity-new\\wwwroot\\images\\topics\\ffbf5acf-3720-434a-9ae5-131b1e261d2b.png",

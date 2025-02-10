@@ -46,6 +46,8 @@ namespace CyberSecurity_new.Models
         public int CourseId { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public string UpdatedBy { get; set; }
 
         public virtual Courses Courses { get; set; }
         public virtual Module Module { get; set; }

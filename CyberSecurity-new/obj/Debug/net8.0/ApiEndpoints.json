@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "CyberSecurity_new.Controllers.AnswersController",
+    "Method": "GetSubmittedAnswers",
+    "RelativePath": "api/Answers/GetSubmittedAnswers/{userId}/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.AnswersController",
     "Method": "SubmitAnswers",
     "RelativePath": "api/Answers/SubmitAnswers",
     "HttpMethod": "POST",
@@ -404,6 +425,84 @@
   },
   {
     "ContainingType": "CyberSecurity_new.Controllers.TopicController",
+    "Method": "GetTopicsByModule",
+    "RelativePath": "api/Topic/{courseId}/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.TopicController",
+    "Method": "DeleteTopic",
+    "RelativePath": "api/Topic/{courseId}/{moduleId}/{topicId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.TopicController",
+    "Method": "EditTopic",
+    "RelativePath": "api/Topic/{courseId}/{moduleId}/{topicId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedTopic",
+        "Type": "CyberSecurity_new.Controllers.EditTopicDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.TopicController",
     "Method": "GetTopicsByCourseAndModule",
     "RelativePath": "api/Topic/{courseId}/{moduleId}/Topics",
     "HttpMethod": "GET",
@@ -470,6 +569,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.TopicController",
+    "Method": "AddTopicToModule",
+    "RelativePath": "api/Topic/AddTopicToModule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requests",
+        "Type": "System.Collections.Generic.List\u00601[[CyberSecurity_new.Controllers.AddTopicDto, CyberSecurity-new, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
