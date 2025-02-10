@@ -29,7 +29,6 @@ export class SigninComponent {
 
   hide = true;
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private userStore: UserstoreService) {
-    // this.initializeForms();
 
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -43,31 +42,7 @@ export class SigninComponent {
 
   togglePasswordVisibilityfor(){
     this.forshowPassword = !this.forshowPassword;
-  }
-  
-  // onSubmit(){
-  //   if(this.forgotPassword.valid){
-  //     // console.log(this.signupForm.value);
-  //     this.auth.forgot(this.forgotPassword.value)
-  //     .subscribe({
-  //       next:(res => {
-  //         this.toastr.success(res.message);
-  //         // alert(res.message);
-  //         this.forgotPassword.reset();
-  //         this.router.navigate(['homepage/signin']);
-  //       })
-  //       ,error:(err => {
-  //         this.toastr.error(err?.error.message);
-  //         // alert(err?.error.message)
-  //       })
-  //     })
-  //   }
-  //   else{
-  //     ValidateForm.validateAllFormFields(this.forgotPassword);
-  //     // alert("Your Form is invalid");
-  //     this.toastr.error("Your Form is invalid");
-  //   }
-  // }
+  }   
 
   onSubmit(forgotPasswordForm: NgForm){
     if (forgotPasswordForm.invalid) {
@@ -129,31 +104,25 @@ export class SigninComponent {
   onLogin() {
     if (this.loginForm.valid) {
 
-      // console.log(this.loginForm.value);
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res) =>{
           this.loginForm.reset();
           this.auth.storeToken(res.token); 
           const tokenPayload = this.auth.decodeToken();
-          // console.log('Decoded Token:', tokenPayload);
           const role = tokenPayload?.role;
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.toastr.success(res.message);          
-          // console.log('Role ID:', role);
-          // this.router.navigate(['courses']);
 
           if (tokenPayload?.role !== '1') {            
             this.router.navigate(['courses']);            
           } else {            
             this.router.navigate(['adminpage']);
-            // this.toastr.error('You do not have permission to access this page.');
           }
         },
         error:(err)=>{
           this.toastr.warning("Some other error Occurred");
           this.toastr.error(err?.error.message);
-          // alert(err?.error.message);
         }
       })
       //send the obj to database
@@ -162,7 +131,6 @@ export class SigninComponent {
       
       ValidateForm.validateAllFormFields(this.loginForm);
       this.toastr.error("Your Form is Invalid!");
-      // alert("Your form is invalid");
       //throw the error 
     }
   }

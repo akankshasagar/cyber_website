@@ -4,6 +4,7 @@ import { UserstoreService } from '../services/userstore.service';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
 import { User } from '../Model/user.model';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-courses',
@@ -81,23 +82,7 @@ export class CoursesComponent {
 
   totalPages(): number {
     return Math.ceil(this.courses.length / this.coursesPerPage);
-  }
-
-  // enroll(email: string, course: string) {
-  //   this.auth.enroll(email, course)
-  //     .subscribe({
-  //       next: (response)  => {
-  //         console.log('Enrollment successful', response);
-  //       },
-  //       error: (error) => {
-  //         console.error('Error occurred during enrollment', error);
-  //       }
-  //     });
-  // }
-
-  // Start(){
-  //   this.start = true;
-  // }
+  }  
 
   Start(course: any): void {
     this.selectedCourse = course;
@@ -130,16 +115,11 @@ export class CoursesComponent {
       CourseId: this.selectedCourse.id,
     };
   
-    this.http.post('https://localhost:7243/api/CourseEnrollments/Enroll', enrollmentRequest).subscribe({
-      next: (response: any) => {
-        // console.log('Enrollment successful', response);
-        // alert(response.Message);
+    this.http.post(`${environment.apiUrl}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
+      next: (response: any) => {        
         this.start = false; // Close the modal
       },
-      error: (error) => {
-        // console.error('Error occurred during enrollment:', error);
-        // const errorMessage = error?.error?.message || 'An unknown error occurred.';
-        // alert(errorMessage);
+      error: (error) => {        
       },
     });
   }

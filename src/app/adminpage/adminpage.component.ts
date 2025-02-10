@@ -99,28 +99,7 @@ export class AdminpageComponent {
     return Math.ceil(this.courses.length / this.coursesPerPage);
   }
 
-  onSubmit(): void {
-    // Set the departmentId and roleId based on the selected values
-    // this.user.deptId = this.selectedDeptId;
-    // this.user.roleId = this.selectedRoleId;
-    // console.log("Submitting user:", this.user);
-    // // Send the user data to the backend for registration
-    // this.auth.registerUser(this.user).subscribe(
-    //   (response) => {
-    //     console.log('Registration Successful:', response);
-    //     // alert('Registration Successful');
-    //     this.toastr.success(response.message);
-    //     this.isFormVisible = false;  // Hide form on success
-    //   },
-    //   (error) => {
-    //     console.error('Registration Failed:', error);
-    //     // let errorMessage = 'Some Other Error Occured';
-    //     // if (error?.error?.Message) {
-    //     //   errorMessage = error.error.Message;
-    //     // }
-    //     this.toastr.error(error?.error.message);
-    //   }
-    // );
+  onSubmit(): void {    
 
     const requestData = {
       name: this.user.name,
@@ -173,18 +152,7 @@ export class AdminpageComponent {
   logout() {
     this.auth.signOut();
   }
-
-  // enroll(email: string, course: string) {
-  //   this.auth.enroll(email, course)
-  //     .subscribe({
-  //       next: (response)  => {
-  //         console.log('Enrollment successful', response);
-  //       },
-  //       error: (error) => {
-  //         console.error('Error occurred during enrollment', error);
-  //       }
-  //     });
-  // }
+  
 
   showForm(): void {
     this.isFormVisible = true;
@@ -221,15 +189,10 @@ export class AdminpageComponent {
     };
   
     this.http.post( `${environment.apiUrl}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
-      next: (response: any) => {
-        // console.log('Enrollment successful', response);
-        // alert(response.Message);
+      next: (response: any) => {        
         this.start = false; // Close the modal
       },
-      error: (error) => {
-        // console.error('Error occurred during enrollment:', error);
-        // const errorMessage = error?.error?.message || 'An unknown error occurred.';
-        // alert(errorMessage);
+      error: (error) => {        
       },
     });
   }

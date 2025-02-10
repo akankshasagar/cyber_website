@@ -23,7 +23,6 @@ export class SignupComponent {
   departments: any[] = [];
   
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private departmentService: DepartmentServiceService) {
-    // this.initializeForms();
     this.signupForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
@@ -60,19 +59,16 @@ export class SignupComponent {
       .subscribe({
         next:(res => {
           this.toastr.success(res.message);
-          // alert(res.message);
           this.signupForm.reset();
           this.router.navigate(['homepage/signin']);
         })
         ,error:(err => {
           this.toastr.error(err?.error.message);
-          // alert(err?.error.message)
         })
       })
     }
     else{
       ValidateForm.validateAllFormFields(this.signupForm);
-      // alert("Your Form is invalid");
       this.toastr.error("Your Form is invalid");
     }
   }

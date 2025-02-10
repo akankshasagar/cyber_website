@@ -63,7 +63,6 @@ export class HomepageComponent {
   }
 
   enroll(email: string, course: string) {
-    // this.http.post<any>('https://localhost:7243/api/CourseEnrollments', { course })
     this.auth.enroll(email, course)
       .subscribe({
         next: (response)  => {
@@ -81,9 +80,7 @@ export class HomepageComponent {
   Start(course: any): void {
     this.selectedCourse = course;
     this.start = true; // Display the modal
-    console.log('Selected course:', this.selectedCourse);
-    // console.log(course);
-    // console.log(this.selectedCourse);
+    console.log('Selected course:', this.selectedCourse);    
     document.body.style.overflow = 'hidden';
   }
 

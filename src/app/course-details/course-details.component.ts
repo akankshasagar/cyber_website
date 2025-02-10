@@ -13,22 +13,10 @@ import { environment } from 'src/environment/environment';
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.css']
 })
-export class CourseDetailsComponent {
-
-  // course: any;
-
-  // constructor(private route: ActivatedRoute, private http: HttpClient) {}
-
-  // ngOnInit(): void {
-  //   const courseId = this.route.snapshot.paramMap.get('id');
-  //   this.http.get(`https://localhost:7243/api/Courses/${courseId}`).subscribe((data: any) => {
-  //       this.course = data;
-  //   });
-  // }
+export class CourseDetailsComponent {  
 
   isDropdownOpen = false;
   course: any;
-  // courseId: number = 1; // Set this dynamically based on your course selection
   courseId = Number(this.route.snapshot.paramMap.get('id'));
   modules: any[] = [];
   public fullName: string = "";
@@ -115,24 +103,6 @@ export class CourseDetailsComponent {
       }
     );
   }
-
-  // getTopics(moduleId: number): void {
-  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId).subscribe({
-  //     next: (data) => {
-  //       this.topics = data;
-  //       this.showTopics[moduleId] = !this.showTopics[moduleId];
-  //       this.currentModuleId = moduleId; // Save the current module ID
-  //       if (data && data.length > 0) {
-  //         this.selectedTopic = data[0];
-  //         if (this.selectedTopic?.t_ImagePath) {
-  //           this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
-  //           this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
-  //         }
-  //       }
-  //     },
-  //     error: (err) => console.error(err)
-  //   });
-  // }
 
   getTopics(moduleId: number): void {
     // Hide topics for all other modules before showing the current module's topics
@@ -291,61 +261,7 @@ export class CourseDetailsComponent {
       this.isTestPage = false;
     }
   }
-  
-  
-  // submitAnswers() {
-  //   // Log the selected options to the console along with courseId and moduleId
-  //   console.log("Selected Answers:", this.selectedOptions);
-  //   console.log("Course ID:", this.courseId);
-  //   console.log("Module ID:", this.currentModuleId);
     
-  //   // Now you can make an API call to submit the answers
-  // }
-  
-  
-  
-  // Fetch topics for a specific module
-  // getTopics(moduleId: number): void {   
-  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId) // Replace 1 with the actual courseId
-  //     .subscribe({
-  //       next: (data) => {
-  //         this.topics = data;
-  //         // this.showTopics[moduleId] = true;
-  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
-  //         if (data && data.length > 0) {
-  //           this.selectedTopic = data[0]; // Automatically select the first topic in the module
-  //           console.log(data[0]);
-  //         }
-  //       },
-  //       error: (err) => console.error(err)
-  //     });
-  // }
-
-  // getTopics(moduleId: number): void {   
-  //   this.courseService.getTopicsByCourseAndModule(this.courseId, moduleId)  // Replace 1 with the actual courseId
-  //     .subscribe({
-  //       next: (data) => {
-  //         this.topics = data;
-  //         // Toggle the visibility of topics
-  //         this.showTopics[moduleId] = !this.showTopics[moduleId];
-          
-  //         if (data && data.length > 0) {
-  //           // Select the first topic in the module
-  //           this.selectedTopic = data[0];  // Automatically select the first topic in the module
-  //           console.log(this.selectedTopic);  // Log the selected topic for debugging
-  
-  //           // Ensure the image path is correct and update if needed
-  //           if (this.selectedTopic?.t_ImagePath) {
-  //             // Normalize the image path if necessary (in case backslashes exist)
-  //             this.selectedTopic.t_ImagePath = this.selectedTopic.t_ImagePath.replace("\\", "/");
-  //             // Now the imagePath will hold the correct value
-  //             this.selectedTopic.imagePath = this.selectedTopic.t_ImagePath;
-  //           }
-  //         }
-  //       },
-  //       error: (err) => console.error(err)
-  //     });
-  // }
 }
 
 
