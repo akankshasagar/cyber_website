@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -20,10 +20,18 @@ export class EditcourseComponent {
   courseId: number = 0;
   moduleForm!: FormGroup;
   modules: any[] = [];
-  selectedModuleId?: number;
+  selectedModuleId?: number | null;
   moduleName: string = '';
   showConfirmDeletePopup: boolean = false;
   userRole: string | null = null;
+  topicForm!: FormGroup;
+  selectedFileBase64: string | null = null;
+  @ViewChild('fileInput') fileInput!: ElementRef;
+  topics2: any[] = [];
+  selectedTopicId?: number | null; 
+  selectedTopicName: string = '';
+  editTopicForm!: FormGroup;
+  base64Image: string | null = null;
 
   constructor(private auth: AuthService,
     private courseService: CourseService,
@@ -36,6 +44,21 @@ export class EditcourseComponent {
       moduleName: ['', Validators.required],
       topics: this.fb.array([this.createTopic()]),
       questions: this.fb.array([])
+    });
+
+    this.topicForm = this.fb.group({
+      selectedModuleId: ['', Validators.required],
+      topicName: ['', Validators.required],
+      topicDescription: ['', Validators.required],
+      topicImage: ['']
+    });
+
+    this.editTopicForm = this.fb.group({
+      selectedModuleId: [''],
+      selectedTopicId: [''],
+      topicName: [''],
+      topicDescription: [''],
+      topicImage: ['']
     });
   }
 
@@ -53,86 +76,7 @@ export class EditcourseComponent {
       topicDescription: ['', Validators.required],
       tImagePath: ['']
     });
-  }
-
-  onImageSelected(event: any, index: number) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        // Convert the file to base64 and update the form
-        const base64Image = reader.result as string;
-        this.topics.at(index).patchValue({
-          tImagePath: base64Image,
-          imagePreview: base64Image // Store base64 image for preview
-        });
-      };
-      reader.readAsDataURL(file); // Read file as base64 string
-    }
-  }
-
-  addTopic() {
-    this.topics.push(this.createTopic());
-  }
-
-  removeTopic(index: number) {
-    this.topics.removeAt(index);
-  }
-
-  addQuestion(): void {
-    const questionGroup = this.fb.group({
-      questionText: ['', Validators.required],
-      optionA: ['', Validators.required],
-      optionB: ['', Validators.required],
-      optionC: [''],
-      optionD: [''],
-      correctOption: ['', Validators.required]
-    });
-    this.questions.push(questionGroup);
-  }
-
-  removeQuestion(index: number): void {
-    this.questions.removeAt(index);
-  }
-
-  onSubmit() {
-    if (this.moduleForm.valid) {
-      const requestPayload = this.prepareRequestPayload();
-      this.courseService.addModuleToCourse(this.moduleForm.value).subscribe(
-        (response) => {
-          alert('Module added successfully');
-          this.toastr.success(response.message);
-          this.moduleForm.reset();
-          console.log('Module added successfully', response);
-        },
-        (error) => {
-          alert('Error adding module');
-        }
-      );
-    } else {
-      alert('Form is not valid');
-    }
-
-    // const questions = this.moduleForm.get('questions').value;
-    // if (!questions || questions.length === 0) {
-    //     alert('Each module must have at least one question.');
-    //     return; // Stop submitting the form if no questions exist
-    // }
-  }
-
-  private prepareRequestPayload() {
-    const formValues = this.moduleForm.value;
-    return {
-      ModuleName: formValues.moduleName,
-      CourseId: formValues.courseId,
-      Topics: formValues.topics.map((topic: any) => ({
-        TopicName: topic.topicName,
-        TopicDescription: topic.topicDescription,
-        TImagePath: topic.tImagePath
-      }))
-    };
-  }
-
+  }        
 
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
@@ -147,12 +91,50 @@ export class EditcourseComponent {
       // Set the courseId in the form without showing it
       this.moduleForm.addControl('courseId', this.fb.control(this.courseId));
     } else {
-      // Handle the case when courseId is not present in the URL
-      alert('Course ID is required');
+      // Handle the case when courseId is not present in the URL      
+      this.toastr.error("Course ID is required");
     }
     this.fetchModulesByCourse();
+  }  
+
+  fetchModulesByCourse(): void {
+    this.http.get<any[]>(`${environment.apiUrl}Module/${this.courseId}`)
+      .subscribe(
+        (data) => {
+          this.modules = data;
+        },
+        (error) => {
+          console.error('Error fetching modules:', error);
+        }
+      );
   }
-  
+
+  //------------------------------Edit Course Details----------------------------
+
+  saveChanges(form: any): void {
+    const formData = new FormData();
+    formData.append('courseName', this.courseName);
+    formData.append('courseDescription', this.courseDescription);
+    if (this.imagePath) {
+      formData.append('imagePath', this.imagePath, this.imagePath.name);  // Append the image file
+    }
+
+    // const courseId = 1;  // Example courseId, replace with actual course ID
+
+    this.http.put(`${environment.apiUrl}Course/EditCourse/${this.courseId}`, formData)
+      .subscribe({
+        next: (response) => {
+          this.toastr.success("Course Details updated successfully");
+          console.log('Course updated successfully:', response);
+
+          form.reset();
+        },
+        error: (error) => {
+          console.error('Error updating course:', error);
+        }
+      });
+  }  
+
   onFileSelect(event: any) {
     // this.imagePath = event.target.files[0];  // Get the file object
     const file = event.target.files[0];  // Get the file object
@@ -167,8 +149,8 @@ export class EditcourseComponent {
       img.onload = () => {
         // Check if width is less than height
         if (img.width < img.height) {
-          // Display error if width is less than height
-          alert('Please upload an image with width greater than height.');
+          // Display error if width is less than height          
+          this.toastr.error("Please upload an image with width greater than height.");
           return;  // Stop further processing if validation fails
         }
 
@@ -229,38 +211,101 @@ export class EditcourseComponent {
   }
   }
 
-  saveChanges(form: any): void {
-    const formData = new FormData();
-    formData.append('courseName', this.courseName);
-    formData.append('courseDescription', this.courseDescription);
-    if (this.imagePath) {
-      formData.append('imagePath', this.imagePath, this.imagePath.name);  // Append the image file
+  //--------------Add Module-----------------------------------------------
+
+  onSubmit() {
+    if (this.moduleForm.valid) {
+      const requestPayload = this.prepareRequestPayload();
+      this.courseService.addModuleToCourse(this.moduleForm.value).subscribe(
+        (response) => {
+          this.toastr.success(response.message);
+          this.moduleForm.reset();
+          console.log('Module added successfully', response);
+        },
+        (error) => {          
+          this.toastr.error("Error adding module");
+        }
+      );
+    } else {      
+      this.toastr.warning("Form is not valid");
+    }   
+  }
+
+  private prepareRequestPayload() {
+    const formValues = this.moduleForm.value;
+    return {
+      ModuleName: formValues.moduleName,
+      CourseId: formValues.courseId,
+      Topics: formValues.topics.map((topic: any) => ({
+        TopicName: topic.topicName,
+        TopicDescription: topic.topicDescription,
+        TImagePath: topic.tImagePath
+      }))
+    };
+  }
+
+  onImageSelected(event: any, index: number) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        // Convert the file to base64 and update the form
+        const base64Image = reader.result as string;
+        this.topics.at(index).patchValue({
+          tImagePath: base64Image,
+          imagePreview: base64Image // Store base64 image for preview
+        });
+      };
+      reader.readAsDataURL(file); // Read file as base64 string
+    }
+  }
+
+  removeTopic(index: number) {
+    this.topics.removeAt(index);
+  }
+
+  removeQuestion(index: number): void {
+    this.questions.removeAt(index);
+  }
+
+  addTopic() {
+    this.topics.push(this.createTopic());
+  }
+
+  addQuestion(): void {
+    const questionGroup = this.fb.group({
+      questionText: ['', Validators.required],
+      optionA: ['', Validators.required],
+      optionB: ['', Validators.required],
+      optionC: [''],
+      optionD: [''],
+      correctOption: ['', Validators.required]
+    });
+    this.questions.push(questionGroup);
+  }      
+
+  //-----------------Edit Module Details----------------------------
+  
+  onSubmitM(form: any): void {
+    if (!this.selectedModuleId || !this.moduleName) {      
+      this.toastr.warning("Please select a module and enter a new module name.");
+      return;
     }
 
-    // const courseId = 1;  // Example courseId, replace with actual course ID
+    const requestPayload = {
+      moduleId: this.selectedModuleId,
+      moduleName: this.moduleName
+    };
 
-    this.http.put(`${environment.apiUrl}Course/EditCourse/${this.courseId}`, formData)
-      .subscribe({
-        next: (response) => {
-          this.toastr.success("Course Details updated successfully");
-          console.log('Course updated successfully:', response);
-
+    this.http.put(`${environment.apiUrl}Module/EditModuleDetails`, requestPayload)
+      .subscribe(
+        (response) => {
+          this.toastr.success("Module details updated successfully!");
           form.reset();
         },
-        error: (error) => {
-          console.error('Error updating course:', error);
-        }
-      });
-  }  
-
-  fetchModulesByCourse(): void {
-    this.http.get<any[]>(`${environment.apiUrl}Module/${this.courseId}`)
-      .subscribe(
-        (data) => {
-          this.modules = data;
-        },
         (error) => {
-          console.error('Error fetching modules:', error);
+          console.error('Error updating module:', error);          
+          this.toastr.error("Error updating module details.");
         }
       );
   }
@@ -275,30 +320,6 @@ export class EditcourseComponent {
       this.moduleName = ''; // Clear the name if no module is selected
       this.selectedModuleId = undefined; // Clear the selected ID
     }
-  }
-
-  onSubmitM(form: any): void {
-    if (!this.selectedModuleId || !this.moduleName) {
-      alert('Please select a module and enter a new module name.');
-      return;
-    }
-
-    const requestPayload = {
-      moduleId: this.selectedModuleId,
-      moduleName: this.moduleName
-    };
-
-    this.http.put(`${environment.apiUrl}Module/EditModuleDetails`, requestPayload)
-      .subscribe(
-        (response) => {
-          alert('Module details updated successfully!');
-          form.reset();
-        },
-        (error) => {
-          console.error('Error updating module:', error);
-          alert('Error updating module details.');
-        }
-      );
   }
 
   confirmDelete(): void {
@@ -327,7 +348,158 @@ export class EditcourseComponent {
   }else {
     console.error('Module ID is not selected or invalid.');
   }
-}
+  }  
+    
+
+//--------------------------------Add Topic----------------------------------------
+
+  onSubmitT() {
+    if (this.topicForm.valid) {
+      const formData = {
+        ModuleId: this.topicForm.value.selectedModuleId,
+        CourseId: this.courseId, // Set CourseId dynamically if needed
+        TopicName: this.topicForm.value.topicName,
+        TopicDescription: this.topicForm.value.topicDescription,
+        TImagePath: this.selectedFileBase64 // Pass Base64 string
+      };
+
+      this.http.post(`${environment.apiUrl}Topic/AddTopicToModule`, [formData]).subscribe(response => {        
+        this.toastr.success("Topic added successfully!");
+        this.topicForm.reset();
+        this.selectedFileBase64 = null;
+
+        // Clear file input field properly
+        if (this.fileInput) {
+          this.fileInput.nativeElement.value = ''; // This removes the selected file name
+        }
+      }, error => {
+        this.toastr.error("Failed to add topic.");
+      });
+    }
+  }
+
+  onModuleSelectT(event: any): void {
+    this.selectedModuleId = event.target.value;
+    const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    if (selectedModule) {
+      this.moduleName = selectedModule.module_Name; // Set the module name here
+      this.selectedModuleId = selectedModule.id; // Also set the selected module ID
+    } else {
+      this.moduleName = ''; // Clear the name if no module is selected
+      this.selectedModuleId = undefined; // Clear the selected ID
+    }
+  }
+
+  onFileSelectT(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.selectedFileBase64 = e.target.result; // Keep the full Base64 string (with metadata)
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+
+  //-----------------------------Edit Topic---------------------------------------
+
+  onModuleSelectT2(event: any): void {
+    this.selectedModuleId = event.target.value;
+    const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    if (selectedModule) {
+      this.moduleName = selectedModule.module_Name; // Set the module name here
+      this.selectedModuleId = selectedModule.id; // Also set the selected module ID
+      this.getTopicsByModule(selectedModule.id);
+
+    } else {
+      this.moduleName = ''; // Clear the name if no module is selected
+      this.selectedModuleId = undefined; // Clear the selected ID
+    }
+  }
+
+  // Fetch topics based on module ID
+  getTopicsByModule(moduleId: number): void {
+    const courseId = this.courseId; // Ensure you have this set somewhere in your component
+    this.http.get<any[]>(`${environment.apiUrl}Topic/${courseId}/${moduleId}`).subscribe(
+        (response) => {
+            this.topics2 = response; // Store fetched topics
+        },
+        (error) => {
+            console.error('Error fetching topics:', error);
+            this.topics2 = []; // Clear topics if there's an error
+        }
+    );
+  }
+
+  onTopicSelect(event: any): void {
+    this.selectedTopicId = event.target.value;
+    const selectedTopic = this.topics2.find(topic => topic.id == this.selectedTopicId);
+    if (selectedTopic) {
+        this.selectedTopicName = selectedTopic.topic_Name;
+    }
+  }
+
+  onSubmitET() {
+    if (!this.selectedModuleId || !this.selectedTopicId) {
+      alert('Please select a module and a topic.');
+      return;
+    }
+
+    const topicData = {
+      topicName: this.editTopicForm.value.topicName,
+      topicDescription: this.editTopicForm.value.topicDescription,
+      tImagePath: this.base64Image
+    };
+
+    this.http.put(`${environment.apiUrl}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)
+      .subscribe(response => {
+        this.toastr.success("Topic updated successfully!");
+        this.editTopicForm.reset();
+        this.selectedModuleId = null;
+        this.selectedTopicId = null;
+        this.base64Image = '';
+
+        setTimeout(() => {
+          if (this.fileInput) {
+            this.fileInput.nativeElement.value = '';
+          }
+        }, 0);
+      }, error => {
+        this.toastr.error("Error updating topic");        
+      });
+  }
+
+  onFileChange(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.base64Image = reader.result as string;
+      };
+    }
+  }
+
+  deleteTopic(): void {
+    if (!this.courseId || !this.selectedModuleId || !this.selectedTopicId) {
+      this.toastr.error("Invalid course, module, or topic selection.");      
+      return;
+    }
+
+    this.http.delete(`${environment.apiUrl}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`).subscribe(
+        () => {
+            this.toastr.success("Topic deleted successfully.");            
+
+            this.showConfirmDeletePopup = false;
+            this.selectedTopicId = null; // Reset selection            
+        },
+        (error) => {
+            this.toastr.error("Failed to delete topic.");            
+        }
+    );
+  }
+
 
   logout() {
     this.auth.signOut();

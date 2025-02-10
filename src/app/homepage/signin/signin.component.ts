@@ -151,6 +151,7 @@ export class SigninComponent {
           }
         },
         error:(err)=>{
+          this.toastr.warning("Some other error Occurred");
           this.toastr.error(err?.error.message);
           // alert(err?.error.message);
         }

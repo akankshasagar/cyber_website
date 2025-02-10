@@ -26,6 +26,7 @@ export class AuthService {
   private courseurl: string = environment.apiUrl + "CourseEnrollments";  
   private coursecompl: string = environment.apiUrl + "CoursesCompleted";  
   private forgotpwd: string = environment.apiUrl + "User/forgot-password";
+  private topicadd = environment.apiUrl + 'https://your-api-url/AddTopicToModule';
   // private test01: string = ""
   private userPayload: any;
 
