@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-editcourse',
@@ -97,7 +97,7 @@ export class EditcourseComponent {
   }  
 
   fetchModulesByCourse(): void {
-    this.http.get<any[]>(`${environment.apiUrl}Module/${this.courseId}`)
+    this.http.get<any[]>(`${environment.apiURL}Module/${this.courseId}`)
       .subscribe(
         (data) => {
           this.modules = data;
@@ -120,7 +120,7 @@ export class EditcourseComponent {
 
     // const courseId = 1;  // Example courseId, replace with actual course ID
 
-    this.http.put(`${environment.apiUrl}Course/EditCourse/${this.courseId}`, formData)
+    this.http.put(`${environment.apiURL}Course/EditCourse/${this.courseId}`, formData)
       .subscribe({
         next: (response) => {
           this.toastr.success("Course Details updated successfully");
@@ -294,7 +294,7 @@ export class EditcourseComponent {
       moduleName: this.moduleName
     };
 
-    this.http.put(`${environment.apiUrl}Module/EditModuleDetails`, requestPayload)
+    this.http.put(`${environment.apiURL}Module/EditModuleDetails`, requestPayload)
       .subscribe(
         (response) => {
           this.toastr.success("Module details updated successfully!");
@@ -359,7 +359,7 @@ export class EditcourseComponent {
         TImagePath: this.selectedFileBase64 // Pass Base64 string
       };
 
-      this.http.post(`${environment.apiUrl}Topic/AddTopicToModule`, [formData]).subscribe(response => {        
+      this.http.post(`${environment.apiURL}Topic/AddTopicToModule`, [formData]).subscribe(response => {        
         this.toastr.success("Topic added successfully!");
         this.topicForm.reset();
         this.selectedFileBase64 = null;
@@ -417,7 +417,7 @@ export class EditcourseComponent {
   // Fetch topics based on module ID
   getTopicsByModule(moduleId: number): void {
     const courseId = this.courseId; // Ensure you have this set somewhere in your component
-    this.http.get<any[]>(`${environment.apiUrl}Topic/${courseId}/${moduleId}`).subscribe(
+    this.http.get<any[]>(`${environment.apiURL}Topic/${courseId}/${moduleId}`).subscribe(
         (response) => {
             this.topics2 = response; // Store fetched topics
         },
@@ -448,7 +448,7 @@ export class EditcourseComponent {
       tImagePath: this.base64Image
     };
 
-    this.http.put(`${environment.apiUrl}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)
+    this.http.put(`${environment.apiURL}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)
       .subscribe(response => {
         this.toastr.success("Topic updated successfully!");
         this.editTopicForm.reset();
@@ -483,7 +483,7 @@ export class EditcourseComponent {
       return;
     }
 
-    this.http.delete(`${environment.apiUrl}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`).subscribe(
+    this.http.delete(`${environment.apiURL}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`).subscribe(
         () => {
             this.toastr.success("Topic deleted successfully.");            
 

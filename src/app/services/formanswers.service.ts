@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Test01 } from '../model/test01.model';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormanswersService {
 
-  baseUrl = environment.apiUrl + "TestAnswers01"; // Your API URL
+  baseUrl = environment.apiURL + "TestAnswers01"; // Your API URL
 
   constructor(private http: HttpClient) { }
 

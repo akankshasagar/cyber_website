@@ -1,20 +1,20 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
   
-  private apiUrl = environment.apiUrl + "Course";  
-  private apiUrl2 = environment.apiUrl + "Course/AddCourseWithModulesAndTopics";
-  private baseUrl = environment.apiUrl + "Module";  
-  private topicurl = environment.apiUrl + "Topic";  
-  private moduleurl = environment.apiUrl + "Module/AddModuleToCourse";  
-  private delmodule = environment.apiUrl + "Module/DeleteModule";  
-  private quesurl = environment.apiUrl + "Answers";
+  private apiUrl = environment.apiURL + "Course";  
+  private apiUrl2 = environment.apiURL + "Course/AddCourseWithModulesAndTopics";
+  private baseUrl = environment.apiURL + "Module";  
+  private topicurl = environment.apiURL + "Topic";  
+  private moduleurl = environment.apiURL + "Module/AddModuleToCourse";  
+  private delmodule = environment.apiURL + "Module/DeleteModule";  
+  private quesurl = environment.apiURL + "Answers";
 
   constructor(private http: HttpClient) { }
 
@@ -57,7 +57,7 @@ export class CourseService {
   }
 
   getQuestionsByModule(moduleId: number): Observable<any[]> {    
-    return this.http.get<any[]>(`${environment.apiUrl}Questions/Module/${moduleId}`);
+    return this.http.get<any[]>(`${environment.apiURL}Questions/Module/${moduleId}`);
   }  
 
   editCourse(courseId: number, courseData: any): Observable<any> {
@@ -70,6 +70,12 @@ export class CourseService {
 
   deleteModule(courseId: number, moduleId: number): Observable<any> {
     return this.http.delete(`${this.delmodule}/${courseId}/${moduleId}`);
+  }
+
+  checkSubmissionStatus(moduleId: number, submittedBy: string): Observable<{ isSubmitted: boolean }> {
+    return this.http.get<{ isSubmitted: boolean }>(
+      `${environment.apiURL}Answers/CheckSubmissionStatus?moduleId=${moduleId}&submittedBy=${submittedBy}`
+    );
   }
 }
 

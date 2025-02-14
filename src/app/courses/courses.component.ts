@@ -4,7 +4,7 @@ import { UserstoreService } from '../services/userstore.service';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
 import { User } from '../Model/user.model';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-courses',
@@ -111,7 +111,7 @@ export class CoursesComponent {
       CourseId: this.selectedCourse.id,
     };
   
-    this.http.post(`${environment.apiUrl}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
+    this.http.post(`${environment.apiURL}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
       next: (response: any) => {        
         this.start = false; // Close the modal
       },

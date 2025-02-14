@@ -4,29 +4,29 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
 import { User } from '../Model/user.model';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   
-  private baseUrl: string = environment.apiUrl + "User/";  
-  private ansapiurl: string = environment.apiUrl + "TestAnswers01";  
-  private apiUrl = environment.apiUrl + "User/RegisterAdminOrManager";  
-  private isacttest001: string = environment.apiUrl + "IsactAnswers001";  
-  private attacksurfacestest001: string = environment.apiUrl + "AttackSurfacesAnswers001";  
-  private phishingspoofingtest001url: string = environment.apiUrl + "PhishingSpoofingAnswer001";  
-  private wirelessenvurl: string = environment.apiUrl + "WirelessEnvironmentAnswer001";  
-  private dosdontsurl: string = environment.apiUrl + "DosDontsAnswer001";  
-  private irmngmnturl: string = environment.apiUrl + "IRMngmntAnswer001";  
-  private dataprotecturl: string = environment.apiUrl + "DataProtectAnswer001";  
-  private dnsapturl: string = environment.apiUrl + "DnsAptAnswer001";   
-  private cyberstalkurl: string = environment.apiUrl + "CyberStalkBullyAnswer001";  
-  private courseurl: string = environment.apiUrl + "CourseEnrollments";  
-  private coursecompl: string = environment.apiUrl + "CoursesCompleted";  
-  private forgotpwd: string = environment.apiUrl + "User/forgot-password";
-  private topicadd = environment.apiUrl + 'https://your-api-url/AddTopicToModule';
+  private baseUrl: string = environment.apiURL + "User/";  
+  private ansapiurl: string = environment.apiURL + "TestAnswers01";  
+  private apiUrl = environment.apiURL + "User/RegisterAdminOrManager";  
+  private isacttest001: string = environment.apiURL + "IsactAnswers001";  
+  private attacksurfacestest001: string = environment.apiURL + "AttackSurfacesAnswers001";  
+  private phishingspoofingtest001url: string = environment.apiURL + "PhishingSpoofingAnswer001";  
+  private wirelessenvurl: string = environment.apiURL + "WirelessEnvironmentAnswer001";  
+  private dosdontsurl: string = environment.apiURL + "DosDontsAnswer001";  
+  private irmngmnturl: string = environment.apiURL + "IRMngmntAnswer001";  
+  private dataprotecturl: string = environment.apiURL + "DataProtectAnswer001";  
+  private dnsapturl: string = environment.apiURL + "DnsAptAnswer001";   
+  private cyberstalkurl: string = environment.apiURL + "CyberStalkBullyAnswer001";  
+  private courseurl: string = environment.apiURL + "CourseEnrollments";  
+  private coursecompl: string = environment.apiURL + "CoursesCompleted";  
+  private forgotpwd: string = environment.apiURL + "User/forgot-password";
+  private topicadd = environment.apiURL + 'https://your-api-url/AddTopicToModule';
   // private test01: string = ""
   private userPayload: any;
 
@@ -174,17 +174,17 @@ export class AuthService {
   }
 
   sendOTP(email: string): Observable<any> {    
-    const url = `${environment.apiUrl}OTPSender/send?email=${email.toString()}`;
+    const url = `${environment.apiURL}OTPSender/send?email=${email.toString()}`;
     return this.http.post<any>(url, {email});
   }
 
   VerifyOTP(email: string, otp: string): Observable<any> {          
-    const url = `${environment.apiUrl}OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
+    const url = `${environment.apiURL}OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
     return this.http.post<any>(url, {email, otp});    
   }
 
   UpdatePassword(email: string, newPassword: string): Observable<any> {    
-    const url = `${environment.apiUrl}OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
+    const url = `${environment.apiURL}OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
     return this.http.post<any>(url, {email, newPassword});
   }
 
@@ -193,7 +193,7 @@ export class AuthService {
   }
 
   getUserByEmail(email: string): Observable<any> {    
-    const url = `${environment.apiUrl}CourseEnrollments/GetUserByEmail/${email}`;
+    const url = `${environment.apiURL}CourseEnrollments/GetUserByEmail/${email}`;
     return this.http.get(url);
   }
   

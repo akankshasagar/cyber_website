@@ -7,7 +7,7 @@ import { User } from '../Model/user.model';
 import { RoleService } from '../services/role.service';
 import { RoleMaster } from '../Model/rolemaster.model';
 import { ToastrService } from 'ngx-toastr';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-adminpage',
@@ -23,7 +23,7 @@ export class AdminpageComponent {
   selectedCourse: any = null;
   isFormVisible: boolean = false;
   user: User = new User();
-  apiUrl = environment.apiUrl + "User/RegisterAdminOrManager";
+  apiUrl = environment.apiURL + "User/RegisterAdminOrManager";
   departments: { deptId: number, deptName: string }[] = [];
   selectedDeptId: number = 0;
   roles: RoleMaster[] = [];
@@ -106,7 +106,7 @@ export class AdminpageComponent {
       deptId: this.selectedDeptId
     };
 
-    this.http.post(`${environment.apiUrl}User/RegisterAdminOrManager`, requestData)
+    this.http.post(`${environment.apiURL}User/RegisterAdminOrManager`, requestData)
       .subscribe(
         (response) => {
           this.toastr.success("Registration successful");
@@ -180,7 +180,7 @@ export class AdminpageComponent {
       CourseId: this.selectedCourse.id,
     };
   
-    this.http.post( `${environment.apiUrl}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
+    this.http.post( `${environment.apiURL}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
       next: (response: any) => {        
         this.start = false; // Close the modal
       },

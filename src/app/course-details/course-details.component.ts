@@ -5,7 +5,7 @@ import { CourseService } from '../services/course.service';
 import { AuthService } from '../services/auth.service';
 import { UserstoreService } from '../services/userstore.service';
 import { ToastrService } from 'ngx-toastr';
-import { environment } from 'src/environment/environment';
+import { environment } from 'src/environments/environment';
 // import * as pdfjsLib from 'pdfjs-dist';
 
 @Component({
@@ -77,6 +77,8 @@ export class CourseDetailsComponent {
         let emailFromToken = this.auth.getEmailFromToken();
         this.email = val || emailFromToken
       })
+
+    this.checkIfTestSubmitted();
   }
 
   loadDefaultTopic(): void {
@@ -230,7 +232,7 @@ export class CourseDetailsComponent {
     });
 
     // Send the answers to the backend API
-    this.http.post( environment.apiUrl + "Answers/SubmitAnswers", answers).subscribe({
+    this.http.post( environment.apiURL + "Answers/SubmitAnswers", answers).subscribe({
       next: (response) => {
         this.toastr.success('Answers submitted successfully.');
         this.isSubmitted = true;
@@ -258,8 +260,18 @@ export class CourseDetailsComponent {
       this.isTestPage = false;
     }
   }
+
+  checkIfTestSubmitted() {
+    if (!this.currentModuleId) {
+      console.error("Current Module ID is not set.");
+      return;
+    }
+  
+    this.courseService.checkSubmissionStatus(this.currentModuleId, this.email).subscribe(response => {
+      this.isSubmitted = response.isSubmitted;
+    });
+  }  
     
 }
-
 
     // this.http.post('https://localhost:7243/api/Answers/SubmitAnswers', answers).subscribe({
