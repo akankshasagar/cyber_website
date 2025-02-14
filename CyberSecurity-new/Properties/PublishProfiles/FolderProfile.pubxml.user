@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\inetpub\wwwroot\CyberSecurityAPIDemo</_PublishTargetUrl>
-    <History>True|2025-01-31T07:45:02.5484712Z||;</History>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\CyberSecurityAPI</_PublishTargetUrl>
+    <History>True|2025-02-12T10:23:47.5300012Z||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

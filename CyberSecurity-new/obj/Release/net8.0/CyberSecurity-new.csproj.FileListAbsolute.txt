@@ -255,3 +255,4 @@ C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Release\net8.0\CyberSecurity-new.pdb
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Release\net8.0\CyberSecurity-new.genruntimeconfig.cache
 C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Release\net8.0\ref\CyberSecurity-new.dll
+C:\Users\Akanksha Mudge\source\repos\trainingsite-netframework (1)\trainingsite-netframework\CyberSecurity-new\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
