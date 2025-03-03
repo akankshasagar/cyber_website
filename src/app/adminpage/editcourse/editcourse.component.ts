@@ -223,18 +223,19 @@ export class EditcourseComponent {
   onSubmit() {
     if (this.moduleForm.valid) {
       const requestPayload = this.prepareRequestPayload();
-      this.courseService.addModuleToCourse(this.moduleForm.value).subscribe(
+  
+      this.courseService.addModuleToCourse(requestPayload).subscribe(
         (response) => {
           this.toastr.success(response.message);
           this.moduleForm.reset();
         },
-        (error) => {          
+        (error) => {
           this.toastr.error("Error adding module");
         }
       );
-    } else {      
+    } else {
       this.toastr.warning("Form is not valid");
-    }   
+    }
   }
 
   private prepareRequestPayload() {
@@ -243,12 +244,21 @@ export class EditcourseComponent {
       ModuleName: formValues.moduleName,
       CourseId: formValues.courseId,
       Topics: formValues.topics.map((topic: any) => ({
-        TopicName: topic.topicName,
-        TopicDescription: topic.topicDescription,
-        TImagePath: topic.tImagePath
+        Topic_Name: topic.topicName,
+        Topic_Description: topic.topicDescription,
+        T_ImagePath: topic.tImagePath || ""  // Ensure an empty string if no image
+      })),
+      Questions: formValues.questions.map((question: any) => ({
+        QuestionText: question.questionText,
+        OptionA: question.optionA,
+        OptionB: question.optionB,
+        OptionC: question.optionC,
+        OptionD: question.optionD,
+        CorrectOption: question.correctOption
       }))
     };
   }
+  
 
   onImageSelected(event: any, index: number) {
     const file = event.target.files[0];
@@ -363,9 +373,9 @@ export class EditcourseComponent {
       const formData = {
         ModuleId: this.topicForm.value.selectedModuleId,
         CourseId: this.courseId, // Set CourseId dynamically if needed
-        TopicName: this.topicForm.value.topicName,
-        TopicDescription: this.topicForm.value.topicDescription,
-        TImagePath: this.selectedFileBase64 // Pass Base64 string
+        Topic_Name: this.topicForm.value.topicName,
+        Topic_Description: this.topicForm.value.topicDescription,
+        T_ImagePath: this.selectedFileBase64 // Pass Base64 string
       };
 
       this.http.post(`${environment.apiURL}Topic/AddTopicToModule`, [formData]).subscribe(response => {        
@@ -452,9 +462,9 @@ export class EditcourseComponent {
     }
 
     const topicData = {
-      topicName: this.editTopicForm.value.topicName,
-      topicDescription: this.editTopicForm.value.topicDescription,
-      tImagePath: this.base64Image
+      topic_Name: this.editTopicForm.value.topicName,
+      topic_Description: this.editTopicForm.value.topicDescription,
+      t_ImagePath: this.base64Image
     };
 
     this.http.put(`${environment.apiURL}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)

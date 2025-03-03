@@ -161,9 +161,9 @@ export class AddcourseComponent {
       Modules: formData.modules.map((module: any) => ({
         ModuleName: module.moduleName,
         Topics: module.topics.map((topic: any) => ({
-          TopicName: topic.topicName,
-          TopicDescription: topic.topicDescription,
-          TImagePath: topic.topicImage,
+          Topic_Name: topic.topicName,
+          Topic_Description: topic.topicDescription,
+          T_ImagePath: topic.topicImage,
         })),
         Questions: module.questions.map((question: any) => ({
           QuestionText: question.questionText,

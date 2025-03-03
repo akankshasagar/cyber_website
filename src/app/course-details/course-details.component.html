@@ -77,9 +77,9 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <div class="row g-5">
             
               <!-- Image Column (For Topics With Image)  && selectedTopic.topic_Description?.length >= 50 -->
-              <div *ngIf="selectedTopic?.imagePath; else noImage" class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+              <div *ngIf="selectedTopic?.t_ImagePath; else noImage" class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                  <img [src]="selectedTopic.imagePath" class="img-fluid position-absolute w-100 h-100" alt="Topic Image" style="object-fit: cover;">
+                  <img [src]="selectedTopic.t_ImagePath" class="img-fluid position-absolute w-100 h-100" alt="Topic Image" style="object-fit: cover;">
                 </div>
               </div>
         
@@ -102,7 +102,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
               </ng-template>
         
               <!-- Regular Version With Image --&& selectedTopic.topic_Description?.length >= 50-->
-              <div *ngIf="selectedTopic?.imagePath" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div *ngIf="selectedTopic?.t_ImagePath" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>
                 <h1 class="mb-4">{{ selectedTopic.topic_Name }}</h1>                        
                 <div class="row gy-2 gx-4 mb-4">
