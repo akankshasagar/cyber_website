@@ -21,7 +21,8 @@ export class CoursesComponent {
   coursesPerPage: number = 3; // Number of courses per page
   paginatedCourses: any[] = []; // Courses to display on the current page
   user: User = new User();
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService) { 
+  public fullName: string = "";
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private userStore: UserstoreService) { 
 
   }
 
@@ -52,6 +53,12 @@ export class CoursesComponent {
         console.error('Failed to fetch courses:', error);
       },
     });
+
+    this.userStore.getFullNameFromStore()
+      .subscribe(val => {
+        let fullNameFromToken = this.auth.getFullNameFromToken();
+        this.fullName = val || fullNameFromToken
+      });
   }
 
   updatePaginatedCourses(): void {

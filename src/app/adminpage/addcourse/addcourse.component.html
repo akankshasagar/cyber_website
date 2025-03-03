@@ -18,6 +18,14 @@
             <!-- <a class="nav-item nav-link active" href="adminpage">Courses</a> -->
             <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
         </div>
+
+        <div class="nav-item d-flex align-items-center px-4">
+          <mat-icon class="text-primary me-2">person</mat-icon>
+          <span class="text-dark" style="font-family: 'Arial', sans-serif; font-weight: 600;">
+            Welcome, {{ fullName }}
+        </span>
+        </div>
+        
         <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
                 class="fa fa-arrow-right ms-3"></i></a>
     </div>

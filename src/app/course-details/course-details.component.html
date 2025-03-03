@@ -1,13 +1,29 @@
 <!-- Navbar Start -->
 <nav
 class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-<a class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-  <h2 class="m-0">
-    <mat-icon (click)="drawer.toggle()" style="cursor: pointer; font-size: 30px;">menu</mat-icon>
-    <!-- <i class="fa fa-solid fa-bars" (click)="drawer.toggle()"
-      style="cursor: pointer; font-size: 30px;"></i>  -->
-      eLEARNING</h2>
-</a>  
+  <a class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0">
+      <mat-icon (click)="drawer.toggle()" style="cursor: pointer; font-size: 30px;">menu</mat-icon>
+      <!-- <i class="fa fa-solid fa-bars" (click)="drawer.toggle()"
+        style="cursor: pointer; font-size: 30px;"></i>  -->
+        eLEARNING</h2>
+  </a>  
+  <button type="button" class="navbar-toggler me-4"
+            data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a class="nav-item nav-link" (click)="navigateToCourses()" style="cursor: pointer;">Courses</a>
+                <!-- <a class="nav-item nav-link">About</a> -->
+                <!-- <a class="nav-item nav-link" href="adminpage">Courses</a> -->
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+            </div>
+            <a (click)="logout()"
+                class="btn py-4 px-lg-5  d-lg-block"
+                style="background: #11101D; color: #ddd;">Log Out<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
 </nav>
 <!-- Navbar End -->
 
@@ -21,7 +37,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
           <li *ngFor="let module of modules">
             <a (click)="getTopics(module.id)" [ngClass]="{'active': currentModuleId === module.id}">
               <i class="bx bx-task"></i>
-              <span class="links_name2">{{ module.module_Name }}</span>            
+              <span class="links_name2">{{ module.moduleName }}</span>            
               <i class="bx"
               [ngClass]="{
                 'bx-chevron-down': !showTopics[module.id],
@@ -29,7 +45,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
               }"
               style="padding-left: 5vh; padding-right: 1vh; cursor: pointer;"></i>
             </a>
-            <span class="tooltip">{{ module.module_Name }}</span>
+            <span class="tooltip">{{ module.moduleName }}</span>
             <ul *ngIf="showTopics[module.id]">
               <li *ngFor="let topic of topics">
                 <a (click)="viewTopicDetails(topic.id)" [ngClass]="{'active': selectedTopic?.id === topic.id}">
@@ -46,7 +62,7 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                   <div class="job">{{email}}</div>
                 </div>
               </div>
-              <i class='bx bx-log-out' id="log_out" (click)="logout()" style="cursor: pointer;"></i>
+              <!-- <i class='bx bx-log-out' id="log_out" (click)="logout()" style="cursor: pointer;"></i> -->
             
           </li>
           </ul>
@@ -60,8 +76,8 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
           <div class="container">
             <div class="row g-5">
             
-              <!-- Image Column (For Topics With Image) -->
-              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length >= 50; else noImage" class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+              <!-- Image Column (For Topics With Image)  && selectedTopic.topic_Description?.length >= 50 -->
+              <div *ngIf="selectedTopic?.imagePath; else noImage" class="col-lg-6 order-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
                   <img [src]="selectedTopic.imagePath" class="img-fluid position-absolute w-100 h-100" alt="Topic Image" style="object-fit: cover;">
                 </div>
@@ -85,8 +101,8 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                 </div>
               </ng-template>
         
-              <!-- Regular Version With Image -->
-              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length >= 50" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+              <!-- Regular Version With Image --&& selectedTopic.topic_Description?.length >= 50-->
+              <div *ngIf="selectedTopic?.imagePath" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">{{ course?.courseName }}</h6>
                 <h1 class="mb-4">{{ selectedTopic.topic_Name }}</h1>                        
                 <div class="row gy-2 gx-4 mb-4">
@@ -103,9 +119,9 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
               </div>
         
               <!-- Image Below the Description for Short Descriptions (Above Button) -->
-              <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length < 50" class="col-lg-12 mt-4 d-flex justify-content-center">
+              <!-- <div *ngIf="selectedTopic?.imagePath && selectedTopic.topic_Description?.length < 50" class="col-lg-12 mt-4 d-flex justify-content-center">
                 <img [src]="selectedTopic.imagePath" class="img-fluid" alt="Topic Image" style="max-height: 400px; object-fit: cover;">
-              </div>
+              </div> -->
               
             </div>
           </div>
@@ -236,7 +252,13 @@ class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
                       </ol>                     
         
                       <button type="submit" [disabled]="isSubmitted">Submit Answers</button>
-                      <button *ngIf="isSubmitted" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextModule()">Go to Next Module</button>
+
+                      <div *ngIf="isSubmitted" class="text-center mt-4">
+                        <button class="btn btn-primary py-3 px-5" (click)="goToNextModule()">
+                          Go to Next Chapter
+                        </button>
+                      </div>
+                      <!-- <button *ngIf="isSubmitted" class="btn btn-primary py-3 px-5 mt-2" (click)="goToNextModule()">Go to Next Module</button> -->
                     </form>
                     <!-- Next Module Button -->            
                   </div>

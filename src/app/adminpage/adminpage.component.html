@@ -1,4 +1,4 @@
-<div *ngIf="userRole === '1'; else noAccessPage">
+<div *ngIf="userRole === '1' || userRole === '2'; else noAccessPage">
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -13,11 +13,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a class="nav-item nav-link" href="adminpage">Home</a>
+            <a class="nav-item nav-link" href="homepage">Home</a>
             <!-- <a class="nav-item nav-link active" href="courses">Courses</a> -->
         </div>
-        <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
-                class="fa fa-arrow-right ms-3"></i></a>
+
+        <div class="nav-item d-flex align-items-center px-4">
+          <mat-icon class="text-primary me-2">person</mat-icon>
+          <span class="text-dark" style="font-family: 'Arial', sans-serif; font-weight: 600;">
+            Welcome, {{ fullName }}
+        </span>
+        </div>
+          
+
+        <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->
@@ -31,7 +39,7 @@
             <h1 class="mb-5">Courses Available</h1>
         </div>
         <a class="btn btn-primary py-3 px-5 mt-2 me-3" href="adminpage/addcourse">Add Course</a> 
-        <a class="btn btn-primary py-3 px-5 mt-2" (click)="showForm()">Register Users</a>        
+        <a class="btn btn-primary py-3 px-5 mt-2" (click)="showForm()">Register Admins</a>        
     </div>
     <br>
     <div class="row g-4 justify-content-center">

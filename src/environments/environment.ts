@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    production: true,
     apiURL: 'https://localhost:7243/api/'
     // apiURL: 'https://sarthi1.prismcement.com/api',
     // apiURL: 'http://172.20.1.123:5003/swagger/index.html/',

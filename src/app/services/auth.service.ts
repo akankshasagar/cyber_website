@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { User } from '../Model/user.model';
 import { environment } from 'src/environments/environment';
 
@@ -39,7 +39,13 @@ export class AuthService {
   }
 
   login(loginObj: any){
-    return this.http.post<any>(`${this.baseUrl}authenticate`, loginObj);
+    return this.http.post<any>(`${this.baseUrl}authenticate`, loginObj).pipe(
+      tap((response) => {
+        if (response && response.userId) {
+          localStorage.setItem('userId', response.userId); 
+        }
+      })
+    );;
   }
 
   forgot(userObj: any){
@@ -195,6 +201,10 @@ export class AuthService {
   getUserByEmail(email: string): Observable<any> {    
     const url = `${environment.apiURL}CourseEnrollments/GetUserByEmail/${email}`;
     return this.http.get(url);
+  }
+
+  getUserId(): string {
+    return localStorage.getItem('userId') || '';
   }
   
 }

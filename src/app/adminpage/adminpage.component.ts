@@ -8,6 +8,7 @@ import { RoleService } from '../services/role.service';
 import { RoleMaster } from '../Model/rolemaster.model';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
+import { UserstoreService } from '../services/userstore.service';
 
 @Component({
   selector: 'app-adminpage',
@@ -31,8 +32,9 @@ export class AdminpageComponent {
   currentPage: number = 1; // Current page number
   coursesPerPage: number = 3; // Number of courses per page
   paginatedCourses: any[] = []; // Courses to display on the current page
+  public fullName: string = "";
 
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService) { 
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService, private userStore: UserstoreService) { 
   
   }
   
@@ -65,6 +67,12 @@ export class AdminpageComponent {
         this.toastr.error("Failed to fetch Courses", error);        
       },
     });
+
+    this.userStore.getFullNameFromStore()
+      .subscribe(val => {
+        let fullNameFromToken = this.auth.getFullNameFromToken();
+        this.fullName = val || fullNameFromToken
+      });      
   }  
 
   updatePaginatedCourses(): void {
@@ -97,7 +105,7 @@ export class AdminpageComponent {
   }
 
   onSubmit(): void {    
-
+    const deptId = this.selectedDeptId ? Number(this.selectedDeptId) : 0;
     const requestData = {
       name: this.user.name,
       email: this.user.email,
@@ -119,11 +127,47 @@ export class AdminpageComponent {
 
   }
 
+  // onSubmit(): void {
+  //   console.log("Selected Dept ID:", this.selectedDeptId);
+
+  //   // Convert selectedDeptId to a number if needed
+  //   const deptId = this.selectedDeptId ? Number(this.selectedDeptId) : 0;
+
+  //   if (!deptId || deptId === 0) {
+  //       this.toastr.error("Please select a valid department");
+  //       return;
+  //   }
+
+  //   const requestData = {
+  //       name: this.user.name,
+  //       email: this.user.email,
+  //       password: this.user.password,
+  //       roleId: Number(this.selectedRoleId), // Ensure roleId is a number
+  //       deptId: deptId // Use the corrected deptId
+  //   };
+
+  //   console.log("Final Request Payload:", requestData);
+
+  //     this.http.post(`${environment.apiURL}User/RegisterAdminOrManager`, requestData)
+  //       .subscribe(
+  //         (response) => {
+  //           this.toastr.success("Registration successful");
+  //           this.closeForm();
+  //         },
+  //         (error) => {
+  //           console.error("Registration Failed:", error);
+  //           this.toastr.error("Registration failed", error);          
+  //         }
+  //       );
+  // }
+
+
 
   // Method to load departments from API
   loadDepartments(): void {
     this.departmentService.getDepartments().subscribe(
       (data) => {
+        // console.log(data);
         this.departments = data;
       },
       (error) => {

@@ -51,11 +51,11 @@ export class SigninComponent {
     }    
   }
 
-  sendOTP(){
-    this.showOTPInput = true;
+  sendOTP(){    
     this.auth.sendOTP(this.email)
       .subscribe({
         next: (response) => {          
+          this.showOTPInput = true;
           this.toastr.success(response.message);
         },
         error: (err) => {          
@@ -114,7 +114,7 @@ export class SigninComponent {
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.toastr.success(res.message);          
 
-          if (tokenPayload?.role !== '1') {            
+          if (tokenPayload?.role === '3') {            
             this.router.navigate(['courses']);            
           } else {            
             this.router.navigate(['adminpage']);

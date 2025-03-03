@@ -4,6 +4,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
+import { UserstoreService } from 'src/app/services/userstore.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -14,6 +15,7 @@ import { environment } from 'src/environments/environment';
 export class AddcourseComponent {
 
   userRole: string | null = null;  
+  public fullName: string = "";
 
   logout() {
     this.auth.signOut();
@@ -27,7 +29,8 @@ export class AddcourseComponent {
     private fb: FormBuilder,
     private http: HttpClient,
     private toastr: ToastrService,
-    private auth: AuthService
+    private auth: AuthService,
+    private userStore: UserstoreService
   ) {}
 
   ngOnInit(): void {
@@ -39,6 +42,12 @@ export class AddcourseComponent {
       image: [null, Validators.required],
       modules: this.fb.array([]),
     });
+
+    this.userStore.getFullNameFromStore()
+      .subscribe(val => {
+        let fullNameFromToken = this.auth.getFullNameFromToken();
+        this.fullName = val || fullNameFromToken
+      });
   }
 
   get modules(): FormArray {

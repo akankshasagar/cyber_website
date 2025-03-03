@@ -47,9 +47,9 @@ export class SignupComponent {
         name: this.signupForm.value.name,
         email: this.signupForm.value.email,
         password: this.signupForm.value.password,
-        department: {
+        // department: {
           deptName: this.signupForm.value.deptName
-        }
+        // }
       };
   
 

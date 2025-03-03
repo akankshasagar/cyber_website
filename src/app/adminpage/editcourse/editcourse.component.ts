@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { CourseService } from 'src/app/services/course.service';
+import { UserstoreService } from 'src/app/services/userstore.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -32,13 +33,15 @@ export class EditcourseComponent {
   selectedTopicName: string = '';
   editTopicForm!: FormGroup;
   base64Image: string | null = null;
+  public fullName: string = "";
 
   constructor(private auth: AuthService,
     private courseService: CourseService,
     private route: ActivatedRoute,
     private http: HttpClient,
     private fb: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private userStore: UserstoreService
   ) {
     this.moduleForm = this.fb.group({
       moduleName: ['', Validators.required],
@@ -60,6 +63,12 @@ export class EditcourseComponent {
       topicDescription: [''],
       topicImage: ['']
     });
+
+    this.userStore.getFullNameFromStore()
+      .subscribe(val => {
+        let fullNameFromToken = this.auth.getFullNameFromToken();
+        this.fullName = val || fullNameFromToken
+      });
   }
 
   get topics() {
@@ -310,7 +319,7 @@ export class EditcourseComponent {
     this.selectedModuleId = event.target.value;
     const selectedModule = this.modules.find(module => module.id === +event.target.value);
     if (selectedModule) {
-      this.moduleName = selectedModule.module_Name; // Set the module name here
+      this.moduleName = selectedModule.moduleName; // Set the module name here
       this.selectedModuleId = selectedModule.id; // Also set the selected module ID
     } else {
       this.moduleName = ''; // Clear the name if no module is selected

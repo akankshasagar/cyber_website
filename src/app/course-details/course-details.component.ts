@@ -29,6 +29,8 @@ export class CourseDetailsComponent {
   questions: any[] = [];
   currentModuleId: number | null = null;
   currentModule: any;
+  userId: string = '';
+  userRole: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -51,7 +53,7 @@ export class CourseDetailsComponent {
   
   ngOnInit(): void {
     const courseId = this.route.snapshot.paramMap.get('id');
-    const courseName = this.route.snapshot.paramMap.get('courseName') || '';
+    const courseName = this.route.snapshot.paramMap.get('courseName') || '';    
     if (courseId) {
       this.courseService.getCourseById(+courseId, courseName).subscribe((data) => {
         this.course = data;
@@ -77,8 +79,8 @@ export class CourseDetailsComponent {
         let emailFromToken = this.auth.getEmailFromToken();
         this.email = val || emailFromToken
       })
-
-    this.checkIfTestSubmitted();
+    this.userId = this.auth.getUserId();
+    this.checkIfTestSubmitted();    
   }
 
   loadDefaultTopic(): void {
@@ -185,25 +187,49 @@ export class CourseDetailsComponent {
   }  
  
   goToTest(moduleId: number): void {
-  this.getQuestionsForModule(this.currentModuleId!); // Fetch questions for the selected module
+  // this.getQuestionsForModule(this.currentModuleId!); // Fetch questions for the selected module
+  this.getQuestions();
   }
 
-  getQuestionsForModule(moduleId: number): void {
-    this.courseService.getQuestionsByModule(moduleId).subscribe({
-      next: (data) => {
-        this.questions = data; // Store the fetched questions
-        this.isTestPage = true; // Display the test page
-        if (data.length > 0) {
-          this.currentModule = data[0].module; // Assuming all questions belong to the same module
+  // getQuestionsForModule(moduleId: number): void {
+  //   this.courseService.getQuestionsByModule(moduleId).subscribe({
+  //     next: (data) => {
+  //       this.questions = data; // Store the fetched questions
+  //       this.isTestPage = true; // Display the test page
+  //       if (data.length > 0) {
+  //         this.currentModule = data[0].module; // Assuming all questions belong to the same module
+  //       }
+  //     },
+  //     error: (err) => console.error('Error fetching questions:', err)
+  //   });
+  // }
+
+  getQuestions() {
+    const moduleId = this.currentModuleId!; // Replace with dynamic ID if needed
+    this.http.get<any[]>(`${environment.apiURL}Questions/Module/${moduleId}`).subscribe(
+      (response) => {
+        this.questions = response;
+        this.isTestPage = true;
+        // Extract module details from the first question
+        if (this.questions.length > 0) {
+          this.currentModule = {
+            module_Name: this.questions[0].module_Name
+          };
         }
       },
-      error: (err) => console.error('Error fetching questions:', err)
-    });
+      (error) => {
+        console.error("Error fetching questions:", error);
+      }
+    );
   }
+
+
 
   selectedOptions: string[] = [];
   answersCorrectness: boolean[] = [];
   isSubmitted: boolean = false;
+  showNextModuleButton: boolean = false;
+
 
   
   selectOption(index: number, optionText: string): void {
@@ -212,54 +238,139 @@ export class CourseDetailsComponent {
     this.selectedOptions[index] = optionText;
   }
 
+  // submitAnswers(): void {
+  //   // Ensure all questions have been answered
+  //   if (this.selectedOptions.length !== this.questions.length || this.selectedOptions.some(option => !option)) {
+  //     this.toastr.error('Please answer all the questions before submitting.');
+  //     return;
+  //   }
+
+  //   // Create a list of answers to be submitted
+  //   const answers: any[] = this.selectedOptions.map((option, index) => {
+  //     const question = this.questions[index];
+  //     return {
+  //       QuestionId: question.id,
+  //       CourseId: this.courseId,
+  //       ModuleId: this.currentModuleId,
+  //       AnswerText: option,
+  //       SubmittedBy: this.userId // Assuming the user's email is stored
+  //     };
+  //   });
+
+  //   // Send the answers to the backend API
+  //   this.http.post( environment.apiURL + "Answers/SubmitAnswers", answers).subscribe({
+  //     next: (response) => {
+  //       this.toastr.success('Answers submitted successfully.');
+  //       this.isSubmitted = true;
+  //       this.goToNextModule();
+
+  //       // Process the API response to update answersCorrectness
+  //       this.answersCorrectness = this.questions.map((question, index) => {
+  //         return this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase();
+  //       });
+  //     },
+  //     error: (err) => {
+  //       console.error('Error submitting answers', err);
+  //       this.toastr.error('There was an error submitting your answers. Please try again.');
+  //     }
+  //   });
+  // }
+
   submitAnswers(): void {
     // Ensure all questions have been answered
     if (this.selectedOptions.length !== this.questions.length || this.selectedOptions.some(option => !option)) {
-      this.toastr.error('Please answer all the questions before submitting.');
-      return;
+        this.toastr.error('Please answer all the questions before submitting.');
+        return;
     }
 
     // Create a list of answers to be submitted
     const answers: any[] = this.selectedOptions.map((option, index) => {
-      const question = this.questions[index];
-      return {
-        QuestionId: question.id,
-        CourseId: this.courseId,
-        ModuleId: this.currentModuleId,
-        AnswerText: option,
-        SubmittedBy: this.email // Assuming the user's email is stored
-      };
+        const question = this.questions[index];
+        return {
+            QuestionId: question.id,
+            CourseId: this.courseId,
+            ModuleId: this.currentModuleId,
+            AnswerText: option,
+            SubmittedBy: this.userId // Assuming the user's ID is stored
+        };
     });
 
     // Send the answers to the backend API
-    this.http.post( environment.apiURL + "Answers/SubmitAnswers", answers).subscribe({
-      next: (response) => {
-        this.toastr.success('Answers submitted successfully.');
-        this.isSubmitted = true;
-        this.goToNextModule();
+    this.http.post(environment.apiURL + "Answers/SubmitAnswers", answers).subscribe({
+        next: (response) => {
+            this.toastr.success('Answers submitted successfully.');
+            this.isSubmitted = true;
 
-        // Process the API response to update answersCorrectness
-        this.answersCorrectness = this.questions.map((question, index) => {
-          return this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase();
-        });
-      },
-      error: (err) => {
-        console.error('Error submitting answers', err);
-        this.toastr.error('There was an error submitting your answers. Please try again.');
-      }
+            // ✅ Process the API response to update answersCorrectness
+            this.answersCorrectness = this.questions.map((question, index) => {
+                return this.selectedOptions[index]?.trim().toLowerCase() === question.correctOption?.trim().toLowerCase();
+            });
+
+            // ✅ Do NOT jump to the next module automatically.
+            // Instead, show "Go to Next Module" button.
+        },
+        error: (err) => {
+            console.error('Error submitting answers', err);
+            // this.toastr.error('There was an error submitting your answers. Please try again.');
+        }
     });
-  }
+  }  
+
+
+
   
+  // goToNextModule(): void {
+  //   // Find the current module and determine the next module
+  //   const currentIndex = this.modules.findIndex(module => module.id === this.currentModuleId);
+  //   if (currentIndex !== -1 && currentIndex < this.modules.length - 1) {
+  //     const nextModule = this.modules[currentIndex + 1];
+  //     this.currentModuleId = nextModule.id; // Update the current module ID
+  //     this.getTopics(nextModule.id); // Optionally, load topics for the next module
+  //     this.isTestPage = false;
+  //   }
+  // }
+
   goToNextModule(): void {
-    // Find the current module and determine the next module
     const currentIndex = this.modules.findIndex(module => module.id === this.currentModuleId);
+    
     if (currentIndex !== -1 && currentIndex < this.modules.length - 1) {
-      const nextModule = this.modules[currentIndex + 1];
-      this.currentModuleId = nextModule.id; // Update the current module ID
-      this.getTopics(nextModule.id); // Optionally, load topics for the next module
-      this.isTestPage = false;
+        const nextModule = this.modules[currentIndex + 1];
+        this.currentModuleId = nextModule.id; // Update module ID
+        
+        // ✅ Reset test state for the new module
+        this.selectedOptions = [];
+        this.answersCorrectness = [];
+        this.isSubmitted = false;
+
+        // ✅ Load new module topics
+        this.getTopics(nextModule.id);
+        this.isTestPage = false;
+
+        // ✅ Load new questions for the next module
+        this.loadQuestionsForModule(nextModule.id);
+    } else {
+        this.toastr.info("No more Chapters left.");
     }
   }
+
+
+  loadQuestionsForModule(moduleId: number): void {
+    this.http.get<any[]>(`${environment.apiURL}Questions/Module/${moduleId}`)
+      .subscribe({
+        next: (questions) => {
+          this.questions = questions;
+          this.selectedOptions = new Array(questions.length).fill(null);
+          this.answersCorrectness = new Array(questions.length).fill(false);
+          this.isSubmitted = false; // ✅ Reset submission status
+        },
+        error: (err) => {
+          console.error("Error loading questions", err);
+          this.toastr.error("Failed to load questions.");
+        }
+      });
+  }
+  
+
 
   checkIfTestSubmitted() {
     if (!this.currentModuleId) {
@@ -271,6 +382,18 @@ export class CourseDetailsComponent {
       this.isSubmitted = response.isSubmitted;
     });
   }  
+
+  navigateToCourses() {
+    const tokenPayload = this.auth.decodeToken();
+
+    this.userRole = tokenPayload?.role || null;
+
+    if (this.userRole === '3') {
+      this.router.navigate(['courses']); // Navigate to courses page
+    } else {
+      this.router.navigate(['adminpage']); // Navigate to admin page
+    }
+  }
     
 }
 

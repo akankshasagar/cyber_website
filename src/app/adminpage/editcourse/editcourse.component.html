@@ -16,6 +16,14 @@
             <!-- <a class="nav-item nav-link active" href="adminpage">Courses</a> -->
             <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
         </div>
+
+        <div class="nav-item d-flex align-items-center px-4">
+            <mat-icon class="text-primary me-2">person</mat-icon>
+            <span class="text-dark" style="font-family: 'Arial', sans-serif; font-weight: 600;">
+              Welcome, {{ fullName }}
+            </span>
+        </div>
+
         <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
                 class="fa fa-arrow-right ms-3"></i></a>
     </div>
@@ -305,7 +313,7 @@
                         <div class="mb-3">
                             <label class="form-label">Select Module</label>
                             <select name="selectedModuleId" class="form-control" (change)="onModuleSelect($event)">
-                                <option *ngFor="let module of modules" [value]="module.id">{{ module.module_Name }}</option>
+                                <option *ngFor="let module of modules" [value]="module.id">{{ module.moduleName }}</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -354,7 +362,7 @@
                         <div class="mb-3">
                             <label class="form-label">Select Module</label>
                             <select formControlName="selectedModuleId" class="form-control" (change)="onModuleSelectT($event)">
-                                <option *ngFor="let module of modules" [value]="module.id">{{ module.module_Name }}</option>
+                                <option *ngFor="let module of modules" [value]="module.id">{{ module.moduleName }}</option>
                             </select>
                         </div>
 
@@ -386,7 +394,7 @@
                         <div class="mb-3">
                             <label class="form-label">Select Module</label>
                             <select formControlName="selectedModuleId" class="form-control" (change)="onModuleSelectT2($event)">
-                                <option *ngFor="let module of modules" [value]="module.id">{{ module.module_Name }}</option>
+                                <option *ngFor="let module of modules" [value]="module.id">{{ module.moduleName }}</option>
                             </select>
                         </div>
 
