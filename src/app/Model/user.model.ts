@@ -3,6 +3,7 @@ export class User {
     name: string;
     email: string;
     password: string;
+    code: string;
     roleId: number;
     deptId: number;
     loginCount: number;
@@ -10,12 +11,13 @@ export class User {
     passwordHash: string;
     passwordSalt: string;
     department?: { deptName: string }; // Optional, for department name
-  
+
     constructor(
       id: number = 0,
       name: string = '',
       email: string = '',
       password: string = '',
+      code: string = '',
       roleId: number = 0,
       deptId: number = 0,
       loginCount: number = 0,
@@ -28,6 +30,7 @@ export class User {
       this.name = name;
       this.email = email;
       this.password = password;
+      this.code = code;
       this.roleId = roleId;
       this.deptId = deptId;
       this.loginCount = loginCount;
@@ -37,4 +40,3 @@ export class User {
       this.department = department;
     }
   }
-  

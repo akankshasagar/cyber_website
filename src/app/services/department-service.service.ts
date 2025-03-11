@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DepartmentServiceService {
 
-  private apiUrl = environment.apiURL + "Department/GetDepartments";
+  private apiUrl = environment.apiURL + "User/GetDepartments";
 
   constructor(private http: HttpClient) { }
 

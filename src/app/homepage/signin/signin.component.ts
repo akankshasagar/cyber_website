@@ -25,7 +25,7 @@ export class SigninComponent {
   otp!: string;
   newPassword!: string;
   showOTPInput: boolean = false;
-  otpVerified: boolean = false;  
+  otpVerified: boolean = false;
 
   hide = true;
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private userStore: UserstoreService) {
@@ -33,7 +33,7 @@ export class SigninComponent {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
-    });    
+    });
   }
 
   togglePasswordVisibility() {
@@ -42,26 +42,26 @@ export class SigninComponent {
 
   togglePasswordVisibilityfor(){
     this.forshowPassword = !this.forshowPassword;
-  }   
+  }
 
   onSubmit(forgotPasswordForm: NgForm){
     if (forgotPasswordForm.invalid) {
       // Form is invalid, do not proceed
       return;
-    }    
+    }
   }
 
-  sendOTP(){    
+  sendOTP(){
     this.auth.sendOTP(this.email)
       .subscribe({
-        next: (response) => {          
+        next: (response) => {
           this.showOTPInput = true;
           this.toastr.success(response.message);
         },
-        error: (err) => {          
+        error: (err) => {
           this.toastr.error(err?.error.message);
         }
-      });    
+      });
   }
 
   verifyOTP() {
@@ -71,25 +71,25 @@ export class SigninComponent {
         next: (response) => {
           this.toastr.success(response.message);
           this.showOTPInput = false;
-          this.otpVerified= true;          
+          this.otpVerified= true;
         },
         error: (err) => {
           this.toastr.error(err?.error.message);
         }
-      });      
+      });
   }
 
   updatePassword() {
     this.auth.UpdatePassword(this.email, this.newPassword)
       .subscribe({
         next: (response) => {
-          this.toastr.success(response.message);   
-          this.closeForm();              
+          this.toastr.success(response.message);
+          this.closeForm();
         },
         error: (err) => {
           this.toastr.error(err?.error.message);
         }
-      });    
+      });
   }
 
   closeForm() {
@@ -98,42 +98,102 @@ export class SigninComponent {
     this.otp = '';
     this.newPassword = '';
     this.showOTPInput = false;
-    this.otpVerified = false;    
+    this.otpVerified = false;
   }
+
+  // onLogin() {
+  //   if (this.loginForm.valid) {
+
+  //     this.auth.login(this.loginForm.value)
+  //     .subscribe({
+  //       next:(res) =>{
+  //         console.log(res);
+  //         this.loginForm.reset();
+  //         this.auth.storeToken(res.token);
+  //         console.log('Stored Token:', localStorage.getItem('token'));
+  //         const tokenPayload = this.auth.decodeToken();
+  //         console.log('Decoded Token:', tokenPayload);
+  //         const role = tokenPayload?.role;
+  //         this.userStore.setFullNameForStore(tokenPayload.name);
+  //         this.toastr.success(res.message);
+  //         console.log(tokenPayload?.role);
+  //         console.log(res.appuser.roleId);
+  //         if(res.appuser.roleId == '1'){
+  //           console.log('Welcome Admin');
+  //           this.router.navigate(['adminpage']);
+  //         }else {
+  //             this.router.navigate(['courses']);
+  //           }
+  //         // if (tokenPayload?.role === '3') {
+  //         //   this.router.navigate(['courses']);
+  //         // } else {
+  //         //   this.router.navigate(['adminpage']);
+  //         // }
+  //       },
+  //       error:(err)=>{
+  //         this.toastr.warning("Some other error Occurred");
+  //         this.toastr.error(err?.error.message);
+  //       }
+  //     })
+  //     //send the obj to database
+  //   }
+  //   else {
+
+  //     ValidateForm.validateAllFormFields(this.loginForm);
+  //     this.toastr.error("Your Form is Invalid!");
+  //     //throw the error
+  //   }
+  // }
 
   onLogin() {
     if (this.loginForm.valid) {
+        this.auth.login(this.loginForm.value).subscribe({
+            next: (res) => {
 
-      this.auth.login(this.loginForm.value)
-      .subscribe({
-        next:(res) =>{
-          this.loginForm.reset();
-          this.auth.storeToken(res.token); 
-          const tokenPayload = this.auth.decodeToken();
-          const role = tokenPayload?.role;
-          this.userStore.setFullNameForStore(tokenPayload.name);
-          this.toastr.success(res.message);          
+                // Store token
+                this.auth.storeToken(res.token);
 
-          if (tokenPayload?.role === '3') {            
-            this.router.navigate(['courses']);            
-          } else {            
-            this.router.navigate(['adminpage']);
-          }
-        },
-        error:(err)=>{
-          this.toastr.warning("Some other error Occurred");
-          this.toastr.error(err?.error.message);
-        }
-      })
-      //send the obj to database
-    }
-    else {
-      
-      ValidateForm.validateAllFormFields(this.loginForm);
-      this.toastr.error("Your Form is Invalid!");
-      //throw the error 
+                // Store email separately
+                const userEmail = res.appuser?.email;
+                localStorage.setItem('userEmail', userEmail);
+                this.auth.setUser(res.appuser.name);
+                this.auth.setEmail(res.appuser.email);
+                this.auth.setUserId(res.appuser.id);
+                this.auth.setRoleId(res.appuser.roleId);
+                // localStorage.setItem('userId', res.appuser.id.toString());
+
+                // Decode token
+                const tokenPayload = this.auth.decodeToken();
+
+                // Extract roleId from response
+                const roleId = res.appuser?.roleId;
+
+                // Set user details in store
+                this.userStore.setFullNameForStore(res.appuser.name);
+
+                // Show success message
+                this.toastr.success(res.message);
+
+                // Navigate based on roleId
+                if (roleId === 1) {
+                    this.router.navigate(['adminpage']);
+                } else {
+                    this.router.navigate(['courses']);
+                }
+            },
+            error: (err) => {
+                console.error("Login Error:", err);
+                this.toastr.warning("Some other error occurred");
+                this.toastr.error(err?.error?.message || "Login failed!");
+            }
+        });
+    } else {
+        ValidateForm.validateAllFormFields(this.loginForm);
+        this.toastr.error("Your Form is Invalid!");
     }
   }
+
+
 
   Start(){
     this.start = true;

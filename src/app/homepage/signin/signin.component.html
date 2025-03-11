@@ -20,9 +20,9 @@
             <a class="nav-item nav-link" href="allcourses">Courses</a>
             <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
         </div>
-        <a href="../homepage/signup"
+        <a href="homepage/signin"
             class="btn py-4 px-lg-5 d-none d-lg-block nav-item nav-link active"
-            style="background: #11101D;">Sign Up<i
+            style="background: #11101D;">Start Now<i
                 class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
@@ -34,8 +34,8 @@
         <input type="checkbox" id="flip">
         <div class="cover">
             <div class="front">
-                <img src="../../../assets/img2/account.png" alt>                
-            </div>            
+                <img src="../../../assets/img2/account.png" alt>
+            </div>
         </div>
         <div class="forms">
             <div class="form-content">
@@ -47,7 +47,7 @@
                                 [class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
                                 <mat-icon> email</mat-icon>
                                 <!-- <i class="fas fa-envelope"></i> -->
-                                <input type="email"
+                                <input type="text"
                                     placeholder="Enter your email"
                                     formControlName="email" required>
                             </div>
@@ -83,11 +83,11 @@
                                 <input type="submit" (click)="onLogin()"
                                     value="Sumbit">
                             </div>
-                            <a routerLink="/homepage/signup">
+                            <!-- <a routerLink="/homepage/signup">
                                 <div class="text sign-up-text">Don't have an
                                     account? <label> Sigup
                                         now</label></div>
-                            </a>
+                            </a> -->
                         </div>
                     </form>
 
@@ -98,7 +98,7 @@
         </div>
 
     </div>
-    <!-- <div class="container"> --> 
+    <!-- <div class="container"> -->
 
     <div class="form-content form-content2">
         <div class="login-form">
@@ -113,11 +113,11 @@
                               <small class="form-text text-danger" style="margin-left: 5vh;" *ngIf="forgotPasswordForm.controls['email'].errors?.['required'] && forgotPasswordForm.submitted">
                                 Email is required
                               </small>
-                            </div>            
+                            </div>
                             <div *ngIf="email && !showOTPInput && !otpVerified">
                               <button type="submit" class="btn btn-primary" style="margin-left: 5vh; margin-bottom: 3vh;" (click)="sendOTP()">Send OTP</button>
-                            </div>                        
-                
+                            </div>
+
                             <div *ngIf="showOTPInput">
                               <div class="form-group">
                                 <label for="otp" style="margin-left: 5vh;">Enter OTP</label>
@@ -125,7 +125,7 @@
                               </div>
                               <button type="button" class="btn btn-primary" style="margin-left: 5vh; margin-bottom: 3vh;" (click)="verifyOTP()">Verify OTP</button>
                             </div>
-                
+
                             <div *ngIf="otpVerified">
                               <div class="form-group">
                                 <label for="newPassword" style="margin-left: 5vh; width: 50vh;">Enter New Password</label>
@@ -143,24 +143,24 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 
 </div>
 </body>
 
-<!-- <div class="container-xxl py-5 justify-content-center align-items-center modal-open" *ngIf="start"> 
+<!-- <div class="container-xxl py-5 justify-content-center align-items-center modal-open" *ngIf="start">
     <div class="container">
         <div class="card shadow confirmation-card">
-            <div class="row g-5">                
+            <div class="row g-5">
                 <div class="col-lg-6 wow" >
-                    <div class="card-body">                        
-                        
+                    <div class="card-body">
+
                         <div class="confirmation-card confirmation-buttons">
                             <p class="confirmation-text">Are you sure you want to submit?</p>
-                            <button class="btn btn-primary">Yes</button> 
+                            <button class="btn btn-primary">Yes</button>
                             <button class="btn btn-secondary">Cancel</button>
                         </div>
-                        
+
                         <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" aria-label="Close" (click)="closeCard()"></button>
                     </div>
                 </div>

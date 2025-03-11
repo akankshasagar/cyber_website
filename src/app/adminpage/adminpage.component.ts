@@ -34,29 +34,29 @@ export class AdminpageComponent {
   paginatedCourses: any[] = []; // Courses to display on the current page
   public fullName: string = "";
 
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService, private userStore: UserstoreService) { 
-  
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private departmentService: DepartmentServiceService, private roleService: RoleService, private toastr: ToastrService, private userStore: UserstoreService) {
+
   }
-  
+
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
-    const userEmail = tokenPayload?.email;
+    const userEmail = this.auth.getUserEmail();
     if (!userEmail) {
-      this.toastr.error('You are not logged in');      
+      this.toastr.error('You are not logged in');
       return;
     }
 
     this.auth.getUserByEmail(userEmail).subscribe({
       next: (user) => {
-        this.user.id = user.id; // Assuming the backend returns a user object with an `id` field        
+        this.user.id = user.id; // Assuming the backend returns a user object with an `id` field
       },
       error: (error) => {
-        this.toastr.error("Failed to fetch User");        
+        this.toastr.error("Failed to fetch User");
       },
     });
 
-    this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token 
-    this.loadDepartments();   
+    this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token
+    this.loadDepartments();
     this.loadRoles();
     this.courseService.getCourses().subscribe({
       next: (data) => {
@@ -64,16 +64,16 @@ export class AdminpageComponent {
         this.updatePaginatedCourses();
       },
       error: (error) => {
-        this.toastr.error("Failed to fetch Courses", error);        
+        this.toastr.error("Failed to fetch Courses", error);
       },
     });
-
+    // this.auth.getUser();
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
-        let fullNameFromToken = this.auth.getFullNameFromToken();
+        let fullNameFromToken = this.auth.getUser();
         this.fullName = val || fullNameFromToken
-      });      
-  }  
+      });
+  }
 
   updatePaginatedCourses(): void {
     const startIndex = (this.currentPage - 1) * this.coursesPerPage;
@@ -104,14 +104,15 @@ export class AdminpageComponent {
     return Math.ceil(this.courses.length / this.coursesPerPage);
   }
 
-  onSubmit(): void {    
+  onSubmit(): void {
     const deptId = this.selectedDeptId ? Number(this.selectedDeptId) : 0;
     const requestData = {
       name: this.user.name,
       email: this.user.email,
       password: this.user.password,
       roleId: this.selectedRoleId,
-      deptId: this.selectedDeptId
+      deptId: this.selectedDeptId,
+      code: this.user.code
     };
 
     this.http.post(`${environment.apiURL}User/RegisterAdminOrManager`, requestData)
@@ -121,14 +122,13 @@ export class AdminpageComponent {
           this.closeForm();
         },
         (error) => {
-          this.toastr.error("Registration failed", error);          
+          this.toastr.error("Registration failed", error);
         }
       );
 
   }
 
   // onSubmit(): void {
-  //   console.log("Selected Dept ID:", this.selectedDeptId);
 
   //   // Convert selectedDeptId to a number if needed
   //   const deptId = this.selectedDeptId ? Number(this.selectedDeptId) : 0;
@@ -146,7 +146,6 @@ export class AdminpageComponent {
   //       deptId: deptId // Use the corrected deptId
   //   };
 
-  //   console.log("Final Request Payload:", requestData);
 
   //     this.http.post(`${environment.apiURL}User/RegisterAdminOrManager`, requestData)
   //       .subscribe(
@@ -155,8 +154,7 @@ export class AdminpageComponent {
   //           this.closeForm();
   //         },
   //         (error) => {
-  //           console.error("Registration Failed:", error);
-  //           this.toastr.error("Registration failed", error);          
+  //           this.toastr.error("Registration failed", error);
   //         }
   //       );
   // }
@@ -167,11 +165,10 @@ export class AdminpageComponent {
   loadDepartments(): void {
     this.departmentService.getDepartments().subscribe(
       (data) => {
-        // console.log(data);
         this.departments = data;
       },
       (error) => {
-        this.toastr.error("No Departments found");        
+        this.toastr.error("No Departments found");
       }
     );
   }
@@ -183,15 +180,15 @@ export class AdminpageComponent {
         this.roles = data;
       },
       (error) => {
-        this.toastr.error("No Roles found");        
+        this.toastr.error("No Roles found");
       }
     );
   }
-  
+
   logout() {
     this.auth.signOut();
   }
-  
+
 
   showForm(): void {
     this.isFormVisible = true;
@@ -203,7 +200,7 @@ export class AdminpageComponent {
 
   Start(course: any): void {
     this.selectedCourse = course;
-    this.start = true; // Display the modal    
+    this.start = true; // Display the modal
     document.body.style.overflow = 'hidden';
   }
 
@@ -218,22 +215,22 @@ export class AdminpageComponent {
       this.toastr.error("User or course information is missing.");
       return;
     }
-  
+
     const enrollmentRequest = {
       UserId: this.user.id,
       CourseId: this.selectedCourse.id,
     };
-  
-    this.http.post( `${environment.apiURL}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
-      next: (response: any) => {        
+
+    this.http.post( `${environment.apiURL}Courses/Enroll`, enrollmentRequest).subscribe({
+      next: (response: any) => {
         this.start = false; // Close the modal
       },
-      error: (error) => {        
+      error: (error) => {
       },
     });
   }
-  
-  
+
+
 }
 
 

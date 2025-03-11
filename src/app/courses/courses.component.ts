@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { CourseService } from '../services/course.service';
 import { User } from '../Model/user.model';
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-courses',
@@ -22,16 +23,16 @@ export class CoursesComponent {
   paginatedCourses: any[] = []; // Courses to display on the current page
   user: User = new User();
   public fullName: string = "";
-  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private userStore: UserstoreService) { 
+  constructor(private auth: AuthService, private http: HttpClient, private courseService: CourseService, private userStore: UserstoreService, private toastr: ToastrService) {
 
   }
 
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
 
-    const userEmail = tokenPayload?.email;
+    const userEmail = this.auth.getUserEmail();
     if (!userEmail) {
-      console.error('Email Not Found');
+      this.toastr.error('You are not logged in');
       return;
     }
 
@@ -56,7 +57,7 @@ export class CoursesComponent {
 
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
-        let fullNameFromToken = this.auth.getFullNameFromToken();
+        let fullNameFromToken = this.auth.getUser();
         this.fullName = val || fullNameFromToken
       });
   }
@@ -88,11 +89,11 @@ export class CoursesComponent {
 
   totalPages(): number {
     return Math.ceil(this.courses.length / this.coursesPerPage);
-  }  
+  }
 
   Start(course: any): void {
     this.selectedCourse = course;
-    this.start = true; // Display the modal    
+    this.start = true; // Display the modal
     document.body.style.overflow = 'hidden';
   }
 
@@ -112,17 +113,17 @@ export class CoursesComponent {
       console.error('User or course information is missing.');
       return;
     }
-  
+
     const enrollmentRequest = {
       UserId: this.user.id,
       CourseId: this.selectedCourse.id,
     };
-  
-    this.http.post(`${environment.apiURL}CourseEnrollments/Enroll`, enrollmentRequest).subscribe({
-      next: (response: any) => {        
+
+    this.http.post(`${environment.apiURL}Courses/Enroll`, enrollmentRequest).subscribe({
+      next: (response: any) => {
         this.start = false; // Close the modal
       },
-      error: (error) => {        
+      error: (error) => {
       },
     });
   }

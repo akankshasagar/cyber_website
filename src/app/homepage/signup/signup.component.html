@@ -74,14 +74,24 @@
 								*ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">*Email
 								is required</small>
 
+                <div class="input-box"
+								[class.error]="signupForm.controls['code'].dirty && signupForm.hasError('required', 'code')">
+								<!-- <i class="fas fa-envelope"></i> -->
+								<mat-icon>confirmation_number</mat-icon>
+								<input type="text" placeholder="Enter your Employee Code"
+									formControlName="code" required>
+							</div>
+							<small class="text-danger"
+								*ngIf="signupForm.controls['code'].dirty && signupForm.hasError('required', 'code')">*Employee Code is required</small>
+
 							<div class="input-box select">
 								<select formControlName="deptName">
 									<option value="" disabled selected>Select Department</option>
 									<option *ngFor="let department of departments" [value]="department.deptName">{{ department.deptName }}</option>
 								</select>
-							</div> 
+							</div>
 
-							<small class="text-danger" *ngIf="signupForm.controls['deptName'].dirty && signupForm.hasError('required', 'deptName')">*Department is required</small>						
+							<small class="text-danger" *ngIf="signupForm.controls['deptName'].dirty && signupForm.hasError('required', 'deptName')">*Department is required</small>
 
 							<div class="input-box"
 								[class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">
@@ -111,7 +121,7 @@
 							  <p>Coffee, at the City hall <a href="https://codepen.io/raubaca/pen/bGWmZje" target="_blank">here!</a></p>
 							</div> -->
 
-							
+
 							<!-- <div formGroupName="department">
 								<label for="deptName">Department Name</label>
 								<input
@@ -121,8 +131,8 @@
 								  class="form-control"
 								/>
 							  </div> -->
-							  
-							
+
+
 
 							<!-- <div class="text"><a href="#">Forgot password?</a></div> -->
 							<div class="button input-box">

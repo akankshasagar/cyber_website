@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class RoleService {
 
-  private apiUrl = environment.apiURL + "Rolemaster/GetRoles";
+  private apiUrl = environment.apiURL + "User/GetRoles";
 
   constructor(private http: HttpClient) { }
 

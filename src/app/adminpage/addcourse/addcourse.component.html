@@ -1,4 +1,4 @@
-<div *ngIf="userRole === '1'; else noAccessPage">
+<!-- <div *ngIf="userRole === '1'; else noAccessPage"> -->
 
 
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -25,7 +25,7 @@
             Welcome, {{ fullName }}
         </span>
         </div>
-        
+
         <a (click)="logout()" class="btn py-4 px-lg-5 d-lg-block" style="background: #11101D; color: #ddd;">Log Out<i
                 class="fa fa-arrow-right ms-3"></i></a>
     </div>
@@ -67,7 +67,7 @@
                         <label for="image" class="formbold-form-label">Upload Image</label>
                         <input
                             id="imageInput"
-                            type="file"                            
+                            type="file"
                             (change)="onFileSelect($event, 'image')"
                             class="formbold-form-input"
                             required
@@ -81,7 +81,7 @@
                         <label for="file" class="formbold-form-label">Upload File</label>
                         <input
                             id="fileInput"
-                            type="file"                            
+                            type="file"
                             (change)="onFileSelect($event, 'file')"
                             class="formbold-form-input"
                             required
@@ -99,7 +99,7 @@
     <div class="container">
       <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h6 class="section-title bg-white text-center text-primary px-3">Add Course</h6>
-      </div>      
+      </div>
 
       <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
@@ -115,7 +115,7 @@
                 required
               />
             </div>
-      
+
             <div class="formbold-input-group">
               <label for="description" class="formbold-form-label">Course Description</label>
               <input
@@ -126,7 +126,7 @@
                 required
               />
             </div>
-      
+
             <div class="formbold-input-group">
               <label for="image" class="formbold-form-label">Upload Image</label>
               <input
@@ -140,7 +140,7 @@
                 Course image is required.
               </div>
             </div>
-      
+
             <!-- Modules Section -->
             <div formArrayName="modules" *ngFor="let module of modules.controls; let i = index">
               <div [formGroupName]="i">
@@ -155,7 +155,7 @@
                     required
                   />
                 </div>
-      
+
                 <!-- Topics -->
                 <div formArrayName="topics" *ngFor="let topic of getTopics(i).controls; let j = index">
                   <div [formGroupName]="j">
@@ -170,7 +170,7 @@
                         required
                       />
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label for="topicDescription" class="formbold-form-label">Topic Description</label>
                       <textarea
@@ -181,7 +181,7 @@
                         required
                       ></textarea>
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label for="topicImage" class="formbold-form-label">Upload Topic Image</label>
                       <input
@@ -190,10 +190,10 @@
                         (change)="onFileSelect($event, 'topic', i, j)"
                         class="formbold-form-input"
                       />
-                      <button 
-                        class="formbold-btn btn-danger mt-2" 
+                      <button
+                        class="formbold-btn btn-danger mt-2"
                         *ngIf="getTopics(i)?.at(j)?.get('topicImage')?.value"
-                        type="button" 
+                        type="button"
                         (click)="removeTopicImage(i, j)"
                       >
                         Remove Topic Image
@@ -205,7 +205,7 @@
                   </div>
                 </div>
                 <button class="formbold-btn" type="button" (click)="addTopic(i)">Add Topic</button>
-      
+
                 <!-- Questions -->
                 <div formArrayName="questions" *ngFor="let question of getQuestions(i).controls; let k = index">
                   <div [formGroupName]="k">
@@ -220,7 +220,7 @@
                         required
                       ></textarea>
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label class="formbold-form-label">Option A</label>
                       <input
@@ -231,7 +231,7 @@
                         required
                       />
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label class="formbold-form-label">Option B</label>
                       <input
@@ -242,7 +242,7 @@
                         required
                       />
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label class="formbold-form-label">Option C</label>
                       <input
@@ -252,7 +252,7 @@
                         class="formbold-form-input"
                       />
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label class="formbold-form-label">Option D</label>
                       <input
@@ -262,7 +262,7 @@
                         class="formbold-form-input"
                       />
                     </div>
-      
+
                     <div class="formbold-input-group">
                       <label class="formbold-form-label">Correct Option</label>
                       <input
@@ -279,22 +279,22 @@
                   </div>
                 </div>
                 <button class="formbold-btn" type="button" (click)="addQuestion(i)">Add Question</button>
-      
+
                 <button class="formbold-btn btn-danger" type="button" (click)="removeModule(i)">
                   Remove Module
                 </button>
               </div>
             </div>
-      
+
             <button class="formbold-btn" type="button" (click)="addModule()">Add Module</button>
             <button class="formbold-btn" type="submit">Submit</button>
           </form>
         </div>
       </div>
-      
+
     </div>
-  </div> 
-  
+  </div>
+
 
   <!-- <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
@@ -309,7 +309,7 @@
                 required
               />
             </div>
-  
+
             <div class="formbold-input-group">
               <label for="description" class="formbold-form-label">Course Description</label>
               <input
@@ -320,7 +320,7 @@
                 required
               />
             </div>
-  
+
             <div class="formbold-input-group">
               <label for="image" class="formbold-form-label">Upload Image</label>
               <input
@@ -332,9 +332,9 @@
               />
               <div *ngIf="courseForm.get('image')?.touched && courseForm.get('image')?.invalid" class="text-danger">
                 Course image is required.
-              </div>             
+              </div>
             </div>
-  
+
             <div formArrayName="modules" *ngFor="let module of modules.controls; let i = index">
               <div [formGroupName]="i">
                 <h5>Module {{ i + 1 }}</h5>
@@ -348,7 +348,7 @@
                     required
                   />
                 </div>
-  
+
                 <div formArrayName="topics" *ngFor="let topic of getTopics(i).controls; let j = index">
                   <div [formGroupName]="j">
                     <h6>Topic {{ j + 1 }}</h6>
@@ -362,7 +362,7 @@
                         required
                       />
                     </div>
-  
+
                     <div class="formbold-input-group">
                       <label for="topicDescription" class="formbold-form-label">Topic Description</label>
                       <textarea
@@ -373,13 +373,13 @@
                         required
                       ></textarea>
                     </div>
-  
+
                     <div class="formbold-input-group">
                       <label for="tImagePath" class="formbold-form-label">Upload Topic Image</label>
                       <input
                         type="file"
                         (change)="onFileSelect($event, 'topic', i, j)"
-                        class="formbold-form-input"                        
+                        class="formbold-form-input"
                       />
                     </div>
 
@@ -388,7 +388,7 @@
                   </button>
                   </div>
                 </div>
-  
+
                 <button class="formbold-btn" type="button" (click)="addTopic(i)">Add Topic</button>
 
               <button class="formbold-btn btn-danger" type="button" (click)="removeModule(i)">
@@ -396,9 +396,9 @@
               </button>
               </div>
             </div>
-  
+
             <button class="formbold-btn" type="button" (click)="addModule()">Add Module</button>
-  
+
             <button class="formbold-btn" type="submit">Submit</button>
           </form>
         </div>
@@ -408,16 +408,16 @@
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-25 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-55">
-        <div class="row g-5">            
+        <div class="row g-5">
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Prism Johnson</a>, All Right Reserved.                                
+                            &copy; <a class="border-bottom" href="#">Prism Johnson</a>, All Right Reserved.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>                                    
+                                <a href="">Home</a>
                                 <a href="">FQAs</a>
                             </div>
                         </div>
@@ -429,7 +429,7 @@
 </div>
 <!-- Footer End -->
 
-</div>
+<!-- </div> -->
 
 <ng-template #noAccessPage>
     <div class="container text-center py-5">

@@ -14,16 +14,16 @@ import { environment } from 'src/environments/environment';
 })
 export class AddcourseComponent {
 
-  userRole: string | null = null;  
+  userRole: string | null = null;
   public fullName: string = "";
 
   logout() {
     this.auth.signOut();
   }
-  
+
   courseForm!: FormGroup;
   imageError: string = '';
-  apiUrl: string = environment.apiURL + "Course/AddCourseWithModulesAndTopics";
+  apiUrl: string = environment.apiURL + "Courses/AddCourseWithModulesAndTopicsNew";
 
   constructor(
     private fb: FormBuilder,
@@ -45,7 +45,7 @@ export class AddcourseComponent {
 
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
-        let fullNameFromToken = this.auth.getFullNameFromToken();
+        let fullNameFromToken = this.auth.getUser();
         this.fullName = val || fullNameFromToken
       });
   }
@@ -157,13 +157,13 @@ export class AddcourseComponent {
     const payload = {
       CourseName: formData.courseName,
       CourseDescription: formData.courseDescription,
-      ImagePath: formData.image,
+      CourseImage: formData.image,
       Modules: formData.modules.map((module: any) => ({
         ModuleName: module.moduleName,
         Topics: module.topics.map((topic: any) => ({
           Topic_Name: topic.topicName,
           Topic_Description: topic.topicDescription,
-          T_ImagePath: topic.topicImage,
+          T_ImagePaths: topic.topicImage,
         })),
         Questions: module.questions.map((question: any) => ({
           QuestionText: question.questionText,
@@ -193,7 +193,7 @@ export class AddcourseComponent {
       this.modules.removeAt(0);
     }
   }
-  
+
 }
 
 

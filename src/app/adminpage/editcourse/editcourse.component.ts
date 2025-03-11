@@ -29,7 +29,7 @@ export class EditcourseComponent {
   selectedFileBase64: string | null = null;
   @ViewChild('fileInput') fileInput!: ElementRef;
   topics2: any[] = [];
-  selectedTopicId?: number | null; 
+  selectedTopicId?: number | null;
   selectedTopicName: string = '';
   editTopicForm!: FormGroup;
   base64Image: string | null = null;
@@ -64,9 +64,10 @@ export class EditcourseComponent {
       topicImage: ['']
     });
 
+    // this.auth.getUser();
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
-        let fullNameFromToken = this.auth.getFullNameFromToken();
+        let fullNameFromToken = this.auth.getUser();
         this.fullName = val || fullNameFromToken
       });
   }
@@ -85,7 +86,7 @@ export class EditcourseComponent {
       topicDescription: ['', Validators.required],
       tImagePath: ['']
     });
-  }        
+  }
 
   ngOnInit(): void {
     const tokenPayload = this.auth.decodeToken();
@@ -99,20 +100,20 @@ export class EditcourseComponent {
       // Set the courseId in the form without showing it
       this.moduleForm.addControl('courseId', this.fb.control(this.courseId));
     } else {
-      // Handle the case when courseId is not present in the URL      
+      // Handle the case when courseId is not present in the URL
       this.toastr.error("Course ID is required");
     }
     this.fetchModulesByCourse();
-  }  
+  }
 
   fetchModulesByCourse(): void {
-    this.http.get<any[]>(`${environment.apiURL}Module/${this.courseId}`)
+    this.http.get<any[]>(`${environment.apiURL}Courses/${this.courseId}`)
       .subscribe(
         (data) => {
           this.modules = data;
         },
         (error) => {
-          this.toastr.error("Error fetching modules:", error);          
+          this.toastr.error("Error fetching modules:", error);
         }
       );
   }
@@ -123,13 +124,22 @@ export class EditcourseComponent {
     const formData = new FormData();
     formData.append('courseName', this.courseName);
     formData.append('courseDescription', this.courseDescription);
+    // Append fields, sending null instead of an empty string
+  //   if (this.courseName) {
+  //     formData.append('courseName', this.courseName);
+  //     // formData.append('courseDescription', this.courseDescription.trim());
+  // }
+
+  // if (this.courseDescription?.trim()) {
+  //     formData.append('courseDescription', this.courseDescription.trim());
+  // }
     if (this.imagePath) {
       formData.append('imagePath', this.imagePath, this.imagePath.name);  // Append the image file
     }
 
     // const courseId = 1;  // Example courseId, replace with actual course ID
 
-    this.http.put(`${environment.apiURL}Course/EditCourse/${this.courseId}`, formData)
+    this.http.put(`${environment.apiURL}Courses/EditCourse/${this.courseId}`, formData)
       .subscribe({
         next: (response) => {
           this.toastr.success("Course Details updated successfully");
@@ -140,7 +150,7 @@ export class EditcourseComponent {
           this.toastr.error("Error updating course:", error);
         }
       });
-  }  
+  }
 
   onFileSelect(event: any) {
     // this.imagePath = event.target.files[0];  // Get the file object
@@ -156,7 +166,7 @@ export class EditcourseComponent {
       img.onload = () => {
         // Check if width is less than height
         if (img.width < img.height) {
-          // Display error if width is less than height          
+          // Display error if width is less than height
           this.toastr.error("Please upload an image with width greater than height.");
           return;  // Stop further processing if validation fails
         }
@@ -223,7 +233,7 @@ export class EditcourseComponent {
   onSubmit() {
     if (this.moduleForm.valid) {
       const requestPayload = this.prepareRequestPayload();
-  
+
       this.courseService.addModuleToCourse(requestPayload).subscribe(
         (response) => {
           this.toastr.success(response.message);
@@ -258,7 +268,7 @@ export class EditcourseComponent {
       }))
     };
   }
-  
+
 
   onImageSelected(event: any, index: number) {
     const file = event.target.files[0];
@@ -298,12 +308,12 @@ export class EditcourseComponent {
       correctOption: ['', Validators.required]
     });
     this.questions.push(questionGroup);
-  }      
+  }
 
   //-----------------Edit Module Details----------------------------
-  
+
   onSubmitM(form: any): void {
-    if (!this.selectedModuleId || !this.moduleName) {      
+    if (!this.selectedModuleId || !this.moduleName) {
       this.toastr.warning("Please select a module and enter a new module name.");
       return;
     }
@@ -313,7 +323,7 @@ export class EditcourseComponent {
       moduleName: this.moduleName
     };
 
-    this.http.put(`${environment.apiURL}Module/EditModuleDetails`, requestPayload)
+    this.http.put(`${environment.apiURL}Courses/EditModuleDetails`, requestPayload)
       .subscribe(
         (response) => {
           this.toastr.success("Module details updated successfully!");
@@ -326,8 +336,9 @@ export class EditcourseComponent {
   }
 
   onModuleSelect(event: any): void {
-    this.selectedModuleId = event.target.value;
-    const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    this.selectedModuleId = +event.target.value;
+    // const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    const selectedModule = this.modules.find(module => module.id === this.selectedModuleId);
     if (selectedModule) {
       this.moduleName = selectedModule.moduleName; // Set the module name here
       this.selectedModuleId = selectedModule.id; // Also set the selected module ID
@@ -363,8 +374,8 @@ export class EditcourseComponent {
   }else {
     this.toastr.error("Please select a module to delete.");
   }
-  }  
-    
+  }
+
 
 //--------------------------------Add Topic----------------------------------------
 
@@ -378,7 +389,7 @@ export class EditcourseComponent {
         T_ImagePath: this.selectedFileBase64 // Pass Base64 string
       };
 
-      this.http.post(`${environment.apiURL}Topic/AddTopicToModule`, [formData]).subscribe(response => {        
+      this.http.post(`${environment.apiURL}Courses/AddTopicToModule`, [formData]).subscribe(response => {
         this.toastr.success("Topic added successfully!");
         this.topicForm.reset();
         this.selectedFileBase64 = null;
@@ -421,7 +432,8 @@ export class EditcourseComponent {
 
   onModuleSelectT2(event: any): void {
     this.selectedModuleId = event.target.value;
-    const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    // const selectedModule = this.modules.find(module => module.id === +event.target.value);
+    const selectedModule = this.modules.find(module => module.id == this.selectedModuleId);
     if (selectedModule) {
       this.moduleName = selectedModule.module_Name; // Set the module name here
       this.selectedModuleId = selectedModule.id; // Also set the selected module ID
@@ -436,12 +448,12 @@ export class EditcourseComponent {
   // Fetch topics based on module ID
   getTopicsByModule(moduleId: number): void {
     const courseId = this.courseId; // Ensure you have this set somewhere in your component
-    this.http.get<any[]>(`${environment.apiURL}Topic/${courseId}/${moduleId}`).subscribe(
+    this.http.get<any[]>(`${environment.apiURL}Courses/GetTopics/${courseId}/${moduleId}`).subscribe(
         (response) => {
             this.topics2 = response; // Store fetched topics
         },
         (error) => {
-          this.toastr.error("Error fetching topics:", error);          
+          this.toastr.error("Error fetching topics:", error);
           this.topics2 = []; // Clear topics if there's an error
         }
     );
@@ -449,6 +461,7 @@ export class EditcourseComponent {
 
   onTopicSelect(event: any): void {
     this.selectedTopicId = event.target.value;
+
     const selectedTopic = this.topics2.find(topic => topic.id == this.selectedTopicId);
     if (selectedTopic) {
         this.selectedTopicName = selectedTopic.topic_Name;
@@ -467,7 +480,7 @@ export class EditcourseComponent {
       t_ImagePath: this.base64Image
     };
 
-    this.http.put(`${environment.apiURL}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)
+    this.http.put(`${environment.apiURL}Courses/EditTopic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`, topicData)
       .subscribe(response => {
         this.toastr.success("Topic updated successfully!");
         this.editTopicForm.reset();
@@ -481,7 +494,7 @@ export class EditcourseComponent {
           }
         }, 0);
       }, error => {
-        this.toastr.error("Error updating topic");        
+        this.toastr.error("Error updating topic");
       });
   }
 
@@ -498,19 +511,19 @@ export class EditcourseComponent {
 
   deleteTopic(): void {
     if (!this.courseId || !this.selectedModuleId || !this.selectedTopicId) {
-      this.toastr.error("Invalid course, module, or topic selection.");      
+      this.toastr.error("Invalid course, module, or topic selection.");
       return;
     }
 
-    this.http.delete(`${environment.apiURL}Topic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`).subscribe(
+    this.http.delete(`${environment.apiURL}Courses/DeleteTopic/${this.courseId}/${this.selectedModuleId}/${this.selectedTopicId}`).subscribe(
         () => {
-            this.toastr.success("Topic deleted successfully.");            
+            this.toastr.success("Topic deleted successfully.");
 
             this.showConfirmDeletePopup = false;
-            this.selectedTopicId = null; // Reset selection            
+            this.selectedTopicId = null; // Reset selection
         },
         (error) => {
-            this.toastr.error("Failed to delete topic.");            
+            this.toastr.error("Failed to delete topic.");
         }
     );
   }

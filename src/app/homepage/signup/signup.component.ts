@@ -21,14 +21,15 @@ export class SignupComponent {
   hide = true;
   showPassword: boolean = false;
   departments: any[] = [];
-  
+
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private departmentService: DepartmentServiceService) {
     this.signupForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      deptName: ['', Validators.required]
-    })    
+      deptName: ['', Validators.required],
+      code: ['', Validators.required]
+    })
   }
 
   ngOnInit(): void {
@@ -48,10 +49,11 @@ export class SignupComponent {
         email: this.signupForm.value.email,
         password: this.signupForm.value.password,
         // department: {
-          deptName: this.signupForm.value.deptName
+          deptName: this.signupForm.value.deptName,
+          code: this.signupForm.value.code
         // }
       };
-  
+
 
       this.auth.signUp(payload)
       .subscribe({
@@ -60,9 +62,27 @@ export class SignupComponent {
           this.signupForm.reset();
           this.router.navigate(['homepage/signin']);
         })
-        ,error:(err => {
-          this.toastr.error(err?.error.message);
-        })
+        ,error: (err) => {
+          console.error("Full Error Response:", err);
+
+          let errorMessage = "Something went wrong!";
+
+          if (err.error?.errors) {
+            const messages: string[] = Object.values(err.error.errors).flat() as string[];
+            messages.forEach((msg) => this.toastr.error(msg));
+          }
+          else if (err.error?.detail) {  // Handle error with 'detail'
+            errorMessage = err.error.detail;
+          }
+          else if (err.error?.title) {  // Handle error with 'title'
+            errorMessage = err.error.title;
+          }
+          else if (typeof err.error === "string") {  // Handle plain string error
+            errorMessage = err.error;
+          }
+
+          this.toastr.error(errorMessage);
+        }
       })
     }
     else{

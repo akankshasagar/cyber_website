@@ -7,13 +7,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CourseService {
-  
-  private apiUrl = environment.apiURL + "Course";  
+
+  private apiUrl = environment.apiURL + "Courses";
   private apiUrl2 = environment.apiURL + "Course/AddCourseWithModulesAndTopics";
-  private baseUrl = environment.apiURL + "Module";  
-  private topicurl = environment.apiURL + "Topic";  
-  private moduleurl = environment.apiURL + "Module/AddModuleToCourse";  
-  private delmodule = environment.apiURL + "Module/DeleteModule";  
+  private baseUrl = environment.apiURL + "Module";
+  private topicurl = environment.apiURL + "Courses/Topic";
+  private moduleurl = environment.apiURL + "Courses/AddModuleToCourse";
+  private delmodule = environment.apiURL + "Courses/DeleteModule";
   private quesurl = environment.apiURL + "Answers";
 
   constructor(private http: HttpClient) { }
@@ -30,7 +30,7 @@ export class CourseService {
       })
     );
   }
-  
+
 
   getCourses(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
@@ -41,24 +41,24 @@ export class CourseService {
   }
 
   getModulesByCourse(courseId: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/${courseId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/${courseId}`);
   }
 
   getTopicsByCourse(courseId: number): Observable<any> {
-    return this.http.get(`${this.topicurl}/${courseId}/Topics`);
+    return this.http.get(`${this.apiUrl}/${courseId}/Topics`);
   }
 
   getTopicsByCourseAndModule(courseId: number, moduleId: number): Observable<any> {
-    return this.http.get(`${this.topicurl}/${courseId}/${moduleId}/Topics`);
+    return this.http.get(`${this.apiUrl}/${courseId}/${moduleId}/Topics`);
   }
 
   getTopicById(topicId: number): Observable<any> {
     return this.http.get(`${this.topicurl}/${topicId}`);
   }
 
-  getQuestionsByModule(moduleId: number): Observable<any[]> {    
+  getQuestionsByModule(moduleId: number): Observable<any[]> {
     return this.http.get<any[]>(`${environment.apiURL}Questions/Module/${moduleId}`);
-  }  
+  }
 
   editCourse(courseId: number, courseData: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/EditCourse/${courseId}`, courseData);
